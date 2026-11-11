@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#24221F"/>
+  <rect x="2" y="2" width="60" height="60" rx="12" stroke="#B7A58D" stroke-opacity="0.3" stroke-width="1"/>
+  <!-- Elegant NP Monogram -->
+  <text x="32" y="41" font-family="'Playfair Display', Georgia, serif" font-size="26" font-weight="600" fill="#E9DDCB" text-anchor="middle" letter-spacing="1">NP</text>
+  <circle cx="50" cy="20" r="2" fill="#B7A58D"/>
+</svg>
+
