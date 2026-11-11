@@ -58,15 +58,15 @@ export default function Hero() {
             {/* Introductory Eyebrow with Medium Typewriter Name */}
             <motion.div
               variants={itemVariants}
-              className="inline-flex flex-wrap items-center gap-x-3.5 gap-y-2 min-h-[44px]"
+              className="inline-flex flex-wrap items-center gap-x-3 gap-y-1.5 min-h-[40px]"
             >
-              <div className="inline-flex items-center gap-2.5">
-                <span className="w-8 h-[2px] bg-bronze shrink-0" />
-                <span className="text-sm sm:text-base md:text-lg uppercase tracking-widest font-mono text-bronze font-semibold">
+              <div className="inline-flex items-center gap-2">
+                <span className="w-6 h-[1px] bg-bronze shrink-0" />
+                <span className="text-xs uppercase tracking-widest-luxury font-mono text-bronze font-semibold">
                   HELLO, I'M
                 </span>
               </div>
-              <div className="text-2xl sm:text-3xl md:text-4xl font-serif text-charcoal font-medium tracking-tight">
+              <div className="text-xl sm:text-2xl md:text-3xl font-serif text-charcoal font-medium tracking-tight">
                 <TypewriterText
                   words={["NAVEEN PRAKASH", "NAVEEN PRAKASH J"]}
                   typingSpeed={110}
