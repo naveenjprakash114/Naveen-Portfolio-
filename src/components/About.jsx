@@ -20,7 +20,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-24 sm:py-32 bg-[#FDFBF7] border-t border-[#A18B70]/20">
+    <section id="about" className="py-24 sm:py-32 bg-ivory border-t border-gold/20">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <motion.div
@@ -31,8 +31,8 @@ export default function About() {
           className="space-y-3 mb-16"
         >
           <div className="flex items-center gap-2.5">
-            <span className="w-6 h-[1px] bg-bronze" />
-            <span className="text-xs uppercase tracking-widest-luxury font-mono text-bronze">
+            <span className="w-6 h-[1px] bg-gold" />
+            <span className="text-xs uppercase tracking-widest-luxury font-mono text-gold">
               01 / ABOUT
             </span>
           </div>
@@ -67,7 +67,7 @@ export default function About() {
               Currently, I work at BitByte Technologies, exploring the intersection of creativity, marketing and frontend development.
             </p>
 
-            <p className="text-base sm:text-lg font-serif italic text-charcoal pt-2 border-l-2 border-bronze pl-4">
+            <p className="text-base sm:text-lg font-serif italic text-charcoal pt-2 border-l-2 border-gold pl-4">
               "I believe great digital experiences are created when creativity, technology and purpose come together."
             </p>
 
@@ -76,7 +76,7 @@ export default function About() {
               <span className="font-serif italic text-2xl text-charcoal tracking-tight block">
                 Naveen Prakash J
               </span>
-              <span className="text-[11px] font-mono tracking-widest uppercase text-bronze">
+              <span className="text-[11px] font-mono tracking-widest uppercase text-gold">
                 Visual Communication & Creative Tech
               </span>
             </div>
@@ -91,13 +91,13 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="p-6 sm:p-7 rounded-2xl bg-[#F7F3EB] border border-[#A18B70]/25 hover:border-bronze hover:bg-white transition-all duration-300 space-y-2 group shadow-subtle"
+                className="p-6 sm:p-7 rounded-2xl bg-cream border border-gold/25 hover:border-gold hover:bg-white/80 transition-all duration-300 space-y-2 group shadow-subtle"
               >
-                <div className="flex items-center justify-between text-xs font-mono text-bronze">
+                <div className="flex items-center justify-between text-xs font-mono text-gold">
                   <span>{card.number}</span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-bronze/40 group-hover:bg-charcoal transition-colors" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold/40 group-hover:bg-charcoal transition-colors" />
                 </div>
-                <h3 className="font-serif text-lg text-charcoal group-hover:text-bronze transition-colors">
+                <h3 className="font-serif text-lg text-charcoal group-hover:text-gold transition-colors">
                   {card.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-charcoal/70 leading-relaxed font-normal">

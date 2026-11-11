@@ -49,7 +49,7 @@ export default function TypewriterText({
       <span>{currentText}</span>
       {/* Editorial Luxury Blinking Cursor */}
       <span
-        className="inline-block w-[2.5px] h-[1em] bg-bronze ml-1.5 animate-pulse align-middle"
+        className="inline-block w-[2.5px] h-[1em] bg-gold ml-1.5 animate-pulse align-middle"
         aria-hidden="true"
       />
     </span>

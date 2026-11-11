@@ -102,7 +102,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 sm:py-32 bg-[#FDFBF7] border-t border-[#A18B70]/20">
+    <section id="contact" className="py-24 sm:py-32 bg-ivory border-t border-gold/20">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <motion.div
@@ -113,8 +113,8 @@ export default function Contact() {
           className="space-y-3 mb-16 max-w-2xl"
         >
           <div className="flex items-center gap-2.5">
-            <span className="w-6 h-[1px] bg-bronze" />
-            <span className="text-xs uppercase tracking-widest-luxury font-mono text-bronze">
+            <span className="w-6 h-[1px] bg-gold" />
+            <span className="text-xs uppercase tracking-widest-luxury font-mono text-gold">
               07 / LET'S CONNECT
             </span>
           </div>
@@ -136,16 +136,16 @@ export default function Contact() {
             transition={{ duration: 0.5 }}
             className="lg:col-span-5 space-y-6"
           >
-            <div className="bg-[#F7F3EB] border border-[#A18B70]/25 rounded-2xl p-7 sm:p-8 space-y-6">
-              <span className="text-xs font-mono uppercase tracking-widest text-bronze block">
+            <div className="bg-cream border border-gold/25 rounded-2xl p-7 sm:p-8 space-y-6">
+              <span className="text-xs font-mono uppercase tracking-widest text-gold block">
                 DIRECT CONTACT CHANNELS
               </span>
 
               <div className="space-y-4">
                 {/* Email */}
-                <div className="p-4 rounded-xl bg-white border border-[#A18B70]/20 flex items-center justify-between gap-3">
+                <div className="p-4 rounded-xl bg-white border border-gold/20 flex items-center justify-between gap-3">
                   <div className="flex items-center gap-3 overflow-hidden">
-                    <div className="w-9 h-9 rounded-full bg-[#F7F3EB] border border-[#A18B70]/30 flex items-center justify-center text-bronze shrink-0">
+                    <div className="w-9 h-9 rounded-full bg-cream border border-gold/30 flex items-center justify-center text-gold shrink-0">
                       <Mail className="w-4 h-4" />
                     </div>
                     <div className="min-w-0">
@@ -154,7 +154,7 @@ export default function Contact() {
                       </span>
                       <a
                         href={`mailto:${emailAddress}`}
-                        className="text-xs sm:text-sm font-medium text-charcoal truncate block hover:text-bronze transition-colors"
+                        className="text-xs sm:text-sm font-medium text-charcoal truncate block hover:text-gold transition-colors"
                       >
                         {emailAddress}
                       </a>
@@ -170,9 +170,9 @@ export default function Contact() {
                 </div>
 
                 {/* Phone & WhatsApp */}
-                <div className="p-4 rounded-xl bg-white border border-[#A18B70]/20 flex items-center justify-between gap-3">
+                <div className="p-4 rounded-xl bg-white border border-gold/20 flex items-center justify-between gap-3">
                   <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-full bg-[#F7F3EB] border border-[#A18B70]/30 flex items-center justify-center text-bronze shrink-0">
+                    <div className="w-9 h-9 rounded-full bg-cream border border-gold/30 flex items-center justify-center text-gold shrink-0">
                       <Phone className="w-4 h-4" />
                     </div>
                     <div>
@@ -181,7 +181,7 @@ export default function Contact() {
                       </span>
                       <a
                         href={`tel:${phoneNumber.replace(/\s+/g, '')}`}
-                        className="text-xs sm:text-sm font-medium text-charcoal hover:text-bronze transition-colors"
+                        className="text-xs sm:text-sm font-medium text-charcoal hover:text-gold transition-colors"
                       >
                         {phoneNumber}
                       </a>
@@ -199,8 +199,8 @@ export default function Contact() {
                 </div>
 
                 {/* Location */}
-                <div className="p-4 rounded-xl bg-white border border-[#A18B70]/20 flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full bg-[#F7F3EB] border border-[#A18B70]/30 flex items-center justify-center text-bronze shrink-0">
+                <div className="p-4 rounded-xl bg-white border border-gold/20 flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-full bg-cream border border-gold/30 flex items-center justify-center text-gold shrink-0">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
@@ -218,10 +218,10 @@ export default function Contact() {
                   href={instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 rounded-xl bg-white border border-[#A18B70]/20 flex items-center justify-between group hover:border-bronze transition-colors"
+                  className="p-4 rounded-xl bg-white border border-gold/20 flex items-center justify-between group hover:border-gold transition-colors"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-full bg-[#F7F3EB] border border-[#A18B70]/30 flex items-center justify-center text-bronze shrink-0 group-hover:bg-[#E8DDCB] transition-colors">
+                    <div className="w-9 h-9 rounded-full bg-cream border border-gold/30 flex items-center justify-center text-gold shrink-0 group-hover:bg-beige transition-colors">
                       <InstagramIcon className="w-4 h-4" />
                     </div>
                     <div>
@@ -239,8 +239,8 @@ export default function Contact() {
             </div>
 
             {/* Social Link Placeholders */}
-            <div className="p-6 rounded-2xl bg-white border border-[#A18B70]/25 space-y-3">
-              <span className="text-[10px] font-mono uppercase tracking-widest text-bronze block">
+            <div className="p-6 rounded-2xl bg-white border border-gold/25 space-y-3">
+              <span className="text-[10px] font-mono uppercase tracking-widest text-gold block">
                 SOCIAL PROFILES (CONFIGURABLE)
               </span>
               <div className="grid grid-cols-2 gap-2 text-xs">
@@ -248,26 +248,26 @@ export default function Contact() {
                   href={instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2.5 rounded-lg bg-[#F7F3EB] text-charcoal font-medium flex items-center justify-between hover:bg-[#E8DDCB] transition-colors"
+                  className="p-2.5 rounded-lg bg-cream text-charcoal font-medium flex items-center justify-between hover:bg-beige transition-colors"
                 >
                   <span>Instagram</span>
                   <span className="text-[10px] font-mono text-emerald-700">Active</span>
                 </a>
-                <div className="p-2.5 rounded-lg bg-[#F7F3EB] text-charcoal/60 flex items-center justify-between">
+                <div className="p-2.5 rounded-lg bg-cream text-charcoal/60 flex items-center justify-between">
                   <span>LinkedIn</span>
-                  <span className="text-[10px] font-mono text-bronze">Placeholder</span>
+                  <span className="text-[10px] font-mono text-gold">Placeholder</span>
                 </div>
-                <div className="p-2.5 rounded-lg bg-[#F7F3EB] text-charcoal/60 flex items-center justify-between">
+                <div className="p-2.5 rounded-lg bg-cream text-charcoal/60 flex items-center justify-between">
                   <span>Behance</span>
-                  <span className="text-[10px] font-mono text-bronze">Placeholder</span>
+                  <span className="text-[10px] font-mono text-gold">Placeholder</span>
                 </div>
-                <div className="p-2.5 rounded-lg bg-[#F7F3EB] text-charcoal/60 flex items-center justify-between">
+                <div className="p-2.5 rounded-lg bg-cream text-charcoal/60 flex items-center justify-between">
                   <span>Dribbble</span>
-                  <span className="text-[10px] font-mono text-bronze">Placeholder</span>
+                  <span className="text-[10px] font-mono text-gold">Placeholder</span>
                 </div>
-                <div className="p-2.5 rounded-lg bg-[#F7F3EB] text-charcoal/60 flex items-center justify-between col-span-2">
+                <div className="p-2.5 rounded-lg bg-cream text-charcoal/60 flex items-center justify-between col-span-2">
                   <span>GitHub</span>
-                  <span className="text-[10px] font-mono text-bronze">Placeholder</span>
+                  <span className="text-[10px] font-mono text-gold">Placeholder</span>
                 </div>
               </div>
             </div>
@@ -279,7 +279,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="lg:col-span-7 bg-[#F7F3EB] border border-[#A18B70]/25 rounded-2xl p-7 sm:p-10 shadow-subtle"
+            className="lg:col-span-7 bg-cream border border-gold/25 rounded-2xl p-7 sm:p-10 shadow-subtle"
           >
             <h3 className="text-xl sm:text-2xl font-serif text-charcoal mb-6">
               Send a Direct Message
@@ -293,7 +293,7 @@ export default function Contact() {
             )}
 
             {submittedStatus === "mailto-fallback" && (
-              <div className="p-4 rounded-xl bg-white border border-[#A18B70]/30 text-charcoal text-xs mb-6 space-y-1">
+              <div className="p-4 rounded-xl bg-white border border-gold/30 text-charcoal text-xs mb-6 space-y-1">
                 <p className="font-semibold">Email client opened with pre-filled message.</p>
                 <p className="text-charcoal/70">
                   If your mail application did not automatically open, please click below or write directly to <a href={`mailto:${emailAddress}`} className="underline font-mono">{emailAddress}</a>.
@@ -305,7 +305,7 @@ export default function Contact() {
               {/* Full Name */}
               <div>
                 <label className="block text-xs uppercase tracking-wider text-charcoal font-semibold mb-2">
-                  Full Name <span className="text-bronze">*</span>
+                  Full Name <span className="text-gold">*</span>
                 </label>
                 <input
                   type="text"
@@ -314,7 +314,7 @@ export default function Contact() {
                   onChange={handleChange}
                   placeholder="e.g. Anand Kumar"
                   className={`w-full px-4 py-3 rounded-xl bg-white border ${
-                    errors.name ? "border-red-500 ring-1 ring-red-500" : "border-[#A18B70]/30"
+                    errors.name ? "border-red-500 ring-1 ring-red-500" : "border-gold/30"
                   } text-charcoal text-xs sm:text-sm focus:outline-none focus:border-charcoal transition-colors`}
                 />
                 {errors.name && (
@@ -328,7 +328,7 @@ export default function Contact() {
               {/* Email Address */}
               <div>
                 <label className="block text-xs uppercase tracking-wider text-charcoal font-semibold mb-2">
-                  Email Address <span className="text-bronze">*</span>
+                  Email Address <span className="text-gold">*</span>
                 </label>
                 <input
                   type="email"
@@ -337,7 +337,7 @@ export default function Contact() {
                   onChange={handleChange}
                   placeholder="you@domain.com"
                   className={`w-full px-4 py-3 rounded-xl bg-white border ${
-                    errors.email ? "border-red-500 ring-1 ring-red-500" : "border-[#A18B70]/30"
+                    errors.email ? "border-red-500 ring-1 ring-red-500" : "border-gold/30"
                   } text-charcoal text-xs sm:text-sm focus:outline-none focus:border-charcoal transition-colors`}
                 />
                 {errors.email && (
@@ -351,7 +351,7 @@ export default function Contact() {
               {/* Subject */}
               <div>
                 <label className="block text-xs uppercase tracking-wider text-charcoal font-semibold mb-2">
-                  Subject <span className="text-bronze">*</span>
+                  Subject <span className="text-gold">*</span>
                 </label>
                 <input
                   type="text"
@@ -360,7 +360,7 @@ export default function Contact() {
                   onChange={handleChange}
                   placeholder="e.g. Creative Production / Collaboration"
                   className={`w-full px-4 py-3 rounded-xl bg-white border ${
-                    errors.subject ? "border-red-500 ring-1 ring-red-500" : "border-[#A18B70]/30"
+                    errors.subject ? "border-red-500 ring-1 ring-red-500" : "border-gold/30"
                   } text-charcoal text-xs sm:text-sm focus:outline-none focus:border-charcoal transition-colors`}
                 />
                 {errors.subject && (
@@ -374,7 +374,7 @@ export default function Contact() {
               {/* Message */}
               <div>
                 <label className="block text-xs uppercase tracking-wider text-charcoal font-semibold mb-2">
-                  Message <span className="text-bronze">*</span>
+                  Message <span className="text-gold">*</span>
                 </label>
                 <textarea
                   name="message"
@@ -383,7 +383,7 @@ export default function Contact() {
                   onChange={handleChange}
                   placeholder="Tell me about your project, timeline, or idea..."
                   className={`w-full px-4 py-3 rounded-xl bg-white border ${
-                    errors.message ? "border-red-500 ring-1 ring-red-500" : "border-[#A18B70]/30"
+                    errors.message ? "border-red-500 ring-1 ring-red-500" : "border-gold/30"
                   } text-charcoal text-xs sm:text-sm focus:outline-none focus:border-charcoal transition-colors resize-y`}
                 />
                 {errors.message && (
@@ -399,10 +399,10 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-charcoal text-[#F7F3EB] text-xs font-semibold uppercase tracking-wider hover:bg-charcoal-soft transition-all duration-300 disabled:opacity-50 shadow-sm"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-charcoal text-cream text-xs font-semibold uppercase tracking-wider hover:bg-charcoal-soft transition-all duration-300 disabled:opacity-50 shadow-sm"
                 >
                   <span>{isSubmitting ? "SENDING..." : "SEND MESSAGE"}</span>
-                  <Send className="w-3.5 h-3.5 text-[#E8DDCB]" />
+                  <Send className="w-3.5 h-3.5 text-champagne" />
                 </button>
               </div>
             </form>

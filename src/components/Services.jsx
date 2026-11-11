@@ -13,7 +13,7 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="py-24 sm:py-32 bg-[#FDFBF7] border-t border-[#A18B70]/20">
+    <section id="services" className="py-24 sm:py-32 bg-ivory border-t border-gold/20">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <motion.div
@@ -24,8 +24,8 @@ export default function Services() {
           className="space-y-3 mb-16 max-w-2xl"
         >
           <div className="flex items-center gap-2.5">
-            <span className="w-6 h-[1px] bg-bronze" />
-            <span className="text-xs uppercase tracking-widest-luxury font-mono text-bronze">
+            <span className="w-6 h-[1px] bg-gold" />
+            <span className="text-xs uppercase tracking-widest-luxury font-mono text-gold">
               05 / SERVICES
             </span>
           </div>
@@ -48,25 +48,25 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
-                className="bg-[#F7F3EB] border border-[#A18B70]/25 rounded-2xl p-7 sm:p-8 hover:border-bronze hover:bg-white hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group"
+                className="bg-cream border border-gold/25 rounded-2xl p-7 sm:p-8 hover:border-gold hover:bg-white hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
-                  <div className="flex items-center justify-between pb-6 mb-6 border-b border-[#A18B70]/15">
-                    <span className="text-xs font-mono tracking-widest text-bronze">
+                  <div className="flex items-center justify-between pb-6 mb-6 border-b border-gold/15">
+                    <span className="text-xs font-mono tracking-widest text-gold">
                       SERVICE {service.number}
                     </span>
-                    <div className="w-8 h-8 rounded-lg bg-white border border-[#A18B70]/25 flex items-center justify-center text-charcoal group-hover:bg-[#E8DDCB] transition-colors">
+                    <div className="w-8 h-8 rounded-lg bg-white border border-gold/25 flex items-center justify-center text-charcoal group-hover:bg-beige transition-colors">
                       <IconComponent className="w-4 h-4 stroke-[1.75]" />
                     </div>
                   </div>
 
                   <div className="space-y-2 mb-4">
-                    <h3 className="text-lg sm:text-xl font-serif font-normal text-charcoal tracking-tight group-hover:text-bronze transition-colors">
+                    <h3 className="text-lg sm:text-xl font-serif font-normal text-charcoal tracking-tight group-hover:text-gold transition-colors">
                       {service.title}
                     </h3>
 
                     {service.isDevelopingCapability && (
-                      <span className="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-mono tracking-wider bg-[#E8DDCB] text-charcoal border border-[#A18B70]/40 font-medium">
+                      <span className="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-mono tracking-wider bg-beige text-charcoal border border-gold/40 font-medium">
                         {service.badge}
                       </span>
                     )}
@@ -77,14 +77,14 @@ export default function Services() {
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-[#A18B70]/15 space-y-2">
-                  <span className="text-[10px] uppercase font-mono tracking-wider text-bronze block">
+                <div className="pt-4 border-t border-gold/15 space-y-2">
+                  <span className="text-[10px] uppercase font-mono tracking-wider text-gold block">
                     Deliverables:
                   </span>
                   <ul className="grid grid-cols-2 gap-1.5 text-xs text-charcoal/80">
                     {service.deliverables.map((item, idx) => (
                       <li key={idx} className="flex items-center gap-1.5">
-                        <CheckCircle2 className="w-3 h-3 text-bronze shrink-0" />
+                        <CheckCircle2 className="w-3 h-3 text-gold shrink-0" />
                         <span className="truncate">{item}</span>
                       </li>
                     ))}
@@ -101,7 +101,7 @@ export default function Services() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-14 p-6 rounded-2xl bg-[#E8DDCB]/40 border border-[#A18B70]/30 max-w-3xl"
+          className="mt-14 p-6 rounded-2xl bg-beige/40 border border-gold/30 max-w-3xl"
         >
           <p className="text-xs text-charcoal/75 leading-relaxed font-normal">
             <span className="font-semibold text-charcoal uppercase tracking-wider font-mono mr-1.5">

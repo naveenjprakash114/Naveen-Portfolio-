@@ -55,7 +55,7 @@ export default function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-[#F7F3EB]/90 backdrop-blur-md border-b border-[#A18B70]/20 shadow-subtle py-4"
+            ? "bg-cream/90 backdrop-blur-md border-b border-gold/20 shadow-subtle py-4"
             : "bg-transparent py-6"
         }`}
       >
@@ -66,14 +66,14 @@ export default function Navbar() {
             onClick={(e) => handleNavClick(e, "#home")}
             className="group flex items-center gap-3 focus:outline-none"
           >
-            <div className="w-8 h-8 rounded-lg bg-charcoal flex items-center justify-center text-[#E8DDCB] font-serif font-semibold text-xs tracking-wider border border-[#A18B70]/30 transition-transform duration-300 group-hover:scale-105">
+            <div className="w-8 h-8 rounded-lg bg-charcoal flex items-center justify-center text-beige font-serif font-semibold text-xs tracking-wider border border-gold/30 transition-transform duration-300 group-hover:scale-105">
               NP
             </div>
             <div className="flex flex-col">
               <span className="font-serif tracking-tight text-base sm:text-lg font-semibold text-charcoal leading-none">
                 NAVEEN PRAKASH
               </span>
-              <span className="text-[10px] tracking-widest uppercase text-bronze font-medium mt-0.5">
+              <span className="text-[10px] tracking-widest uppercase text-gold font-medium mt-0.5">
                 Creative Technologist
               </span>
             </div>
@@ -96,7 +96,7 @@ export default function Navbar() {
                 >
                   {link.label}
                   {isActive && (
-                    <span className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-bronze rounded-full" />
+                    <span className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-champagne rounded-full" />
                   )}
                 </a>
               );
@@ -108,10 +108,10 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={(e) => handleNavClick(e, "#contact")}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-charcoal text-[#F7F3EB] text-xs font-semibold uppercase tracking-wider border border-charcoal hover:bg-charcoal-soft transition-all duration-300 shadow-sm group"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-charcoal text-cream text-xs font-semibold uppercase tracking-wider border border-charcoal hover:bg-charcoal-soft transition-all duration-300 shadow-sm group"
             >
               <span>LET'S TALK</span>
-              <ArrowUpRight className="w-3.5 h-3.5 text-[#E8DDCB] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              <ArrowUpRight className="w-3.5 h-3.5 text-champagne transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
           </div>
 
@@ -120,7 +120,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={(e) => handleNavClick(e, "#contact")}
-              className="sm:hidden px-3.5 py-1.5 rounded-full bg-charcoal text-[#F7F3EB] text-[11px] font-semibold uppercase tracking-wider"
+              className="sm:hidden px-3.5 py-1.5 rounded-full bg-charcoal text-cream text-[11px] font-semibold uppercase tracking-wider"
             >
               TALK
             </a>
@@ -137,9 +137,9 @@ export default function Navbar() {
 
       {/* Mobile Navigation Drawer */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-[#F7F3EB]/98 backdrop-blur-xl lg:hidden flex flex-col justify-between pt-24 pb-8 px-8 animate-fadeIn">
+        <div className="fixed inset-0 z-40 bg-cream/98 backdrop-blur-xl lg:hidden flex flex-col justify-between pt-24 pb-8 px-8 animate-fadeIn">
           <div className="space-y-4">
-            <span className="text-[11px] uppercase tracking-widest text-bronze font-mono block pb-2 border-b border-[#A18B70]/20">
+            <span className="text-[11px] uppercase tracking-widest text-gold font-mono block pb-2 border-b border-gold/20">
               NAVIGATION
             </span>
             <div className="flex flex-col space-y-3">
@@ -148,16 +148,16 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="text-2xl font-serif text-charcoal hover:text-bronze transition-colors flex items-center justify-between py-1"
+                  className="text-2xl font-serif text-charcoal hover:text-gold transition-colors flex items-center justify-between py-1"
                 >
                   <span>{link.label}</span>
-                  <span className="text-xs font-mono text-bronze">0{index + 1}</span>
+                  <span className="text-xs font-mono text-gold">0{index + 1}</span>
                 </a>
               ))}
             </div>
           </div>
 
-          <div className="pt-6 border-t border-[#A18B70]/20 space-y-3">
+          <div className="pt-6 border-t border-gold/20 space-y-3">
             <div className="text-xs text-charcoal/70 flex justify-between">
               <span>Salem, Tamil Nadu, India</span>
               <a
@@ -172,10 +172,10 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={(e) => handleNavClick(e, "#contact")}
-              className="w-full py-3.5 rounded-full bg-charcoal text-[#F7F3EB] text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2"
+              className="w-full py-3.5 rounded-full bg-charcoal text-cream text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2"
             >
               <span>LET'S TALK</span>
-              <ArrowUpRight className="w-4 h-4 text-[#E8DDCB]" />
+              <ArrowUpRight className="w-4 h-4 text-champagne" />
             </a>
           </div>
         </div>

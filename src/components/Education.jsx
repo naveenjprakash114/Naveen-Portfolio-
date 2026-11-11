@@ -12,7 +12,7 @@ export default function Education() {
   ];
 
   return (
-    <section id="education" className="py-24 sm:py-32 bg-[#F7F3EB] border-t border-[#A18B70]/20">
+    <section id="education" className="py-24 sm:py-32 bg-cream border-t border-gold/20">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <motion.div
@@ -23,8 +23,8 @@ export default function Education() {
           className="space-y-3 mb-16 max-w-2xl"
         >
           <div className="flex items-center gap-2.5">
-            <span className="w-6 h-[1px] bg-bronze" />
-            <span className="text-xs uppercase tracking-widest-luxury font-mono text-bronze">
+            <span className="w-6 h-[1px] bg-gold" />
+            <span className="text-xs uppercase tracking-widest-luxury font-mono text-gold">
               06 / EDUCATION
             </span>
           </div>
@@ -44,14 +44,14 @@ export default function Education() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5 }}
-            className="bg-[#FDFBF7] border border-[#A18B70]/25 rounded-2xl p-8 flex flex-col justify-between space-y-6"
+            className="bg-ivory border border-gold/25 rounded-2xl p-8 flex flex-col justify-between space-y-6"
           >
             <div className="space-y-4">
-              <div className="w-12 h-12 rounded-xl bg-[#F7F3EB] border border-[#A18B70]/30 flex items-center justify-center text-charcoal">
+              <div className="w-12 h-12 rounded-xl bg-cream border border-gold/30 flex items-center justify-center text-charcoal">
                 <GraduationCap className="w-6 h-6 stroke-[1.5]" />
               </div>
               <div>
-                <span className="text-xs font-mono uppercase tracking-widest text-bronze block mb-1">
+                <span className="text-xs font-mono uppercase tracking-widest text-gold block mb-1">
                   GRADUATION DEGREE
                 </span>
                 <h3 className="text-2xl font-serif text-charcoal font-normal">
@@ -63,7 +63,7 @@ export default function Education() {
               </p>
             </div>
 
-            <div className="pt-6 border-t border-[#A18B70]/15 space-y-2 text-xs">
+            <div className="pt-6 border-t border-gold/15 space-y-2 text-xs">
               <div className="flex justify-between text-charcoal/70">
                 <span className="font-medium text-charcoal">College:</span>
                 <span>AVS College of Arts & Science</span>
@@ -85,14 +85,14 @@ export default function Education() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="bg-[#FDFBF7] border border-[#A18B70]/25 rounded-2xl p-8 flex flex-col justify-between space-y-6"
+            className="bg-ivory border border-gold/25 rounded-2xl p-8 flex flex-col justify-between space-y-6"
           >
             <div className="space-y-4">
-              <div className="w-12 h-12 rounded-xl bg-[#F7F3EB] border border-[#A18B70]/30 flex items-center justify-center text-charcoal">
+              <div className="w-12 h-12 rounded-xl bg-cream border border-gold/30 flex items-center justify-center text-charcoal">
                 <BookOpen className="w-6 h-6 stroke-[1.5]" />
               </div>
               <div>
-                <span className="text-xs font-mono uppercase tracking-widest text-bronze block mb-1">
+                <span className="text-xs font-mono uppercase tracking-widest text-gold block mb-1">
                   INDEPENDENT STUDY
                 </span>
                 <h3 className="text-2xl font-serif text-charcoal font-normal">
@@ -104,14 +104,14 @@ export default function Education() {
               </p>
             </div>
 
-            <div className="space-y-4 pt-4 border-t border-[#A18B70]/15">
+            <div className="space-y-4 pt-4 border-t border-gold/15">
               <div className="flex flex-wrap gap-2">
                 {selfLearnedSkills.map((skill, idx) => (
                   <span
                     key={idx}
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-[#F7F3EB] text-charcoal border border-[#A18B70]/25"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-cream text-charcoal border border-gold/25"
                   >
-                    <CheckCircle2 className="w-3.5 h-3.5 text-bronze" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-gold" />
                     <span>{skill}</span>
                   </span>
                 ))}
