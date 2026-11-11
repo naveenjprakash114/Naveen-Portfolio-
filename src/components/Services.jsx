@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { services } from "../data/services";
 import { Camera, Share2, TrendingUp, Palette, Sparkles, Code2, CheckCircle2 } from "lucide-react";
 
@@ -15,7 +16,13 @@ export default function Services() {
     <section id="services" className="py-24 sm:py-32 bg-[#FDFBF7] border-t border-[#A18B70]/20">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
-        <div className="space-y-3 mb-16 max-w-2xl">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.6 }}
+          className="space-y-3 mb-16 max-w-2xl"
+        >
           <div className="flex items-center gap-2.5">
             <span className="w-6 h-[1px] bg-bronze" />
             <span className="text-xs uppercase tracking-widest-luxury font-mono text-bronze">
@@ -28,15 +35,19 @@ export default function Services() {
           <p className="text-xs sm:text-sm text-charcoal/70 leading-relaxed">
             From commercial visual production and marketing campaigns to emerging AI-assisted creative workflows.
           </p>
-        </div>
+        </motion.div>
 
         {/* 6 Service Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => {
+          {services.map((service, index) => {
             const IconComponent = iconMap[service.icon] || Sparkles;
             return (
-              <div
+              <motion.div
                 key={service.number}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
                 className="bg-[#F7F3EB] border border-[#A18B70]/25 rounded-2xl p-7 sm:p-8 hover:border-bronze hover:bg-white hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
@@ -79,20 +90,26 @@ export default function Services() {
                     ))}
                   </ul>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
 
         {/* Clear Professional Note on Technical Capabilities */}
-        <div className="mt-14 p-6 rounded-2xl bg-[#E8DDCB]/40 border border-[#A18B70]/30 max-w-3xl">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-14 p-6 rounded-2xl bg-[#E8DDCB]/40 border border-[#A18B70]/30 max-w-3xl"
+        >
           <p className="text-xs text-charcoal/75 leading-relaxed font-normal">
             <span className="font-semibold text-charcoal uppercase tracking-wider font-mono mr-1.5">
               Note on Technical Scope:
             </span>
             For UI/UX design, website development, and AI-powered frontend development, these are presented as self-developed personal project capabilities and active engineering explorations, while photography, videography, graphic design, and digital marketing represent established practical experience.
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

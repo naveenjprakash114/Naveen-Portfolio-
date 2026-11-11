@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, MessageCircle, ArrowUpRight, Copy, Check, AlertCircle, Send } from "lucide-react";
 import { InstagramIcon } from "./Icons";
 
@@ -80,10 +81,6 @@ export default function Contact() {
         setIsSubmitting(false);
       }
     } else {
-      // Prompt explicitly specifies:
-      // "Do not show a fake success message if no backend or email service is connected.
-      // Prepare the form for future integration with Formspree or EmailJS.
-      // Add a clickable email link and WhatsApp link."
       setIsSubmitting(false);
       launchMailto();
     }
@@ -108,7 +105,13 @@ export default function Contact() {
     <section id="contact" className="py-24 sm:py-32 bg-[#FDFBF7] border-t border-[#A18B70]/20">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
-        <div className="space-y-3 mb-16 max-w-2xl">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.6 }}
+          className="space-y-3 mb-16 max-w-2xl"
+        >
           <div className="flex items-center gap-2.5">
             <span className="w-6 h-[1px] bg-bronze" />
             <span className="text-xs uppercase tracking-widest-luxury font-mono text-bronze">
@@ -122,11 +125,17 @@ export default function Contact() {
           <p className="text-xs sm:text-sm text-charcoal/70 leading-relaxed pt-1">
             I'm always interested in creative collaborations, innovative ideas and opportunities to build something valuable.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Direct Channels & Information */}
-          <div className="lg:col-span-5 space-y-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.5 }}
+            className="lg:col-span-5 space-y-6"
+          >
             <div className="bg-[#F7F3EB] border border-[#A18B70]/25 rounded-2xl p-7 sm:p-8 space-y-6">
               <span className="text-xs font-mono uppercase tracking-widest text-bronze block">
                 DIRECT CONTACT CHANNELS
@@ -262,10 +271,16 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Column: Contact Form */}
-          <div className="lg:col-span-7 bg-[#F7F3EB] border border-[#A18B70]/25 rounded-2xl p-7 sm:p-10 shadow-subtle">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+            className="lg:col-span-7 bg-[#F7F3EB] border border-[#A18B70]/25 rounded-2xl p-7 sm:p-10 shadow-subtle"
+          >
             <h3 className="text-xl sm:text-2xl font-serif text-charcoal mb-6">
               Send a Direct Message
             </h3>
@@ -391,7 +406,7 @@ export default function Contact() {
                 </button>
               </div>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

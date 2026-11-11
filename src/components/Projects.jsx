@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { projectFilterCategories, projects } from "../data/projects";
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
@@ -19,7 +20,13 @@ export default function Projects() {
     <section id="projects" className="py-24 sm:py-32 bg-[#F7F3EB] border-t border-[#A18B70]/20">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
-        <div className="space-y-3 mb-12 max-w-2xl">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.6 }}
+          className="space-y-3 mb-12 max-w-2xl"
+        >
           <div className="flex items-center gap-2.5">
             <span className="w-6 h-[1px] bg-bronze" />
             <span className="text-xs uppercase tracking-widest-luxury font-mono text-bronze">
@@ -32,7 +39,7 @@ export default function Projects() {
           <p className="text-xs sm:text-sm text-charcoal/70 leading-relaxed">
             A collection of creative projects, visual stories and digital experiences.
           </p>
-        </div>
+        </motion.div>
 
         {/* Filter Categories Bar */}
         <div className="pb-8 mb-12 border-b border-[#A18B70]/20">
@@ -61,16 +68,30 @@ export default function Projects() {
         </div>
 
         {/* Asymmetric 2-Column Editorial Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10">
-          {filteredProjects.map((project, index) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              index={index}
-              onSelect={(p) => setSelectedProject(p)}
-            />
-          ))}
-        </div>
+        <motion.div
+          layout
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10"
+        >
+          <AnimatePresence>
+            {filteredProjects.map((project, index) => (
+              <motion.div
+                key={project.id}
+                layout
+                initial={{ opacity: 0, scale: 0.98 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.98 }}
+                transition={{ duration: 0.4 }}
+                className={project.isFeatured ? "md:col-span-2" : ""}
+              >
+                <ProjectCard
+                  project={project}
+                  index={index}
+                  onSelect={(p) => setSelectedProject(p)}
+                />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
 
         {/* Expandable Project Detail Modal */}
         <ProjectModal

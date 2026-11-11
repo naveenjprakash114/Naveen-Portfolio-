@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { ArrowUpRight, ArrowDown, MapPin, Sparkles, Download, FileText } from "lucide-react";
+import { motion } from "framer-motion";
+import { ArrowUpRight, ArrowDown, MapPin, Sparkles, FileText } from "lucide-react";
 import ResumeModal from "./ResumeModal";
 
 export default function Hero() {
@@ -13,40 +14,83 @@ export default function Hero() {
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 15 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+    },
+  };
+
+  const imageVariants = {
+    hidden: { opacity: 0, scale: 0.97 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 },
+    },
+  };
+
   return (
     <section id="home" className="relative min-h-screen pt-32 pb-20 md:pt-40 md:pb-28 flex flex-col justify-between">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full my-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* LEFT SIDE: Typography, Positioning, CTAs */}
-          <div className="lg:col-span-7 space-y-7 sm:space-y-8">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="lg:col-span-7 space-y-7 sm:space-y-8"
+          >
             {/* Small Introductory Label */}
-            <div className="inline-flex items-center gap-3">
+            <motion.div variants={itemVariants} className="inline-flex items-center gap-3">
               <span className="w-8 h-[1px] bg-bronze" />
               <span className="text-xs uppercase tracking-widest-luxury font-medium text-charcoal/70">
                 HELLO, I'M NAVEEN PRAKASH
               </span>
-            </div>
+            </motion.div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-6xl md:text-7xl font-sans font-normal text-charcoal tracking-tight leading-[1.08]">
+            <motion.h1
+              variants={itemVariants}
+              className="text-4xl sm:text-6xl md:text-7xl font-sans font-normal text-charcoal tracking-tight leading-[1.08]"
+            >
               <span className="font-serif italic font-normal text-charcoal block mb-1">
                 Creativity
               </span>{" "}
               Meets Technology.
-            </h1>
+            </motion.h1>
 
             {/* Subheading */}
-            <p className="text-base sm:text-lg text-charcoal/80 max-w-xl leading-relaxed font-normal">
+            <motion.p
+              variants={itemVariants}
+              className="text-base sm:text-lg text-charcoal/80 max-w-xl leading-relaxed font-normal"
+            >
               I create meaningful digital experiences through design, photography, marketing and artificial intelligence.
-            </p>
+            </motion.p>
 
             {/* Additional Text */}
-            <p className="text-xs sm:text-sm font-mono tracking-wider uppercase text-bronze">
+            <motion.p
+              variants={itemVariants}
+              className="text-xs sm:text-sm font-mono tracking-wider uppercase text-bronze"
+            >
               Visual Storyteller. Digital Creator. Creative Technologist.
-            </p>
+            </motion.p>
 
             {/* Buttons */}
-            <div className="pt-2 flex flex-col sm:flex-row sm:items-center gap-4">
+            <motion.div variants={itemVariants} className="pt-2 flex flex-col sm:flex-row sm:items-center gap-4">
               <a
                 href="#projects"
                 onClick={handleScrollToProjects}
@@ -64,10 +108,13 @@ export default function Hero() {
                 <FileText className="w-4 h-4 text-bronze" />
                 <span>DOWNLOAD RESUME</span>
               </button>
-            </div>
+            </motion.div>
 
             {/* Below the buttons: Location & Availability */}
-            <div className="pt-6 border-t border-[#A18B70]/20 flex flex-wrap items-center gap-6 text-xs text-charcoal/70">
+            <motion.div
+              variants={itemVariants}
+              className="pt-6 border-t border-[#A18B70]/20 flex flex-wrap items-center gap-6 text-xs text-charcoal/70"
+            >
               <div className="flex items-center gap-2">
                 <MapPin className="w-3.5 h-3.5 text-bronze" />
                 <span>Based in Salem, India</span>
@@ -76,11 +123,16 @@ export default function Hero() {
                 <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
                 <span>Available for Creative Opportunities</span>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* RIGHT SIDE: Profile Image Composition & Placeholder */}
-          <div className="lg:col-span-5 relative">
+          <motion.div
+            variants={imageVariants}
+            initial="hidden"
+            animate="visible"
+            className="lg:col-span-5 relative"
+          >
             <div className="relative mx-auto max-w-sm lg:max-w-none">
               {/* Soft Beige Backing Frame */}
               <div className="absolute -inset-3 bg-[#E8DDCB]/50 rounded-3xl -rotate-1 pointer-events-none -z-10" />
@@ -122,7 +174,7 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 

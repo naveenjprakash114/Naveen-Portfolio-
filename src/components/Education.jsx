@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { GraduationCap, BookOpen, CheckCircle2 } from "lucide-react";
 
 export default function Education() {
@@ -14,7 +15,13 @@ export default function Education() {
     <section id="education" className="py-24 sm:py-32 bg-[#F7F3EB] border-t border-[#A18B70]/20">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
-        <div className="space-y-3 mb-16 max-w-2xl">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.6 }}
+          className="space-y-3 mb-16 max-w-2xl"
+        >
           <div className="flex items-center gap-2.5">
             <span className="w-6 h-[1px] bg-bronze" />
             <span className="text-xs uppercase tracking-widest-luxury font-mono text-bronze">
@@ -27,12 +34,18 @@ export default function Education() {
           <p className="text-xs sm:text-sm text-charcoal/70 leading-relaxed">
             Formal visual communication theory paired with disciplined self-directed technical development.
           </p>
-        </div>
+        </motion.div>
 
         {/* Two-Column Editorial Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
           {/* Card 1: University Degree */}
-          <div className="bg-[#FDFBF7] border border-[#A18B70]/25 rounded-2xl p-8 flex flex-col justify-between space-y-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.5 }}
+            className="bg-[#FDFBF7] border border-[#A18B70]/25 rounded-2xl p-8 flex flex-col justify-between space-y-6"
+          >
             <div className="space-y-4">
               <div className="w-12 h-12 rounded-xl bg-[#F7F3EB] border border-[#A18B70]/30 flex items-center justify-center text-charcoal">
                 <GraduationCap className="w-6 h-6 stroke-[1.5]" />
@@ -64,10 +77,16 @@ export default function Education() {
                 <span className="font-mono text-charcoal font-semibold">2022</span>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Card 2: Self-Learned / Independent Learning */}
-          <div className="bg-[#FDFBF7] border border-[#A18B70]/25 rounded-2xl p-8 flex flex-col justify-between space-y-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+            className="bg-[#FDFBF7] border border-[#A18B70]/25 rounded-2xl p-8 flex flex-col justify-between space-y-6"
+          >
             <div className="space-y-4">
               <div className="w-12 h-12 rounded-xl bg-[#F7F3EB] border border-[#A18B70]/30 flex items-center justify-center text-charcoal">
                 <BookOpen className="w-6 h-6 stroke-[1.5]" />
@@ -102,7 +121,7 @@ export default function Education() {
                 <span>Certifications: No formal certifications currently listed.</span>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

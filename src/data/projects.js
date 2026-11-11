@@ -138,3 +138,4 @@ export const projects = [
     isFeatured: false
   }
 ];
+

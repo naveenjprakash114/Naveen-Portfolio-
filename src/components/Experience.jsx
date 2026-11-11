@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { experiences } from "../data/experience";
 import { Briefcase } from "lucide-react";
 
@@ -6,7 +7,13 @@ export default function Experience() {
     <section id="experience" className="py-24 sm:py-32 bg-[#FDFBF7] border-t border-[#A18B70]/20">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
-        <div className="space-y-3 mb-16 max-w-2xl">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.6 }}
+          className="space-y-3 mb-16 max-w-2xl"
+        >
           <div className="flex items-center gap-2.5">
             <span className="w-6 h-[1px] bg-bronze" />
             <span className="text-xs uppercase tracking-widest-luxury font-mono text-bronze">
@@ -19,14 +26,21 @@ export default function Experience() {
           <p className="text-xs sm:text-sm text-charcoal/70 leading-relaxed">
             Practical creative background spanning camera direction, corporate operations, and agency digital marketing.
           </p>
-        </div>
+        </motion.div>
 
         {/* Vertical Timeline */}
         <div className="max-w-4xl mx-auto space-y-8 sm:space-y-10 relative">
           {experiences.map((exp, index) => {
             const isLast = index === experiences.length - 1;
             return (
-              <div key={exp.id} className="relative pl-8 sm:pl-12 group">
+              <motion.div
+                key={exp.id}
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.6, delay: index * 0.12 }}
+                className="relative pl-8 sm:pl-12 group"
+              >
                 {/* Thin Vertical Spine Connector */}
                 {!isLast && (
                   <div className="absolute left-[11px] sm:left-[15px] top-6 bottom-0 w-[1px] bg-[#A18B70]/25 group-hover:bg-bronze transition-colors" />
@@ -90,7 +104,7 @@ export default function Experience() {
                     </ul>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

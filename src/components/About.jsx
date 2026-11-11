@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export default function About() {
   const infoCards = [
     {
@@ -21,7 +23,13 @@ export default function About() {
     <section id="about" className="py-24 sm:py-32 bg-[#FDFBF7] border-t border-[#A18B70]/20">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
-        <div className="space-y-3 mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.6 }}
+          className="space-y-3 mb-16"
+        >
           <div className="flex items-center gap-2.5">
             <span className="w-6 h-[1px] bg-bronze" />
             <span className="text-xs uppercase tracking-widest-luxury font-mono text-bronze">
@@ -31,12 +39,18 @@ export default function About() {
           <h2 className="text-3xl sm:text-5xl font-serif font-normal text-charcoal tracking-tight">
             A little about me.
           </h2>
-        </div>
+        </motion.div>
 
         {/* Narrative & Info Cards Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Main Narrative Column */}
-          <div className="lg:col-span-7 space-y-6 text-charcoal/85 text-base sm:text-lg leading-relaxed font-normal">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-7 space-y-6 text-charcoal/85 text-base sm:text-lg leading-relaxed font-normal"
+          >
             <p className="font-serif text-xl sm:text-2xl text-charcoal leading-snug">
               I'm Naveen Prakash J, a Visual Communication graduate with a passion for creativity, digital experiences and emerging technologies.
             </p>
@@ -66,13 +80,17 @@ export default function About() {
                 Visual Communication & Creative Tech
               </span>
             </div>
-          </div>
+          </motion.div>
 
           {/* Three Minimal Information Cards Column */}
           <div className="lg:col-span-5 space-y-5">
-            {infoCards.map((card) => (
-              <div
+            {infoCards.map((card, idx) => (
+              <motion.div
                 key={card.number}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className="p-6 sm:p-7 rounded-2xl bg-[#F7F3EB] border border-[#A18B70]/25 hover:border-bronze hover:bg-white transition-all duration-300 space-y-2 group shadow-subtle"
               >
                 <div className="flex items-center justify-between text-xs font-mono text-bronze">
@@ -85,7 +103,7 @@ export default function About() {
                 <p className="text-xs sm:text-sm text-charcoal/70 leading-relaxed font-normal">
                   {card.description}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
