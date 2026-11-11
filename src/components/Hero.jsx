@@ -55,26 +55,20 @@ export default function Hero() {
             animate="visible"
             className="lg:col-span-7 space-y-7 sm:space-y-8"
           >
-            {/* Introductory Eyebrow with Medium Typewriter Name */}
+            {/* Small Introductory Label with Typewriter Name */}
             <motion.div
               variants={itemVariants}
-              className="inline-flex flex-wrap items-center gap-x-3 gap-y-1.5 min-h-[40px]"
+              className="inline-flex items-center gap-2.5 text-xs uppercase tracking-widest-luxury font-medium"
             >
-              <div className="inline-flex items-center gap-2">
-                <span className="w-6 h-[1px] bg-bronze shrink-0" />
-                <span className="text-xs uppercase tracking-widest-luxury font-mono text-bronze font-semibold">
-                  HELLO, I'M
-                </span>
-              </div>
-              <div className="text-xl sm:text-2xl md:text-3xl font-serif text-charcoal font-medium tracking-tight">
-                <TypewriterText
-                  words={["NAVEEN PRAKASH", "NAVEEN PRAKASH J"]}
-                  typingSpeed={110}
-                  deletingSpeed={50}
-                  pauseTime={3500}
-                  className="text-charcoal"
-                />
-              </div>
+              <span className="w-8 h-[1px] bg-bronze shrink-0" />
+              <span className="text-charcoal/70">HELLO, I'M</span>
+              <TypewriterText
+                words={["NAVEEN PRAKASH", "NAVEEN PRAKASH J"]}
+                typingSpeed={110}
+                deletingSpeed={50}
+                pauseTime={3500}
+                className="text-charcoal font-semibold"
+              />
             </motion.div>
 
             {/* Main Headline */}
