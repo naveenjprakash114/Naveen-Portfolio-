@@ -71,31 +71,20 @@ export default function Hero() {
               />
             </motion.div>
 
-            {/* Main Headline */}
+            {/* Main Headline - Even & Unified Typography */}
             <motion.h1
               variants={itemVariants}
-              className="text-4xl sm:text-6xl md:text-7xl font-sans font-normal text-charcoal tracking-tight leading-[1.08]"
+              className="text-4xl sm:text-6xl md:text-7xl font-serif font-normal text-charcoal tracking-tight leading-[1.12]"
             >
-              <span className="font-serif italic font-normal text-charcoal block mb-1">
-                Creativity
-              </span>{" "}
-              Meets Technology.
+              Creativity Meets Technology.
             </motion.h1>
 
-            {/* Subheading */}
+            {/* Concise Subheading */}
             <motion.p
               variants={itemVariants}
-              className="text-base sm:text-lg text-charcoal/80 max-w-xl leading-relaxed font-normal"
+              className="text-base sm:text-lg text-charcoal/75 max-w-xl leading-relaxed font-normal"
             >
               I create meaningful digital experiences through design, photography, marketing and artificial intelligence.
-            </motion.p>
-
-            {/* Additional Text */}
-            <motion.p
-              variants={itemVariants}
-              className="text-xs sm:text-sm font-mono tracking-wider uppercase text-bronze"
-            >
-              Visual Storyteller. Digital Creator. Creative Technologist.
             </motion.p>
 
             {/* Buttons */}
