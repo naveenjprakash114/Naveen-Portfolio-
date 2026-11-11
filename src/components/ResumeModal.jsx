@@ -42,6 +42,15 @@ export default function ResumeModal({ isOpen, onClose }) {
             Curriculum Vitae / Professional Summary
           </span>
           <div className="flex items-center gap-3">
+            <a
+              href="/assets/resume/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-white border border-[#B7A58D]/30 text-charcoal text-xs font-semibold uppercase tracking-wider hover:bg-[#E9DDCB] transition-colors"
+            >
+              <ExternalLink className="w-3.5 h-3.5 text-[#B7A58D]" />
+              <span>Fullpage CV</span>
+            </a>
             <button
               onClick={handlePrint}
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#E9DDCB] text-[#24221F] text-xs font-semibold uppercase tracking-wider hover:bg-white transition-colors"
