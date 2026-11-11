@@ -2,19 +2,31 @@ import { useState, useMemo } from "react";
 import { projectCategories, projectsData } from "../data/portfolioData";
 import SectionHeading from "../components/SectionHeading";
 import ProjectCard from "../components/ProjectCard";
-import { Filter } from "lucide-react";
+import { Filter, Search, X } from "lucide-react";
 
 export default function Work() {
   const [activeCategory, setActiveCategory] = useState("ALL");
+  const [searchQuery, setSearchQuery] = useState("");
 
   const filteredProjects = useMemo(() => {
-    if (activeCategory === "ALL") {
-      return projectsData;
-    }
-    return projectsData.filter((project) =>
-      project.tags.includes(activeCategory)
-    );
-  }, [activeCategory]);
+    return projectsData.filter((project) => {
+      // Category filter check
+      const matchesCategory =
+        activeCategory === "ALL" || project.tags.includes(activeCategory);
+
+      // Search keyword check
+      const query = searchQuery.toLowerCase().trim();
+      const matchesSearch =
+        !query ||
+        project.title.toLowerCase().includes(query) ||
+        project.category.toLowerCase().includes(query) ||
+        project.description.toLowerCase().includes(query) ||
+        project.roles.some((r) => r.toLowerCase().includes(query)) ||
+        project.toolsUsed.some((t) => t.toLowerCase().includes(query));
+
+      return matchesCategory && matchesSearch;
+    });
+  }, [activeCategory, searchQuery]);
 
   return (
     <div className="pt-28 sm:pt-32 pb-24">
@@ -27,13 +39,37 @@ export default function Work() {
           className="mb-12"
         />
 
-        {/* Category Filters Bar */}
-        <div className="pb-8 mb-12 border-b border-[#B7A58D]/25">
-          <div className="flex items-center gap-2 mb-4 text-xs font-mono uppercase tracking-widest text-[#B7A58D] lg:hidden">
-            <Filter className="w-3.5 h-3.5" />
-            <span>Filter By Discipline</span>
+        {/* Filter and Search Bar */}
+        <div className="pb-8 mb-12 border-b border-[#B7A58D]/25 space-y-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            {/* Search Input */}
+            <div className="relative max-w-md w-full">
+              <Search className="w-4 h-4 text-[#B7A58D] absolute left-3.5 top-1/2 -translate-y-1/2" />
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search projects by keyword (e.g. Saree, React, Video)..."
+                className="w-full pl-10 pr-9 py-2.5 rounded-full bg-white border border-[#B7A58D]/30 text-xs text-charcoal focus:outline-none focus:border-charcoal focus:ring-1 focus:ring-charcoal transition-colors placeholder:text-muted/70"
+              />
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery("")}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-muted hover:text-charcoal"
+                  aria-label="Clear search"
+                >
+                  <X className="w-3.5 h-3.5" />
+                </button>
+              )}
+            </div>
+
+            {/* Project Count Indicator */}
+            <span className="text-xs font-mono text-[#B7A58D] tracking-wider">
+              {filteredProjects.length} of {projectsData.length} Projects
+            </span>
           </div>
 
+          {/* Category Filter Pills */}
           <div className="flex flex-wrap items-center gap-2 sm:gap-3">
             {projectCategories.map((category) => {
               const isSelected = activeCategory === category;
@@ -63,13 +99,16 @@ export default function Work() {
           </div>
         ) : (
           <div className="py-20 text-center rounded-3xl bg-[#FAF7F2] border border-[#B7A58D]/20 space-y-3">
-            <p className="font-serif text-xl text-charcoal">No projects found in this category.</p>
-            <p className="text-xs text-muted">Please select "ALL" or another discipline filter.</p>
+            <p className="font-serif text-xl text-charcoal">No projects match your filter criteria.</p>
+            <p className="text-xs text-muted">Try clearing the search query or selecting "ALL" categories.</p>
             <button
-              onClick={() => setActiveCategory("ALL")}
+              onClick={() => {
+                setActiveCategory("ALL");
+                setSearchQuery("");
+              }}
               className="mt-4 px-5 py-2 rounded-full bg-charcoal text-[#F8F5EF] text-xs uppercase tracking-wider"
             >
-              Reset Filter
+              Reset Filters
             </button>
           </div>
         )}
@@ -85,11 +124,10 @@ export default function Work() {
             </p>
           </div>
           <span className="text-xs font-mono tracking-widest text-[#B7A58D] uppercase shrink-0">
-            {filteredProjects.length} Projects Displayed
+            Ready for New Case Studies
           </span>
         </div>
       </div>
     </div>
   );
 }
-

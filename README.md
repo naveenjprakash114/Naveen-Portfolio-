@@ -114,3 +114,4 @@ To receive emails directly through EmailJS without opening the user's mail clien
    ```
 3. Fill in your `VITE_EMAILJS_SERVICE_ID`, `VITE_EMAILJS_TEMPLATE_ID`, and `VITE_EMAILJS_PUBLIC_KEY`.
 *(If left unset, the form works automatically with a direct mailto client fallback).*
+

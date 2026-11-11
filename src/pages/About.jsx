@@ -1,12 +1,15 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, GraduationCap, Sparkles, BookOpen, Heart, Compass, CheckCircle2 } from "lucide-react";
+import { ArrowUpRight, GraduationCap, Sparkles, BookOpen, FileText, CheckCircle2 } from "lucide-react";
 import { personalInfo, experienceTimeline } from "../data/portfolioData";
 import SectionHeading from "../components/SectionHeading";
 import EditorialImage from "../components/EditorialImage";
 import TimelineItem from "../components/TimelineItem";
+import ResumeModal from "../components/ResumeModal";
 
 export default function About() {
   const { about, education } = personalInfo;
+  const [resumeOpen, setResumeOpen] = useState(false);
 
   return (
     <div className="pt-28 sm:pt-32 pb-24">
@@ -34,18 +37,27 @@ export default function About() {
                 className="shadow-luxury"
               />
 
-              {/* Editorial Caption Box */}
-              <div className="p-6 rounded-2xl bg-[#FCFAF7] border border-[#B7A58D]/30 space-y-3">
-                <span className="text-[10px] uppercase tracking-widest text-[#B7A58D] font-mono block">
-                  PROFESSIONAL IDENTITY
-                </span>
-                <p className="text-sm font-serif italic text-charcoal">
-                  "Blending the eye of a photographer with digital marketing strategy and modern web development."
-                </p>
-                <div className="pt-2 text-xs text-muted flex items-center justify-between border-t border-[#B7A58D]/20">
+              {/* Editorial Caption Box & CV Trigger */}
+              <div className="p-6 rounded-2xl bg-[#FCFAF7] border border-[#B7A58D]/30 space-y-4">
+                <div>
+                  <span className="text-[10px] uppercase tracking-widest text-[#B7A58D] font-mono block">
+                    PROFESSIONAL IDENTITY
+                  </span>
+                  <p className="text-sm font-serif italic text-charcoal mt-1">
+                    "Blending the eye of a photographer with digital marketing strategy and modern web development."
+                  </p>
+                </div>
+                <div className="pt-3 text-xs text-muted flex items-center justify-between border-t border-[#B7A58D]/20">
                   <span>Graduated 2022</span>
                   <span>Salem, Tamil Nadu</span>
                 </div>
+                <button
+                  onClick={() => setResumeOpen(true)}
+                  className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-full bg-charcoal text-[#F8F5EF] text-xs font-semibold uppercase tracking-wider hover:bg-[#332F2B] transition-colors"
+                >
+                  <FileText className="w-3.5 h-3.5 text-[#E9DDCB]" />
+                  <span>View Curriculum Vitae (CV)</span>
+                </button>
               </div>
             </div>
           </div>
@@ -236,7 +248,9 @@ export default function About() {
           ))}
         </div>
       </section>
+
+      {/* Curriculum Vitae Modal */}
+      <ResumeModal isOpen={resumeOpen} onClose={() => setResumeOpen(false)} />
     </div>
   );
 }
-

@@ -1,11 +1,20 @@
+import { useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { ArrowLeft, ArrowRight, ExternalLink, Calendar, User, Tag, Layers, CheckCircle, Video, Image as ImageIcon } from "lucide-react";
+import { ArrowLeft, ArrowRight, ExternalLink, CheckCircle, Video, Image as ImageIcon, Play, Eye } from "lucide-react";
 import { projectsData } from "../data/portfolioData";
 import EditorialImage from "../components/EditorialImage";
+import ImageLightbox from "../components/ImageLightbox";
 
 export default function ProjectDetails() {
   const { id } = useParams();
   const navigate = useNavigate();
+
+  // Lightbox state
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  // Video preview modal state
+  const [selectedVideo, setSelectedVideo] = useState(null);
 
   // Find current project
   const currentIndex = projectsData.findIndex((p) => p.id === id);
@@ -40,6 +49,11 @@ export default function ProjectDetails() {
     currentIndex < projectsData.length - 1
       ? projectsData[currentIndex + 1]
       : projectsData[0];
+
+  const handleOpenLightbox = (index) => {
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+  };
 
   return (
     <div className="pt-28 sm:pt-32 pb-24">
@@ -223,27 +237,42 @@ export default function ProjectDetails() {
           </div>
         </div>
 
-        {/* Image Gallery */}
+        {/* Image Gallery with Lightbox interaction */}
         {project.gallery && project.gallery.length > 0 && (
           <section className="mb-20">
-            <div className="flex items-center gap-2 mb-8">
-              <ImageIcon className="w-4 h-4 text-[#B7A58D]" />
-              <h3 className="text-xl sm:text-2xl font-serif text-charcoal">
-                Project Visual Gallery
-              </h3>
+            <div className="flex items-center justify-between mb-8">
+              <div className="flex items-center gap-2">
+                <ImageIcon className="w-4 h-4 text-[#B7A58D]" />
+                <h3 className="text-xl sm:text-2xl font-serif text-charcoal">
+                  Project Visual Gallery
+                </h3>
+              </div>
+              <span className="text-xs font-mono text-muted">Click image to enlarge</span>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {project.gallery.map((item, idx) => (
-                <div key={idx} className="space-y-3">
-                  <EditorialImage
-                    src={item.url}
-                    alt={item.caption}
-                    aspectRatio="aspect-[4/3]"
-                    slotPath={`/public${item.url}`}
-                    className="shadow-subtle"
-                  />
-                  <p className="text-xs text-muted italic font-serif leading-snug">
+                <div
+                  key={idx}
+                  onClick={() => handleOpenLightbox(idx)}
+                  className="space-y-3 cursor-pointer group"
+                >
+                  <div className="relative overflow-hidden rounded-2xl">
+                    <EditorialImage
+                      src={item.url}
+                      alt={item.caption}
+                      aspectRatio="aspect-[4/3]"
+                      slotPath={`/public${item.url}`}
+                      className="shadow-subtle transition-transform duration-500 group-hover:scale-[1.02]"
+                    />
+                    <div className="absolute inset-0 bg-charcoal/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                      <span className="px-3.5 py-1.5 rounded-full bg-white/90 text-charcoal text-xs font-medium tracking-wider uppercase flex items-center gap-1.5 shadow-sm">
+                        <Eye className="w-3.5 h-3.5" />
+                        <span>Enlarge</span>
+                      </span>
+                    </div>
+                  </div>
+                  <p className="text-xs text-muted italic font-serif leading-snug group-hover:text-charcoal transition-colors">
                     {item.caption}
                   </p>
                 </div>
@@ -252,7 +281,7 @@ export default function ProjectDetails() {
           </section>
         )}
 
-        {/* Video Slots / Gallery (When available) */}
+        {/* Video Slots / Gallery with Interactive Preview Modal */}
         {project.videoSlots && project.videoSlots.length > 0 && (
           <section className="mb-20">
             <div className="flex items-center gap-2 mb-8">
@@ -266,13 +295,16 @@ export default function ProjectDetails() {
               {project.videoSlots.map((video, idx) => (
                 <div
                   key={idx}
-                  className="rounded-3xl bg-[#FAF7F2] border border-[#B7A58D]/30 p-8 flex flex-col justify-between space-y-6 text-center"
+                  onClick={() => setSelectedVideo(video)}
+                  className="cursor-pointer group rounded-3xl bg-[#FAF7F2] border border-[#B7A58D]/30 p-8 flex flex-col justify-between space-y-6 text-center hover:border-[#B7A58D] hover:bg-white hover:shadow-subtle transition-all duration-300"
                 >
-                  <div className="space-y-2">
-                    <div className="w-12 h-12 rounded-full bg-[#E9DDCB] text-charcoal flex items-center justify-center mx-auto border border-[#B7A58D]/40">
-                      <Video className="w-5 h-5 text-charcoal" />
+                  <div className="space-y-3">
+                    <div className="w-14 h-14 rounded-full bg-[#E9DDCB] text-charcoal flex items-center justify-center mx-auto border border-[#B7A58D]/40 group-hover:scale-105 transition-transform">
+                      <Play className="w-5 h-5 text-charcoal fill-charcoal ml-0.5" />
                     </div>
-                    <h4 className="font-serif text-lg text-charcoal">{video.title}</h4>
+                    <h4 className="font-serif text-lg text-charcoal group-hover:text-taupe-dark transition-colors">
+                      {video.title}
+                    </h4>
                     <p className="text-xs text-muted">{video.placeholderNote}</p>
                   </div>
                   <div className="pt-4 border-t border-[#B7A58D]/20 text-[11px] font-mono text-muted flex justify-between">
@@ -322,7 +354,57 @@ export default function ProjectDetails() {
           </Link>
         </div>
       </div>
+
+      {/* Lightbox Component */}
+      <ImageLightbox
+        isOpen={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+        images={project.gallery || []}
+        currentIndex={lightboxIndex}
+        onNavigate={(newIndex) => setLightboxIndex(newIndex)}
+      />
+
+      {/* Video Preview Modal */}
+      {selectedVideo && (
+        <div
+          className="fixed inset-0 z-50 bg-[#24221F]/80 backdrop-blur-md flex items-center justify-center p-6 animate-fadeIn"
+          onClick={() => setSelectedVideo(null)}
+        >
+          <div
+            className="bg-[#FAF7F2] rounded-3xl max-w-md w-full p-8 border border-[#B7A58D] shadow-2xl text-center space-y-6"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="w-16 h-16 rounded-full bg-[#E9DDCB] flex items-center justify-center mx-auto border border-[#B7A58D]/40">
+              <Video className="w-8 h-8 text-charcoal" />
+            </div>
+            <div className="space-y-2">
+              <span className="text-[10px] uppercase font-mono tracking-widest text-[#B7A58D]">
+                Motion Reel Player Slot
+              </span>
+              <h3 className="text-2xl font-serif text-charcoal">{selectedVideo.title}</h3>
+              <p className="text-xs text-muted leading-relaxed">
+                {selectedVideo.placeholderNote}
+              </p>
+            </div>
+            <div className="p-4 rounded-xl bg-white border border-[#B7A58D]/25 text-xs font-mono text-muted space-y-1">
+              <div className="flex justify-between">
+                <span>Aspect Ratio:</span>
+                <span className="text-charcoal font-medium">{selectedVideo.aspectRatio}</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Estimated Duration:</span>
+                <span className="text-charcoal font-medium">{selectedVideo.duration}</span>
+              </div>
+            </div>
+            <button
+              onClick={() => setSelectedVideo(null)}
+              className="w-full py-3 rounded-full bg-charcoal text-[#F8F5EF] text-xs uppercase tracking-wider font-semibold"
+            >
+              Close Preview
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
-
