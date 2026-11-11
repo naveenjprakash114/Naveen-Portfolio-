@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, ArrowDown, MapPin, Sparkles, FileText } from "lucide-react";
 import ResumeModal from "./ResumeModal";
+import Typewriter from "./Typewriter";
 
 export default function Hero() {
   const [resumeOpen, setResumeOpen] = useState(false);
@@ -54,12 +55,16 @@ export default function Hero() {
             animate="visible"
             className="lg:col-span-7 space-y-7 sm:space-y-8"
           >
-            {/* Small Introductory Label */}
+            {/* Small Introductory Label with Typewriter Animation */}
             <motion.div variants={itemVariants} className="inline-flex items-center gap-3">
               <span className="w-8 h-[1px] bg-bronze" />
-              <span className="text-xs uppercase tracking-widest-luxury font-medium text-charcoal/70">
-                HELLO, I'M NAVEEN PRAKASH
-              </span>
+              <Typewriter
+                prefix="HELLO, I'M"
+                words={["NAVEEN PRAKASH", "NAVEEN PRAKASH J"]}
+                typingSpeed={85}
+                deletingSpeed={45}
+                pauseDelay={3500}
+              />
             </motion.div>
 
             {/* Main Headline */}
