@@ -8,65 +8,52 @@ export default {
     extend: {
       colors: {
         cream: {
-          DEFAULT: '#F8F5EF',
-          light: '#FCFAF7',
-          surface: '#FBF9F4',
-          border: '#E8DFC9',
+          DEFAULT: '#F7F3EB',
+          light: '#FAF7F2',
+          dark: '#EFE9DE',
+        },
+        ivory: {
+          DEFAULT: '#FDFBF7',
+          soft: '#FBF8F2',
         },
         beige: {
-          DEFAULT: '#E9DDCB',
-          light: '#F3EBDD',
-          hover: '#DECDB5',
-          dark: '#CCA986',
-        },
-        taupe: {
-          DEFAULT: '#B7A58D',
-          light: '#C9BAA3',
-          dark: '#938169',
+          DEFAULT: '#E8DDCB',
+          light: '#F0E7D8',
+          hover: '#DDD0BC',
         },
         charcoal: {
-          DEFAULT: '#24221F',
-          pure: '#1A1816',
-          soft: '#332F2B',
-          muted: '#4A453F',
+          DEFAULT: '#292722',
+          pure: '#1F1D1A',
+          soft: '#383530',
+          muted: '#4A4742',
         },
-        muted: {
-          DEFAULT: '#89847D',
-          light: '#A59F97',
-          dark: '#6B6660',
+        bronze: {
+          DEFAULT: '#A18B70',
+          light: '#B5A28A',
+          dark: '#8C775D',
+        },
+        taupe: {
+          DEFAULT: '#D4C6B3',
+          light: '#E2D8C9',
+          dark: '#BFAEA7',
+          muted: '#8E8579',
         },
       },
       fontFamily: {
-        serif: ['"Playfair Display"', 'Georgia', 'serif'],
-        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
-        editorial: ['"Instrument Serif"', '"Playfair Display"', 'Georgia', 'serif'],
+        serif: ['"Playfair Display"', 'Cormorant Garamond', 'Georgia', 'serif'],
+        sans: ['Inter', 'Manrope', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        cormorant: ['"Cormorant Garamond"', 'Playfair Display', 'serif'],
       },
       letterSpacing: {
         'widest-luxury': '0.22em',
         'loose-luxury': '0.15em',
       },
       boxShadow: {
-        'subtle': '0 4px 20px -2px rgba(36, 34, 31, 0.04), 0 2px 6px -1px rgba(36, 34, 31, 0.02)',
-        'luxury': '0 20px 40px -15px rgba(36, 34, 31, 0.07)',
-        'card-hover': '0 24px 48px -12px rgba(36, 34, 31, 0.1)',
-        'inner-fine': 'inset 0 0 0 1px rgba(183, 165, 141, 0.18)',
+        'subtle': '0 4px 20px -2px rgba(41, 39, 34, 0.04), 0 2px 6px -1px rgba(41, 39, 34, 0.02)',
+        'luxury': '0 20px 40px -15px rgba(41, 39, 34, 0.08)',
+        'card-hover': '0 24px 48px -12px rgba(41, 39, 34, 0.12)',
       },
-      animation: {
-        'marquee': 'marquee 35s linear infinite',
-        'pulse-subtle': 'pulseSubtle 3s ease-in-out infinite',
-      },
-      keyframes: {
-        marquee: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-50%)' },
-        },
-        pulseSubtle: {
-          '0%, 100%': { opacity: '1' },
-          '50%': { opacity: '0.6' },
-        }
-      }
     },
   },
   plugins: [],
 };
-

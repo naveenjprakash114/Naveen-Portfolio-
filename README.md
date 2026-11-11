@@ -1,117 +1,113 @@
-# Naveen Prakash J — Personal Portfolio Website
-### Multidisciplinary Creative Professional
-**Apple-Inspired Luxury Minimalism | Beige + Cream + Warm Neutral Theme**
+# Naveen Prakash J — Single-Page Personal Portfolio Website
+### Creative Technologist | Digital Marketer | AI Creative Director
+**Apple-Inspired Luxury Minimalism | Beige + Cream + Warm Neutral System**
 
 ---
 
 ## ✦ Overview
-This is a production-quality, luxury personal portfolio website crafted for **Naveen Prakash J**, a Visual Communication graduate and multidisciplinary creative professional based in Salem, Tamil Nadu, India.
+This is a production-quality, luxury single-page personal portfolio website created for **Naveen Prakash J**.
 
-The project embodies **Apple-inspired luxury minimalism**—generous whitespace, editorial serif headings paired with clean sans typography, fine warm taupe borders, subtle shadows, and restrained micro-interactions without unnecessary gradients or generic templates.
-
----
-
-## ✦ Visual Identity & Design System
-
-| Element | Specification |
-| :--- | :--- |
-| **Warm Beige** | `#E9DDCB` |
-| **Cream (Base Background)** | `#F8F5EF` |
-| **Soft White (Cards & Modals)** | `#FFFFFF` |
-| **Taupe (Accents & Borders)** | `#B7A58D` |
-| **Charcoal (Headings & Wordmarks)** | `#24221F` |
-| **Muted Grey (Prose & Metadata)** | `#89847D` |
-| **Headings Typography** | *Playfair Display* & *Instrument Serif* |
-| **Body Typography** | *Inter* |
+The design combines **Apple-inspired luxury minimalism** with editorial typography (*Playfair Display*, *Cormorant Garamond*, *Inter*, *Manrope*), generous whitespace, fine borders, smooth section scrolling, interactive case study modals, and restrained micro-animations.
 
 ---
 
-## ✦ Pages & Navigation
+## ✦ Color Palette Implementation
 
-1. **Home (`/`)**:
-   - Split-layout editorial hero section.
-   - Left: Introduction, main headline *"Creativity meets technology. Ideas become experiences."*, supporting narrative, CTAs (`Explore My Work`, `Let's Connect`), and location badge.
-   - Right: Editorial portrait frame placeholder (`/public/images/profile.jpg`).
-   - Slim expertise marquee ticker.
-   - Selected portfolio preview, philosophy statement, and current role highlight.
-2. **About Me (`/about`)**:
-   - Headline *"Behind the pixels, ideas and innovation."*
-   - Two-column biography (B.Sc Visual Communication, photography & videography background, digital marketing, AI creative direction, and React frontend development).
-   - Education section (AVS College of Arts & Science / Periyar University, 2022) and self-directed technical competencies (no false certificates).
-   - Career progression timeline.
-3. **My Expertise (`/expertise`)**:
-   - 6 structured categories:
+| Color Name | Hex Code | Purpose |
+| :--- | :--- | :--- |
+| **Warm Beige** | `#E8DDCB` | Alternate sections, hero backing frames, tag pills |
+| **Cream** | `#F7F3EB` | Base canvas background, section alternates |
+| **Soft Ivory** | `#FDFBF7` | Clean card surfaces, modal backgrounds |
+| **Charcoal** | `#292722` | Primary typography, CTA buttons, dark accents |
+| **Muted Bronze** | `#A18B70` | Editorial subheadings, fine border lines, icons |
+| **Light Taupe** | `#D4C6B3` | Scrollbar thumb, secondary accents |
+
+---
+
+## ✦ Sections in Single-Page Architecture
+
+1. **Navigation (`Navbar.jsx`)**:
+   - Wordmark: `NAVEEN PRAKASH`
+   - Links with smooth scrolling: `Home` (`#home`), `About` (`#about`), `Expertise` (`#expertise`), `Experience` (`#experience`), `Projects` (`#projects`), `Services` (`#services`), `Contact` (`#contact`)
+   - Action Button: `LET'S TALK`
+   - Mobile responsive drawer with smooth animated toggle.
+2. **Hero Section (`Hero.jsx` / `#home`)**:
+   - Small label: `HELLO, I'M NAVEEN PRAKASH`
+   - Headline: *"Creativity Meets Technology."* (Editorial serif highlight on *Creativity*)
+   - Subheading: *"I create meaningful digital experiences through design, photography, marketing and artificial intelligence."*
+   - Badges: `Based in Salem, India` | `Available for Creative Opportunities`
+   - Actions: `EXPLORE MY WORK` (scrolls to `#projects`) & `DOWNLOAD RESUME` (opens CV / printable modal)
+   - Profile Frame: Rectangular portrait placeholder (`/public/assets/profile/portrait.jpg`) with floating label `DESIGN × TECHNOLOGY × CREATIVITY`.
+3. **About Me (`About.jsx` / `#about`)**:
+   - Section label: `01 / ABOUT`
+   - Heading: *"A little about me."*
+   - Narrative covering Visual Communication degree, photography foundation, BitByte Technologies role, and philosophy.
+   - Three minimal cards: `01 — Creative Thinking`, `02 — Technology Driven`, `03 — Continuous Learning`.
+   - Signature text: *Naveen Prakash J*.
+4. **Expertise / Skills (`Expertise.jsx` / `#expertise`)**:
+   - Section label: `02 / EXPERTISE`
+   - Heading: *"What I bring to the table."*
+   - Six structured categories without fake percentages:
      - `01 — CREATIVE PRODUCTION`
-     - `02 — DIGITAL MARKETING`
-     - `03 — AI & CREATIVE TECHNOLOGY`
-     - `04 — UI/UX & DIGITAL DESIGN`
-     - `05 — FRONTEND DEVELOPMENT`
-     - `06 — CREATIVE TOOLS`
-   - Honest, craft-based presentation without inflated skill percentage bars.
-4. **Work / Portfolio (`/work`)**:
-   - Interactive category filter: `ALL`, `BRANDING & DESIGN`, `PHOTOGRAPHY`, `VIDEOGRAPHY`, `DIGITAL MARKETING`, `WEB DEVELOPMENT`, `AI CREATIVE PROJECTS`.
-   - Feature projects: **Arulmathi Silks**, **Hashtag Clothings**, **Visual Narratives Photography**, **CineFlow Motion**, and **Intelligent Interfaces**.
-5. **Project Details (`/project/:id`)**:
-   - Deep-dive case studies with context, strategic objectives, creative direction, responsibilities, tools used, visual galleries, video reel slots, and previous/next navigation.
-6. **Experience & Services (`/experience`)**:
-   - Vertical timeline: **BitByte Technologies** (with subtle `CURRENT POSITION` badge), **Shriram Finance Ltd.**, and **DJ Photography**.
-   - Clear distinction between **Established Professional Services** (commercial agency scope) and **Exploration / Personal Project Services** (self-developed UI/UX & React frontend scope).
-7. **Contact (`/contact`)**:
-   - Headline *"Let's create something extraordinary."*
-   - Direct channels: Email, Phone, Location, Instagram, WhatsApp CTA link (`+91 7397172114`).
-   - Functional contact form with client-side validation, EmailJS integration support, and automatic mailto client fallback.
+     - `02 — GRAPHIC DESIGN`
+     - `03 — DIGITAL MARKETING`
+     - `04 — AI & EMERGING TECHNOLOGY`
+     - `05 — UI/UX & WEB DESIGN`
+     - `06 — DEVELOPMENT`
+5. **Professional Experience (`Experience.jsx` / `#experience`)**:
+   - Section label: `03 / EXPERIENCE`
+   - Heading: *"My professional journey."*
+   - Vertical timeline:
+     - **BitByte Technologies** (*Digital Marketing & Creative Technology*, Current, Start: 01 July 2026)
+     - **Shriram Finance Ltd.** (*Executive Officer*, 6 Months)
+     - **DJ Photography** (*Photographer & Videographer*, 3 Years)
+6. **Selected Projects (`Projects.jsx` / `#projects`)**:
+   - Section label: `04 / SELECTED WORK`
+   - Heading: *"Some things I've created."*
+   - Subheading: *"A collection of creative projects, visual stories and digital experiences."*
+   - Filter pills: `ALL`, `BRANDING`, `GRAPHIC DESIGN`, `PHOTOGRAPHY`, `VIDEOGRAPHY`, `DIGITAL MARKETING`, `WEB DESIGN`
+   - Projects: **Arulmathi Silks**, **Hashtag Clothings**, **Personal Creative Projects**, **AI-Powered Web Experiences**
+   - Clickable cards open **`ProjectModal.jsx`** with full case study, objectives, roles, tools, and visual galleries.
+7. **Services (`Services.jsx` / `#services`)**:
+   - Section label: `05 / SERVICES`
+   - Heading: *"What I can help you with."*
+   - 6 service offerings clearly separating established commercial services from developing technical capabilities.
+8. **Education (`Education.jsx` / `#education`)**:
+   - Section label: `06 / EDUCATION`
+   - Degree: B.Sc Visual Communication, AVS College of Arts & Science, Periyar University, 2022.
+   - Independent Study: AI Creative Direction, Prompt Engineering, React.js, UI/UX Design, Web Design.
+9. **Contact (`Contact.jsx` / `#contact`)**:
+   - Section label: `07 / LET'S CONNECT`
+   - Heading: *"Have an idea? Let's create something meaningful."*
+   - Direct channels: Email (`naveenjprakash114@gmail.com`), Phone & WhatsApp (`+91 7397172114`), Instagram (`@naveen_j_prakash`).
+   - Working contact form with validation, Formspree / EmailJS preparation, and automatic mail client fallback.
+10. **Footer (`Footer.jsx`)**:
+    - Left: `NAVEEN PRAKASH J`
+    - Center: `Creative Technologist | Digital Creative`
+    - Right: `BACK TO TOP ↑`
+    - Copyright: `© 2026 Naveen Prakash J. All Rights Reserved.`
 
 ---
 
-## ✦ How to Replace Placeholders with Your Real Photos
+## ✦ Replacing Placeholder Images
 
-All images are neatly organized in the `public/images/` directory:
-
+Drop your high-resolution images into:
 ```bash
-public/images/
-├── profile.jpg          # Your main homepage portrait (aspect ratio 4:5)
-├── about.jpg            # Your about page editorial photo (aspect ratio 4:5)
-├── projects/
-│   ├── arulmathi-silks/ # Cover and case study stills
-│   ├── hashtag-clothings/
-│   ├── photography/
-│   ├── videography/
-│   └── creative/
-└── services/            # Category thumbnails
+public/assets/profile/portrait.jpg   # Main Hero Portrait (aspect ratio 4:5)
+public/assets/projects/              # Project covers and gallery stills
 ```
 
-Simply overwrite `public/images/profile.jpg` or any project image with your high-resolution photograph. The layout automatically adapts, and if an image is ever missing, an Apple-styled placeholder frame is displayed.
-
 ---
 
-## ✦ Development & Deployment
+## ✦ Development Commands
 
-### Run Locally
 ```bash
+# Start development server on port 3000
 npm run dev
-# The website will be available at http://localhost:3000
-```
 
-### Build for Production
-```bash
+# Build optimized production bundle
 npm run build
-# Compiles minified, optimized production bundle to the dist/ folder
-```
 
-### Preview Production Build
-```bash
+# Preview build locally
 npm run preview
 ```
-
----
-
-## ✦ Email Configuration (Optional)
-To receive emails directly through EmailJS without opening the user's mail client:
-1. Create an account at [emailjs.com](https://www.emailjs.com/).
-2. Copy `.env.example` to `.env`:
-   ```bash
-   cp .env.example .env
-   ```
-3. Fill in your `VITE_EMAILJS_SERVICE_ID`, `VITE_EMAILJS_TEMPLATE_ID`, and `VITE_EMAILJS_PUBLIC_KEY`.
-*(If left unset, the form works automatically with a direct mailto client fallback).*
-

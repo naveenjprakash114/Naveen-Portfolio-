@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-cream: #F7F3EB;
+    --color-ivory: #FDFBF7;
+    --color-beige: #E8DDCB;
+    --color-charcoal: #292722;
+    --color-bronze: #A18B70;
+    --color-taupe: #D4C6B3;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-cream);
+    color: var(--color-charcoal);
+  }
+
+  body {
+    font-family: 'Inter', 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--color-cream);
+    color: var(--color-charcoal);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #E8DDCB;
+    color: #292722;
+  }
+
+  /* Apple-inspired subtle luxury scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F7F3EB;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D4C6B3;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #A18B70;
+  }
+}
+
+@layer utilities {
+  .border-luxury {
+    border-color: rgba(161, 139, 112, 0.25);
+  }
+  .border-luxury-subtle {
+    border-color: rgba(161, 139, 112, 0.15);
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
