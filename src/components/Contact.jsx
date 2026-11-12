@@ -103,7 +103,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 sm:py-32 bg-ivory border-t border-gold/20">
+    <section id="contact" className="py-12 sm:py-16 bg-ivory border-t border-gold/20">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <motion.div
@@ -111,7 +111,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.6 }}
-          className="space-y-3 mb-16 max-w-2xl"
+          className="space-y-2 mb-8 sm:mb-10 max-w-2xl"
         >
           <div className="flex items-center gap-2.5">
             <span className="w-6 h-[1px] bg-gold" />
@@ -128,7 +128,7 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Left Column: Direct Channels & Information */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -17,7 +17,7 @@ export default function Projects() {
   }, [activeFilter]);
 
   return (
-    <section id="projects" className="py-24 sm:py-32 bg-ivory border-t border-gold/20">
+    <section id="projects" className="py-12 sm:py-16 bg-ivory border-t border-gold/20">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <motion.div
@@ -25,7 +25,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.6 }}
-          className="space-y-3 mb-12 max-w-2xl"
+          className="space-y-2 mb-6 sm:mb-8 max-w-2xl"
         >
           <div className="flex items-center gap-2.5">
             <span className="w-6 h-[1px] bg-gold" />
@@ -42,7 +42,7 @@ export default function Projects() {
         </motion.div>
 
         {/* Filter Categories Bar */}
-        <div className="pb-6 mb-10 border-b border-gold/20">
+        <div className="pb-4 mb-6 sm:mb-8 border-b border-gold/20">
           <div className="flex items-center gap-2 mb-3 text-xs font-mono uppercase tracking-widest text-gold lg:hidden">
             <Filter className="w-3.5 h-3.5" />
             <span>FILTER WORK</span>

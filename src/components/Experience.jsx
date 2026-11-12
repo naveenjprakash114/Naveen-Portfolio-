@@ -4,7 +4,7 @@ import { Briefcase } from "lucide-react";
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 sm:py-32 bg-ivory border-t border-gold/20">
+    <section id="experience" className="py-12 sm:py-16 bg-ivory border-t border-gold/20">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <motion.div
@@ -12,7 +12,7 @@ export default function Experience() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.6 }}
-          className="space-y-3 mb-16 max-w-2xl"
+          className="space-y-2 mb-8 sm:mb-10 max-w-2xl"
         >
           <div className="flex items-center gap-2.5">
             <span className="w-6 h-[1px] bg-gold" />
@@ -29,7 +29,7 @@ export default function Experience() {
         </motion.div>
 
         {/* Vertical Timeline */}
-        <div className="max-w-4xl mx-auto space-y-8 sm:space-y-10 relative">
+        <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8 relative">
           {experiences.map((exp, index) => {
             const isLast = index === experiences.length - 1;
             return (

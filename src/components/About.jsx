@@ -20,7 +20,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-24 sm:py-32 bg-ivory border-t border-gold/20">
+    <section id="about" className="py-12 sm:py-16 bg-ivory border-t border-gold/20">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <motion.div
@@ -28,7 +28,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.6 }}
-          className="space-y-3 mb-16"
+          className="space-y-2 mb-8 sm:mb-10"
         >
           <div className="flex items-center gap-2.5">
             <span className="w-6 h-[1px] bg-gold" />
@@ -42,7 +42,7 @@ export default function About() {
         </motion.div>
 
         {/* Narrative & Info Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Main Narrative Column */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

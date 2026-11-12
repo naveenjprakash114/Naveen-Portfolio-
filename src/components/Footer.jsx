@@ -14,10 +14,10 @@ export default function Footer() {
   const githubUrl = "https://github.com/naveenjprakash114";
 
   return (
-    <footer className="bg-cream border-t border-gold/20 py-16 text-charcoal">
+    <footer className="bg-cream border-t border-gold/20 py-10 sm:py-12 text-charcoal">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Main Row */}
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-10 border-b border-gold/20">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-6 sm:pb-8 border-b border-gold/20">
           {/* Left: NAVEEN PRAKASH J */}
           <div>
             <h3 className="font-serif text-xl sm:text-2xl font-normal tracking-tight text-charcoal">
@@ -77,7 +77,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Row */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-charcoal/60">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-charcoal/60">
           <p className="italic font-serif">
             "Designed with creativity. Built with curiosity."
           </p>

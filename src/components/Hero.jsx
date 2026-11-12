@@ -45,7 +45,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen pt-32 pb-20 md:pt-40 md:pb-28 flex flex-col justify-between">
+    <section id="home" className="relative min-h-[90vh] pt-24 pb-10 sm:pt-28 sm:pb-12 md:pt-32 md:pb-14 flex flex-col justify-between">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full my-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* LEFT SIDE: Typography, Positioning, CTAs */}
