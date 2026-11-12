@@ -1,5 +1,5 @@
 import { ArrowUp } from "lucide-react";
-import { LinkedInIcon, InstagramIcon } from "./Icons";
+import { LinkedInIcon, InstagramIcon, GitHubIcon } from "./Icons";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -11,6 +11,7 @@ export default function Footer() {
 
   const linkedinUrl = "https://www.linkedin.com/in/naveen-prakash-j-22b563249";
   const instagramUrl = "https://www.instagram.com/naveen_j_prakash/";
+  const githubUrl = "https://github.com/naveenjprakash114";
 
   return (
     <footer className="bg-cream border-t border-gold/20 py-16 text-charcoal">
@@ -42,6 +43,15 @@ export default function Footer() {
               >
                 <LinkedInIcon className="w-3.5 h-3.5 text-gold" />
                 <span>LinkedIn</span>
+              </a>
+              <a
+                href={githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-charcoal/75 hover:text-gold uppercase tracking-wider transition-colors inline-flex items-center gap-1.5"
+              >
+                <GitHubIcon className="w-3.5 h-3.5 text-gold" />
+                <span>GitHub</span>
               </a>
               <a
                 href={instagramUrl}

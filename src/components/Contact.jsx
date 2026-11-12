@@ -294,10 +294,15 @@ export default function Contact() {
                   <span>Dribbble</span>
                   <span className="text-[10px] font-mono text-gold">Placeholder</span>
                 </div>
-                <div className="p-2.5 rounded-lg bg-cream text-charcoal/60 flex items-center justify-between col-span-2">
-                  <span>GitHub</span>
-                  <span className="text-[10px] font-mono text-gold">Placeholder</span>
-                </div>
+                <a
+                  href="https://github.com/naveenjprakash114"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2.5 rounded-lg bg-cream text-charcoal font-medium flex items-center justify-between hover:bg-beige transition-colors col-span-2"
+                >
+                  <span>GitHub (@naveenjprakash114)</span>
+                  <span className="text-[10px] font-mono text-emerald-700">Active</span>
+                </a>
               </div>
             </div>
           </motion.div>

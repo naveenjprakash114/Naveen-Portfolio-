@@ -26,6 +26,9 @@ export const personalInfo = {
   instagramUrl: "https://www.instagram.com/naveen_j_prakash/",
   linkedinHandle: "naveen-prakash-j-22b563249",
   linkedinUrl: "https://www.linkedin.com/in/naveen-prakash-j-22b563249",
+  githubHandle: "naveenjprakash114",
+  githubUrl: "https://github.com/naveenjprakash114",
+  githubRepoUrl: "https://github.com/naveenjprakash114/Naveen",
   currentCompany: "BitByte Technologies",
   currentRole: "Digital Marketing & AI Creative Professional",
   
@@ -33,9 +36,9 @@ export const personalInfo = {
   socialLinks: {
     instagram: "https://www.instagram.com/naveen_j_prakash/",
     linkedin: "https://www.linkedin.com/in/naveen-prakash-j-22b563249",
+    github: "https://github.com/naveenjprakash114",
     behance: "",  // Configurable placeholder: e.g. "https://behance.net/naveenprakash"
     dribbble: "", // Configurable placeholder: e.g. "https://dribbble.com/naveenprakash"
-    github: "",   // Configurable placeholder: e.g. "https://github.com/naveenprakash"
   },
 
   hero: {

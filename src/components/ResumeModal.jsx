@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { X, Printer, Download, MapPin, Mail, Phone, ExternalLink } from "lucide-react";
 import { personalInfo, experienceTimeline, expertiseCategories } from "../data/portfolioData";
-import { LinkedInIcon } from "./Icons";
+import { LinkedInIcon, GitHubIcon } from "./Icons";
 
 export default function ResumeModal({ isOpen, onClose }) {
   useEffect(() => {
@@ -102,6 +102,15 @@ export default function ResumeModal({ isOpen, onClose }) {
               >
                 <LinkedInIcon className="w-3.5 h-3.5 text-gold" />
                 <span>LinkedIn</span>
+              </a>
+              <a
+                href={personalInfo.githubUrl || "https://github.com/naveenjprakash114"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 hover:underline text-charcoal hover:text-gold transition-colors"
+              >
+                <GitHubIcon className="w-3.5 h-3.5 text-gold" />
+                <span>GitHub</span>
               </a>
             </div>
           </div>
