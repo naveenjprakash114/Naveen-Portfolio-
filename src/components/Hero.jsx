@@ -84,8 +84,27 @@ export default function Hero() {
               variants={itemVariants}
               className="text-base sm:text-lg text-charcoal/75 max-w-xl leading-relaxed font-normal"
             >
-              I create meaningful digital experiences through design, photography, marketing and artificial intelligence.
+              I create meaningful digital experiences combining digital marketing, design systems, modern frontend engineering and artificial intelligence.
             </motion.p>
+
+            {/* 6 Core Specializations */}
+            <motion.div variants={itemVariants} className="flex flex-wrap gap-2 pt-1 max-w-xl">
+              {[
+                "Digital Marketing",
+                "Graphic Designer",
+                "UI/UX Designer",
+                "AI Creative Technologist",
+                "Frontend Developer",
+                "Prompt Engineer",
+              ].map((role) => (
+                <span
+                  key={role}
+                  className="text-[11px] font-mono tracking-wider px-3 py-1 rounded-full bg-cream border border-gold/35 text-charcoal font-medium hover:border-gold transition-colors shadow-2xs"
+                >
+                  {role}
+                </span>
+              ))}
+            </motion.div>
 
             {/* Buttons */}
             <motion.div variants={itemVariants} className="pt-2 flex flex-col sm:flex-row sm:items-center gap-4">

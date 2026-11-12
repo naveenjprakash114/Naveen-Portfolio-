@@ -76,8 +76,8 @@ export default function ResumeModal({ isOpen, onClose }) {
             <h1 className="text-3xl sm:text-4xl font-serif font-normal text-charcoal tracking-tight">
               {personalInfo.name}
             </h1>
-            <p className="text-xs uppercase tracking-widest-luxury text-gold font-medium mt-1">
-              {personalInfo.identity}
+            <p className="text-xs uppercase tracking-widest-luxury text-gold font-semibold mt-1">
+              Digital Marketing • Graphic Designer • UI/UX Designer • AI Creative Technologist • Frontend Developer • Prompt Engineer
             </p>
 
             {/* Quick Contact Bar */}

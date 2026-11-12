@@ -77,7 +77,7 @@ export default function About() {
                 Naveen Prakash J
               </span>
               <span className="text-[11px] font-mono tracking-widest uppercase text-gold">
-                Visual Communication & Creative Tech
+                AI Creative Technologist • Frontend Developer • UI/UX
               </span>
             </div>
           </motion.div>

@@ -7,15 +7,14 @@
 export const personalInfo = {
   name: "Naveen Prakash J",
   shortName: "Naveen Prakash",
-  identity: "Multidisciplinary Creative Professional",
+  identity: "AI Creative Technologist & Multidisciplinary Professional",
   positioning: [
     "Digital Marketing",
-    "Photography",
-    "Videography",
-    "AI Creative Direction",
-    "AI-Powered Design",
-    "UI/UX Design",
-    "Frontend Development"
+    "Graphic Designer",
+    "UI/UX Designer",
+    "AI Creative Technologist",
+    "Frontend Developer",
+    "Prompt Engineer"
   ],
   location: "Salem, Tamil Nadu, India",
   email: "naveenjprakash114@gmail.com",
@@ -44,26 +43,26 @@ export const personalInfo = {
   hero: {
     smallIntro: "HELLO, I'M NAVEEN PRAKASH",
     mainHeading: "Creativity meets technology.\nIdeas become experiences.",
-    supportingText: "I'm a multidisciplinary creative professional exploring the intersection of visual storytelling, digital marketing, AI-powered design and frontend development.",
+    supportingText: "Digital Marketing • Graphic Designer • UI/UX Designer • AI Creative Technologist • Frontend Developer • Prompt Engineer",
     locationBadge: "Based in Salem, Tamil Nadu, India",
   },
 
   ticker: [
-    "PHOTOGRAPHY",
     "DIGITAL MARKETING",
-    "CREATIVE DESIGN",
-    "AI TECHNOLOGY",
-    "UI UX",
-    "FRONTEND DEVELOPMENT"
+    "GRAPHIC DESIGNER",
+    "UI/UX DESIGNER",
+    "AI CREATIVE TECHNOLOGIST",
+    "FRONTEND DEVELOPER",
+    "PROMPT ENGINEER"
   ],
 
   about: {
     headline: "Behind the pixels, ideas and innovation.",
-    lead: "I'm Naveen Prakash, a Visual Communication graduate and multidisciplinary creative professional passionate about combining creativity, technology and digital innovation.",
+    lead: "I'm Naveen Prakash, a Visual Communication graduate and multidisciplinary creative professional passionate about combining creativity, technology and artificial intelligence.",
     bioParagraphs: [
-      "My work spans digital marketing, photography, videography, graphic design, AI-powered creative direction, UI/UX design and frontend development.",
+      "My core specializations span Digital Marketing, Graphic Design, UI/UX Design, AI Creative Technology, Frontend Development, and Prompt Engineering.",
       "I enjoy transforming creative ideas into meaningful digital experiences through visual storytelling, modern design principles and emerging AI technologies.",
-      "Currently, I work with the Digital Marketing team at BitByte Technologies, where I contribute to creative production, digital content, visual communication and AI-powered frontend development.",
+      "Currently, I work with the Digital Marketing team at BitByte Technologies, where I contribute to creative campaigns, AI-assisted design, digital branding and frontend UI development.",
       "My long-term goal is to become an AI Full-Stack Developer and build innovative digital products that combine intelligent technology with exceptional user experiences."
     ],
     philosophy: "I believe great digital experiences are created when creativity, strategy and technology work together.",
@@ -76,12 +75,12 @@ export const personalInfo = {
     university: "Periyar University",
     graduationYear: "2022",
     additionalLearning: [
-      "AI Creative Direction",
-      "Prompt Engineering",
-      "AI-Assisted Frontend Development",
+      "Digital Marketing",
+      "Graphic Design",
       "UI/UX Design",
-      "React Development",
-      "Digital Creative Workflows"
+      "AI Creative Direction",
+      "Frontend Development (React.js)",
+      "Prompt Engineering"
     ]
   }
 };
@@ -89,74 +88,74 @@ export const personalInfo = {
 export const expertiseCategories = [
   {
     number: "01",
-    category: "CREATIVE PRODUCTION",
-    summary: "Visual storytelling through cameras, composition, and post-production craft.",
-    skills: [
-      "Photography",
-      "Videography",
-      "Graphic Design",
-      "Video Editing",
-      "Visual Storytelling"
-    ]
-  },
-  {
-    number: "02",
     category: "DIGITAL MARKETING",
     summary: "Strategic social positioning, narrative campaigns, and brand engagement.",
     skills: [
       "Digital Marketing",
       "Social Media Management",
-      "Content Creation",
-      "Social Media Campaigns",
-      "Digital Brand Communication"
+      "Content Strategy",
+      "Campaign Development",
+      "Audience Growth"
+    ]
+  },
+  {
+    number: "02",
+    category: "GRAPHIC DESIGNER",
+    summary: "Brand identity, typographic composition, promotional creatives, and editorial visual direction.",
+    skills: [
+      "Graphic Design",
+      "Brand Identity",
+      "Poster Design",
+      "Creative Direction",
+      "Visual Storytelling"
     ]
   },
   {
     number: "03",
-    category: "AI & CREATIVE TECHNOLOGY",
-    summary: "Augmenting creative workflows with generative intelligence and prompt craft.",
+    category: "UI/UX DESIGNER",
+    summary: "Apple-inspired minimalist interfaces, interactive wireframes, and intuitive user experiences.",
     skills: [
-      "Prompt Engineering",
-      "AI Creative Direction",
-      "AI-Assisted Content Production",
-      "AI-Powered Design Workflows"
+      "UI Design",
+      "UX Research",
+      "Wireframing & Prototyping",
+      "Web Design",
+      "Responsive Layouts"
     ]
   },
   {
     number: "04",
-    category: "UI/UX & DIGITAL DESIGN",
-    summary: "Crafting structured interfaces, wireframes, and responsive user flows.",
+    category: "AI CREATIVE TECHNOLOGIST",
+    summary: "Bridging generative artificial intelligence with digital design, visual direction, and rapid prototyping.",
     skills: [
-      "UI/UX Design",
-      "Website Design",
-      "Wireframing",
-      "Visual Design",
-      "Responsive Design"
+      "AI Creative Direction",
+      "Generative Workflows",
+      "Creative Automation",
+      "AI-Assisted Design",
+      "Multimodal Workflows"
     ]
   },
   {
     number: "05",
-    category: "FRONTEND DEVELOPMENT",
-    summary: "Translating concepts into interactive code with React and modern CSS.",
+    category: "FRONTEND DEVELOPER",
+    summary: "Translating digital concepts into responsive, component-driven web applications with React.",
     skills: [
-      "HTML",
-      "CSS",
-      "JavaScript",
+      "Frontend Development",
       "React.js",
       "Tailwind CSS",
-      "AI-Assisted Frontend Development"
+      "JavaScript (ES6+)",
+      "HTML & Modern CSS"
     ]
   },
   {
     number: "06",
-    category: "CREATIVE TOOLS",
-    summary: "Industry-standard software suites driving production efficiency.",
+    category: "PROMPT ENGINEER",
+    summary: "Advanced prompt architecture for LLMs, diffusion models, and automated multimodal creative pipelines.",
     skills: [
-      "Adobe Photoshop",
-      "Adobe Illustrator",
-      "Adobe Premiere Pro",
-      "Canva",
-      "AI Creative Tools"
+      "Prompt Engineering",
+      "LLM Creative Workflows",
+      "Image & Media Generation",
+      "Context & Parameter Tuning",
+      "Creative Pipeline Automation"
     ]
   }
 ];

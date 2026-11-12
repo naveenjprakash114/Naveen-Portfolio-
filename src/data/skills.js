@@ -1,82 +1,86 @@
 export const expertiseCategories = [
   {
-    id: "creative-production",
-    number: "01",
-    category: "CREATIVE PRODUCTION",
-    description: "Visual storytelling through camera lenses, cinematic framing, and post-production editing.",
-    icon: "Camera",
-    skills: [
-      "Photography",
-      "Videography",
-      "Video Editing",
-      "Visual Storytelling"
-    ]
-  },
-  {
-    id: "graphic-design",
-    number: "02",
-    category: "GRAPHIC DESIGN",
-    description: "Brand identity, typographic composition, promotional posters, and editorial layouts.",
-    icon: "Palette",
-    skills: [
-      "Graphic Design",
-      "Branding",
-      "Poster Design",
-      "Creative Direction"
-    ]
-  },
-  {
     id: "digital-marketing",
-    number: "03",
+    number: "01",
     category: "DIGITAL MARKETING",
-    description: "Campaign development, social channel curation, strategic content, and audience engagement.",
+    description: "Campaign development, social channel curation, performance marketing, and strategic audience engagement.",
     icon: "TrendingUp",
     skills: [
       "Digital Marketing",
       "Social Media Management",
-      "Content Creation",
-      "Campaign Development"
+      "Content Strategy",
+      "Campaign Development",
+      "Audience Growth"
     ]
   },
   {
-    id: "ai-emerging-technology",
-    number: "04",
-    category: "AI & EMERGING TECHNOLOGY",
-    description: "Generative AI ideation, prompt engineering, and modern AI-powered visual workflows.",
-    icon: "Cpu",
+    id: "graphic-designer",
+    number: "02",
+    category: "GRAPHIC DESIGNER",
+    description: "Brand identity, typographic composition, promotional creatives, and editorial visual direction.",
+    icon: "Palette",
     skills: [
-      "Prompt Engineering",
-      "AI Creative Direction",
-      "AI-Assisted Design",
-      "AI-Powered Workflows"
+      "Graphic Design",
+      "Brand Identity",
+      "Poster Design",
+      "Creative Direction",
+      "Visual Storytelling"
     ]
   },
   {
-    id: "uiux-web-design",
-    number: "05",
-    category: "UI/UX & WEB DESIGN",
-    description: "Minimalist Apple-inspired interfaces, responsive wireframes, and intuitive user experiences.",
+    id: "uiux-designer",
+    number: "03",
+    category: "UI/UX DESIGNER",
+    description: "Apple-inspired minimalist interfaces, interactive wireframes, and intuitive user experiences.",
     icon: "Layout",
     skills: [
       "UI Design",
-      "UX Design",
+      "UX Research",
+      "Wireframing & Prototyping",
       "Web Design",
-      "Responsive Design"
+      "Responsive Layouts"
     ]
   },
   {
-    id: "development",
-    number: "06",
-    category: "DEVELOPMENT",
-    description: "Translating digital concepts into responsive, component-driven web applications.",
+    id: "ai-creative-technologist",
+    number: "04",
+    category: "AI CREATIVE TECHNOLOGIST",
+    description: "Bridging generative artificial intelligence with digital design, visual direction, and rapid prototyping.",
+    icon: "Cpu",
+    skills: [
+      "AI Creative Direction",
+      "Generative Workflows",
+      "Creative Automation",
+      "AI-Assisted Design",
+      "Multimodal Workflows"
+    ]
+  },
+  {
+    id: "frontend-developer",
+    number: "05",
+    category: "FRONTEND DEVELOPER",
+    description: "Translating digital concepts into responsive, component-driven web applications with React.",
     icon: "Code2",
     skills: [
       "Frontend Development",
       "React.js",
-      "HTML",
-      "CSS",
-      "JavaScript"
+      "Tailwind CSS",
+      "JavaScript (ES6+)",
+      "HTML & Modern CSS"
+    ]
+  },
+  {
+    id: "prompt-engineer",
+    number: "06",
+    category: "PROMPT ENGINEER",
+    description: "Advanced prompt architecture for LLMs, diffusion models, and automated multimodal creative pipelines.",
+    icon: "Sparkles",
+    skills: [
+      "Prompt Engineering",
+      "LLM Creative Workflows",
+      "Image & Media Generation",
+      "Context & Parameter Tuning",
+      "Creative Pipeline Automation"
     ]
   }
 ];
-

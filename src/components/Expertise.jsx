@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
-import { Camera, Palette, TrendingUp, Cpu, Layout, Code2 } from "lucide-react";
+import { TrendingUp, Palette, Layout, Cpu, Code2, Sparkles } from "lucide-react";
 import { expertiseCategories } from "../data/skills";
 
 export default function Expertise() {
   const iconMap = {
-    Camera: Camera,
-    Palette: Palette,
     TrendingUp: TrendingUp,
-    Cpu: Cpu,
+    Palette: Palette,
     Layout: Layout,
+    Cpu: Cpu,
     Code2: Code2,
+    Sparkles: Sparkles,
   };
 
   return (
@@ -33,7 +33,7 @@ export default function Expertise() {
             What I bring to the table.
           </h2>
           <p className="text-xs sm:text-sm text-charcoal/70 leading-relaxed">
-            A multidisciplinary foundation spanning camera composition, digital branding, generative AI workflows, and modern web development.
+            Specialized across Digital Marketing, Graphic Design, UI/UX Design, AI Creative Technology, Frontend Development, and Prompt Engineering.
           </p>
         </motion.div>
 

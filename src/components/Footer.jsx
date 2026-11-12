@@ -24,14 +24,14 @@ export default function Footer() {
               NAVEEN PRAKASH J
             </h3>
             <p className="text-[11px] font-mono tracking-widest uppercase text-gold mt-0.5">
-              Multidisciplinary Creative Professional
+              AI Creative Technologist & Multidisciplinary Professional
             </p>
           </div>
 
           {/* Center: Creative Technologist & Social Links */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 text-xs font-mono">
             <span className="text-charcoal/70 uppercase tracking-wider">
-              Creative Technologist
+              AI Creative Technologist | Frontend Developer
             </span>
             <span className="hidden sm:inline text-gold/40">•</span>
             <div className="flex items-center gap-4">

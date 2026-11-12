@@ -74,7 +74,7 @@ export default function Navbar() {
                 NAVEEN PRAKASH
               </span>
               <span className="text-[10px] tracking-widest uppercase text-gold font-medium mt-0.5">
-                Creative Technologist
+                AI Creative Technologist
               </span>
             </div>
           </a>
