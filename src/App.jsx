@@ -12,7 +12,7 @@ import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-cream text-charcoal font-sans selection:bg-[#EBD6A7] selection:text-charcoal relative">
+    <div className="min-h-screen bg-ivory text-charcoal font-sans selection:bg-[#F5E8CE] selection:text-charcoal relative">
       <Navbar />
 
       <main>

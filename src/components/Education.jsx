@@ -44,10 +44,10 @@ export default function Education() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5 }}
-            className="bg-ivory border border-gold/25 rounded-2xl p-8 flex flex-col justify-between space-y-6"
+            className="bg-white border border-gold/25 rounded-2xl p-8 flex flex-col justify-between space-y-6 shadow-subtle"
           >
             <div className="space-y-4">
-              <div className="w-12 h-12 rounded-xl bg-cream border border-gold/30 flex items-center justify-center text-charcoal">
+              <div className="w-12 h-12 rounded-xl bg-ivory border border-gold/30 flex items-center justify-center text-charcoal">
                 <GraduationCap className="w-6 h-6 stroke-[1.5]" />
               </div>
               <div>
@@ -85,10 +85,10 @@ export default function Education() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="bg-ivory border border-gold/25 rounded-2xl p-8 flex flex-col justify-between space-y-6"
+            className="bg-white border border-gold/25 rounded-2xl p-8 flex flex-col justify-between space-y-6 shadow-subtle"
           >
             <div className="space-y-4">
-              <div className="w-12 h-12 rounded-xl bg-cream border border-gold/30 flex items-center justify-center text-charcoal">
+              <div className="w-12 h-12 rounded-xl bg-ivory border border-gold/30 flex items-center justify-center text-charcoal">
                 <BookOpen className="w-6 h-6 stroke-[1.5]" />
               </div>
               <div>
@@ -109,7 +109,7 @@ export default function Education() {
                 {selfLearnedSkills.map((skill, idx) => (
                   <span
                     key={idx}
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-cream text-charcoal border border-gold/25"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-ivory text-charcoal border border-gold/25"
                   >
                     <CheckCircle2 className="w-3.5 h-3.5 text-gold" />
                     <span>{skill}</span>

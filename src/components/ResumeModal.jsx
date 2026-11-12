@@ -47,21 +47,21 @@ export default function ResumeModal({ isOpen, onClose }) {
               href="/assets/resume/index.html"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-white border border-gold/30 text-charcoal text-xs font-semibold uppercase tracking-wider hover:bg-beige transition-colors"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-white border border-gold/30 text-charcoal text-xs font-semibold uppercase tracking-wider hover:bg-ivory-warm transition-colors"
             >
               <ExternalLink className="w-3.5 h-3.5 text-gold" />
               <span>Fullpage CV</span>
             </a>
             <button
               onClick={handlePrint}
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-beige text-charcoal text-xs font-semibold uppercase tracking-wider hover:bg-white transition-colors border border-gold/30"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-ivory-warm text-charcoal text-xs font-semibold uppercase tracking-wider hover:bg-white transition-colors border border-gold/30"
             >
               <Printer className="w-3.5 h-3.5" />
               <span>Print / Save PDF</span>
             </button>
             <button
               onClick={onClose}
-              className="w-9 h-9 rounded-full bg-white border border-gold/40 flex items-center justify-center text-charcoal hover:bg-beige transition-colors"
+              className="w-9 h-9 rounded-full bg-white border border-gold/40 flex items-center justify-center text-charcoal hover:bg-ivory-warm transition-colors"
               aria-label="Close CV Modal"
             >
               <X className="w-4 h-4" />
@@ -176,7 +176,7 @@ export default function ResumeModal({ isOpen, onClose }) {
                 {personalInfo.education.additionalLearning.map((item, idx) => (
                   <span
                     key={idx}
-                    className="text-[11px] px-2.5 py-1 rounded-md bg-cream text-charcoal border border-gold/25"
+                    className="text-[11px] px-2.5 py-1 rounded-md bg-ivory text-charcoal border border-gold/25"
                   >
                     {item}
                   </span>

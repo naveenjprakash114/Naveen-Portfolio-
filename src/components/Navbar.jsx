@@ -55,7 +55,7 @@ export default function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-cream/90 backdrop-blur-md border-b border-gold/20 shadow-subtle py-4"
+            ? "bg-ivory/90 backdrop-blur-md border-b border-gold/20 shadow-subtle py-4"
             : "bg-transparent py-6"
         }`}
       >
@@ -66,7 +66,7 @@ export default function Navbar() {
             onClick={(e) => handleNavClick(e, "#home")}
             className="group flex items-center gap-3 focus:outline-none"
           >
-            <div className="w-8 h-8 rounded-lg bg-charcoal flex items-center justify-center text-beige font-serif font-semibold text-xs tracking-wider border border-gold/30 transition-transform duration-300 group-hover:scale-105">
+            <div className="w-8 h-8 rounded-lg bg-charcoal flex items-center justify-center text-ivory font-serif font-semibold text-xs tracking-wider border border-gold/30 transition-transform duration-300 group-hover:scale-105">
               NP
             </div>
             <div className="flex flex-col">
@@ -108,7 +108,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={(e) => handleNavClick(e, "#contact")}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-charcoal text-cream text-xs font-semibold uppercase tracking-wider border border-charcoal hover:bg-charcoal-soft transition-all duration-300 shadow-sm group"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-charcoal text-ivory text-xs font-semibold uppercase tracking-wider border border-charcoal hover:bg-charcoal-soft transition-all duration-300 shadow-sm group"
             >
               <span>LET'S TALK</span>
               <ArrowUpRight className="w-3.5 h-3.5 text-champagne transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -120,13 +120,13 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={(e) => handleNavClick(e, "#contact")}
-              className="sm:hidden px-3.5 py-1.5 rounded-full bg-charcoal text-cream text-[11px] font-semibold uppercase tracking-wider"
+              className="sm:hidden px-3.5 py-1.5 rounded-full bg-charcoal text-ivory text-[11px] font-semibold uppercase tracking-wider"
             >
               TALK
             </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-charcoal hover:bg-beige/40 focus:outline-none transition-colors"
+              className="p-2 rounded-lg text-charcoal hover:bg-ivory-warm focus:outline-none transition-colors"
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -137,7 +137,7 @@ export default function Navbar() {
 
       {/* Mobile Navigation Drawer */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-cream/98 backdrop-blur-xl lg:hidden flex flex-col justify-between pt-24 pb-8 px-8 animate-fadeIn">
+        <div className="fixed inset-0 z-40 bg-ivory/98 backdrop-blur-xl lg:hidden flex flex-col justify-between pt-24 pb-8 px-8 animate-fadeIn">
           <div className="space-y-4">
             <span className="text-[11px] uppercase tracking-widest text-gold font-mono block pb-2 border-b border-gold/20">
               NAVIGATION

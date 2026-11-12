@@ -91,7 +91,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="p-6 sm:p-7 rounded-2xl bg-cream border border-gold/25 hover:border-gold hover:bg-white/80 transition-all duration-300 space-y-2 group shadow-subtle"
+                className="p-6 sm:p-7 rounded-2xl bg-white/90 border border-gold/25 hover:border-gold hover:bg-white hover:shadow-card-hover transition-all duration-300 space-y-2 group"
               >
                 <div className="flex items-center justify-between text-xs font-mono text-gold">
                   <span>{card.number}</span>

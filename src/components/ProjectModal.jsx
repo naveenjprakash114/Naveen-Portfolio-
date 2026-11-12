@@ -43,7 +43,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
           </div>
           <button
             onClick={onClose}
-            className="w-10 h-10 rounded-full bg-white border border-gold/30 flex items-center justify-center text-charcoal hover:bg-beige transition-colors shrink-0"
+            className="w-10 h-10 rounded-full bg-white border border-gold/30 flex items-center justify-center text-charcoal hover:bg-ivory-warm transition-colors shrink-0"
             aria-label="Close project modal"
           >
             <X className="w-5 h-5" />
@@ -51,7 +51,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
         </div>
 
         {/* Hero Image Frame */}
-        <div className="relative overflow-hidden rounded-2xl bg-beige aspect-[16/9] mb-8 border border-gold/20">
+        <div className="relative overflow-hidden rounded-2xl bg-ivory aspect-[16/9] mb-8 border border-gold/20">
           <img
             src={project.thumbnail}
             alt={project.name}
@@ -110,7 +110,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                 {project.tools.map((tool, i) => (
                   <span
                     key={i}
-                    className="text-xs px-3 py-1 rounded-full bg-cream border border-gold/25 text-charcoal font-medium"
+                    className="text-xs px-3 py-1 rounded-full bg-ivory border border-gold/25 text-charcoal font-medium"
                   >
                     {tool}
                   </span>
@@ -128,7 +128,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {project.gallery.map((item, idx) => (
                   <div key={idx} className="space-y-2">
-                    <div className="rounded-xl overflow-hidden aspect-[4/3] bg-beige border border-gold/20">
+                    <div className="rounded-xl overflow-hidden aspect-[4/3] bg-ivory border border-gold/20">
                       <img
                         src={item.url}
                         alt={item.caption}
@@ -149,7 +149,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
         <div className="pt-8 mt-8 border-t border-gold/20 flex justify-end">
           <button
             onClick={onClose}
-            className="px-6 py-2.5 rounded-full bg-charcoal text-cream text-xs font-semibold uppercase tracking-wider"
+            className="px-6 py-2.5 rounded-full bg-charcoal text-ivory text-xs font-semibold uppercase tracking-wider"
           >
             CLOSE CASE STUDY
           </button>

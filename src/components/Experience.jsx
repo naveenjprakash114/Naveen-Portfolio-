@@ -50,7 +50,7 @@ export default function Experience() {
                 <div
                   className={`absolute left-0 sm:left-1 top-1.5 w-6 h-6 rounded-full flex items-center justify-center border transition-all duration-300 ${
                     exp.isCurrent
-                      ? "bg-charcoal text-cream border-charcoal ring-4 ring-gold/30"
+                      ? "bg-charcoal text-ivory border-charcoal ring-4 ring-gold/30"
                       : "bg-ivory text-gold border-gold/40 group-hover:border-gold"
                   }`}
                 >
@@ -62,7 +62,7 @@ export default function Experience() {
                 </div>
 
                 {/* Timeline Card */}
-                <div className="bg-cream border border-gold/25 rounded-2xl p-6 sm:p-8 hover:border-gold hover:bg-white hover:shadow-subtle transition-all duration-300">
+                <div className="bg-white border border-gold/25 rounded-2xl p-6 sm:p-8 hover:border-gold hover:shadow-subtle transition-all duration-300">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 mb-5 border-b border-gold/15">
                     <div>
                       <div className="flex flex-wrap items-center gap-3">
@@ -70,7 +70,7 @@ export default function Experience() {
                           {exp.role}
                         </h3>
                         {exp.isCurrent && (
-                          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-mono tracking-widest uppercase bg-charcoal text-cream border border-gold/40 font-semibold">
+                          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-mono tracking-widest uppercase bg-charcoal text-ivory border border-gold/40 font-semibold">
                             CURRENT
                           </span>
                         )}
@@ -81,7 +81,7 @@ export default function Experience() {
                       </p>
                     </div>
 
-                    <div className="text-xs font-mono tracking-wider text-charcoal/70 bg-white/70 px-3 py-1.5 rounded-lg border border-gold/20 self-start sm:self-auto">
+                    <div className="text-xs font-mono tracking-wider text-charcoal/70 bg-ivory px-3 py-1.5 rounded-lg border border-gold/20 self-start sm:self-auto">
                       {exp.duration}
                     </div>
                   </div>

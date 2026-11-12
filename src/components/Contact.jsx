@@ -137,16 +137,16 @@ export default function Contact() {
             transition={{ duration: 0.5 }}
             className="lg:col-span-5 space-y-6"
           >
-            <div className="bg-cream border border-gold/25 rounded-2xl p-7 sm:p-8 space-y-6">
+            <div className="bg-white border border-gold/25 rounded-2xl p-7 sm:p-8 space-y-6 shadow-subtle">
               <span className="text-xs font-mono uppercase tracking-widest text-gold block">
                 DIRECT CONTACT CHANNELS
               </span>
 
               <div className="space-y-4">
                 {/* Email */}
-                <div className="p-4 rounded-xl bg-white border border-gold/20 flex items-center justify-between gap-3">
+                <div className="p-4 rounded-xl bg-ivory border border-gold/20 flex items-center justify-between gap-3">
                   <div className="flex items-center gap-3 overflow-hidden">
-                    <div className="w-9 h-9 rounded-full bg-cream border border-gold/30 flex items-center justify-center text-gold shrink-0">
+                    <div className="w-9 h-9 rounded-full bg-white border border-gold/30 flex items-center justify-center text-gold shrink-0">
                       <Mail className="w-4 h-4" />
                     </div>
                     <div className="min-w-0">
@@ -171,9 +171,9 @@ export default function Contact() {
                 </div>
 
                 {/* Phone & WhatsApp */}
-                <div className="p-4 rounded-xl bg-white border border-gold/20 flex items-center justify-between gap-3">
+                <div className="p-4 rounded-xl bg-ivory border border-gold/20 flex items-center justify-between gap-3">
                   <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-full bg-cream border border-gold/30 flex items-center justify-center text-gold shrink-0">
+                    <div className="w-9 h-9 rounded-full bg-white border border-gold/30 flex items-center justify-center text-gold shrink-0">
                       <Phone className="w-4 h-4" />
                     </div>
                     <div>
@@ -200,8 +200,8 @@ export default function Contact() {
                 </div>
 
                 {/* Location */}
-                <div className="p-4 rounded-xl bg-white border border-gold/20 flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full bg-cream border border-gold/30 flex items-center justify-center text-gold shrink-0">
+                <div className="p-4 rounded-xl bg-ivory border border-gold/20 flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-full bg-white border border-gold/30 flex items-center justify-center text-gold shrink-0">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
@@ -219,10 +219,10 @@ export default function Contact() {
                   href={instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 rounded-xl bg-white border border-gold/20 flex items-center justify-between group hover:border-gold transition-colors"
+                  className="p-4 rounded-xl bg-ivory border border-gold/20 flex items-center justify-between group hover:border-gold transition-colors"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-full bg-cream border border-gold/30 flex items-center justify-center text-gold shrink-0 group-hover:bg-beige transition-colors">
+                    <div className="w-9 h-9 rounded-full bg-white border border-gold/30 flex items-center justify-center text-gold shrink-0 group-hover:bg-ivory-warm transition-colors">
                       <InstagramIcon className="w-4 h-4" />
                     </div>
                     <div>
@@ -242,10 +242,10 @@ export default function Contact() {
                   href={linkedinUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 rounded-xl bg-white border border-gold/20 flex items-center justify-between group hover:border-gold transition-colors"
+                  className="p-4 rounded-xl bg-ivory border border-gold/20 flex items-center justify-between group hover:border-gold transition-colors"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-full bg-cream border border-gold/30 flex items-center justify-center text-gold shrink-0 group-hover:bg-beige transition-colors">
+                    <div className="w-9 h-9 rounded-full bg-white border border-gold/30 flex items-center justify-center text-gold shrink-0 group-hover:bg-ivory-warm transition-colors">
                       <LinkedInIcon className="w-4 h-4" />
                     </div>
                     <div>
@@ -263,7 +263,7 @@ export default function Contact() {
             </div>
 
             {/* Social Link Placeholders */}
-            <div className="p-6 rounded-2xl bg-white border border-gold/25 space-y-3">
+            <div className="p-6 rounded-2xl bg-white border border-gold/25 space-y-3 shadow-subtle">
               <span className="text-[10px] font-mono uppercase tracking-widest text-gold block">
                 SOCIAL PROFILES (CONFIGURABLE)
               </span>
@@ -272,7 +272,7 @@ export default function Contact() {
                   href={instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2.5 rounded-lg bg-cream text-charcoal font-medium flex items-center justify-between hover:bg-beige transition-colors"
+                  className="p-2.5 rounded-lg bg-ivory text-charcoal font-medium flex items-center justify-between hover:bg-ivory-warm transition-colors"
                 >
                   <span>Instagram</span>
                   <span className="text-[10px] font-mono text-emerald-700">Active</span>
@@ -281,16 +281,16 @@ export default function Contact() {
                   href={linkedinUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2.5 rounded-lg bg-cream text-charcoal font-medium flex items-center justify-between hover:bg-beige transition-colors"
+                  className="p-2.5 rounded-lg bg-ivory text-charcoal font-medium flex items-center justify-between hover:bg-ivory-warm transition-colors"
                 >
                   <span>LinkedIn</span>
                   <span className="text-[10px] font-mono text-emerald-700">Active</span>
                 </a>
-                <div className="p-2.5 rounded-lg bg-cream text-charcoal/60 flex items-center justify-between">
+                <div className="p-2.5 rounded-lg bg-ivory text-charcoal/60 flex items-center justify-between">
                   <span>Behance</span>
                   <span className="text-[10px] font-mono text-gold">Placeholder</span>
                 </div>
-                <div className="p-2.5 rounded-lg bg-cream text-charcoal/60 flex items-center justify-between">
+                <div className="p-2.5 rounded-lg bg-ivory text-charcoal/60 flex items-center justify-between">
                   <span>Dribbble</span>
                   <span className="text-[10px] font-mono text-gold">Placeholder</span>
                 </div>
@@ -298,7 +298,7 @@ export default function Contact() {
                   href="https://github.com/naveenjprakash114"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2.5 rounded-lg bg-cream text-charcoal font-medium flex items-center justify-between hover:bg-beige transition-colors col-span-2"
+                  className="p-2.5 rounded-lg bg-ivory text-charcoal font-medium flex items-center justify-between hover:bg-ivory-warm transition-colors col-span-2"
                 >
                   <span>GitHub (@naveenjprakash114)</span>
                   <span className="text-[10px] font-mono text-emerald-700">Active</span>
@@ -313,7 +313,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="lg:col-span-7 bg-cream border border-gold/25 rounded-2xl p-7 sm:p-10 shadow-subtle"
+            className="lg:col-span-7 bg-white border border-gold/25 rounded-2xl p-7 sm:p-10 shadow-subtle"
           >
             <h3 className="text-xl sm:text-2xl font-serif text-charcoal mb-6">
               Send a Direct Message

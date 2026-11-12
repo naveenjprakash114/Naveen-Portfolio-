@@ -48,14 +48,14 @@ export default function Expertise() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
-                className="bg-ivory border border-gold/25 rounded-2xl p-7 sm:p-8 hover:border-gold hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group"
+                className="bg-white border border-gold/25 rounded-2xl p-7 sm:p-8 hover:border-gold hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between pb-6 mb-6 border-b border-gold/15">
                     <span className="text-xs font-mono tracking-widest text-gold">
                       CATEGORY {item.number}
                     </span>
-                    <div className="w-8 h-8 rounded-lg bg-cream border border-gold/25 flex items-center justify-center text-charcoal group-hover:bg-beige transition-colors">
+                    <div className="w-8 h-8 rounded-lg bg-ivory border border-gold/25 flex items-center justify-center text-charcoal group-hover:bg-ivory-warm transition-colors">
                       <IconComponent className="w-4 h-4 stroke-[1.75]" />
                     </div>
                   </div>
@@ -74,7 +74,7 @@ export default function Expertise() {
                     {item.skills.map((skill, idx) => (
                       <li
                         key={idx}
-                        className="text-xs px-3 py-1.5 rounded-full bg-cream text-charcoal border border-gold/25 font-medium tracking-tight group-hover:border-gold/40 transition-colors"
+                        className="text-xs px-3 py-1.5 rounded-full bg-ivory text-charcoal border border-gold/25 font-medium tracking-tight group-hover:border-gold/40 transition-colors"
                       >
                         {skill}
                       </li>

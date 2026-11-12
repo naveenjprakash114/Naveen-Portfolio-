@@ -17,7 +17,7 @@ export default function Projects() {
   }, [activeFilter]);
 
   return (
-    <section id="projects" className="py-24 sm:py-32 bg-cream border-t border-gold/20">
+    <section id="projects" className="py-24 sm:py-32 bg-ivory border-t border-gold/20">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <motion.div
@@ -56,8 +56,8 @@ export default function Projects() {
                   onClick={() => setActiveFilter(category)}
                   className={`text-xs uppercase tracking-wider px-4 py-2 rounded-full font-medium transition-all duration-300 ${
                     isSelected
-                      ? "bg-charcoal text-cream shadow-xs"
-                      : "bg-ivory text-charcoal/70 border border-gold/25 hover:border-gold hover:text-charcoal"
+                      ? "bg-charcoal text-ivory shadow-xs"
+                      : "bg-white text-charcoal/70 border border-gold/25 hover:border-gold hover:text-charcoal"
                   }`}
                 >
                   {category}

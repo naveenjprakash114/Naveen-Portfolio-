@@ -8,12 +8,12 @@ export default function ProjectCard({ project, index, onSelect }) {
   return (
     <article
       onClick={() => onSelect(project)}
-      className={`group relative flex flex-col bg-ivory border border-gold/25 rounded-2xl overflow-hidden hover:border-gold hover:shadow-card-hover transition-all duration-300 cursor-pointer ${
+      className={`group relative flex flex-col bg-white border border-gold/25 rounded-2xl overflow-hidden hover:border-gold hover:shadow-card-hover transition-all duration-300 cursor-pointer ${
         project.isFeatured ? "md:col-span-2" : ""
       }`}
     >
       {/* Large Rectangular Project Image */}
-      <div className="relative overflow-hidden bg-beige aspect-[16/10] sm:aspect-[16/9] w-full">
+      <div className="relative overflow-hidden bg-ivory aspect-[16/10] sm:aspect-[16/9] w-full">
         {!imageError ? (
           <img
             src={project.thumbnail}
@@ -29,7 +29,7 @@ export default function ProjectCard({ project, index, onSelect }) {
 
         {/* Fallback Placeholder Frame */}
         {(!imageLoaded || imageError) && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-ivory via-beige/50 to-cream">
+          <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-white via-ivory to-ivory-warm">
             <p className="font-serif italic text-charcoal text-sm">{project.name}</p>
             <span className="text-[10px] font-mono text-charcoal/60 mt-1 uppercase tracking-wider">
               {project.thumbnail}
@@ -38,7 +38,7 @@ export default function ProjectCard({ project, index, onSelect }) {
         )}
 
         {/* Category Pill Tag */}
-        <div className="absolute top-4 left-4 bg-charcoal/85 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-mono tracking-widest uppercase text-cream border border-gold/30 pointer-events-none">
+        <div className="absolute top-4 left-4 bg-charcoal/85 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-mono tracking-widest uppercase text-ivory border border-gold/30 pointer-events-none">
           {project.category.split("/")[0].trim()}
         </div>
 

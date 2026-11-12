@@ -48,14 +48,14 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
-                className="bg-cream border border-gold/25 rounded-2xl p-7 sm:p-8 hover:border-gold hover:bg-white hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group"
+                className="bg-white border border-gold/25 rounded-2xl p-7 sm:p-8 hover:border-gold hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between pb-6 mb-6 border-b border-gold/15">
                     <span className="text-xs font-mono tracking-widest text-gold">
                       SERVICE {service.number}
                     </span>
-                    <div className="w-8 h-8 rounded-lg bg-white border border-gold/25 flex items-center justify-center text-charcoal group-hover:bg-beige transition-colors">
+                    <div className="w-8 h-8 rounded-lg bg-ivory border border-gold/25 flex items-center justify-center text-charcoal group-hover:bg-ivory-warm transition-colors">
                       <IconComponent className="w-4 h-4 stroke-[1.75]" />
                     </div>
                   </div>
@@ -66,7 +66,7 @@ export default function Services() {
                     </h3>
 
                     {service.isDevelopingCapability && (
-                      <span className="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-mono tracking-wider bg-beige text-charcoal border border-gold/40 font-medium">
+                      <span className="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-mono tracking-wider bg-ivory text-charcoal border border-gold/40 font-medium">
                         {service.badge}
                       </span>
                     )}
@@ -101,7 +101,7 @@ export default function Services() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-14 p-6 rounded-2xl bg-beige/40 border border-gold/30 max-w-3xl"
+          className="mt-14 p-6 rounded-2xl bg-ivory-warm/60 border border-gold/30 max-w-3xl"
         >
           <p className="text-xs text-charcoal/75 leading-relaxed font-normal">
             <span className="font-semibold text-charcoal uppercase tracking-wider font-mono mr-1.5">

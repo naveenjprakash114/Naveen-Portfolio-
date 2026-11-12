@@ -99,7 +99,7 @@ export default function Hero() {
               ].map((role) => (
                 <span
                   key={role}
-                  className="text-[11px] font-mono tracking-wider px-3 py-1 rounded-full bg-cream border border-gold/35 text-charcoal font-medium hover:border-gold transition-colors shadow-2xs"
+                  className="text-[11px] font-mono tracking-wider px-3 py-1 rounded-full bg-ivory border border-gold/35 text-charcoal font-medium hover:border-gold transition-colors shadow-2xs"
                 >
                   {role}
                 </span>
@@ -111,7 +111,7 @@ export default function Hero() {
               <a
                 href="#projects"
                 onClick={handleScrollToProjects}
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-charcoal text-cream text-xs font-semibold uppercase tracking-wider hover:bg-charcoal-soft active:scale-[0.99] transition-all duration-300 shadow-sm group"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-charcoal text-ivory text-xs font-semibold uppercase tracking-wider hover:bg-charcoal-soft active:scale-[0.99] transition-all duration-300 shadow-sm group"
               >
                 <span>EXPLORE MY WORK</span>
                 <ArrowUpRight className="w-4 h-4 text-champagne transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -120,7 +120,7 @@ export default function Hero() {
               <button
                 type="button"
                 onClick={() => setResumeOpen(true)}
-                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-transparent text-charcoal border border-gold/40 text-xs font-semibold uppercase tracking-wider hover:bg-beige/40 hover:border-charcoal transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-transparent text-charcoal border border-gold/40 text-xs font-semibold uppercase tracking-wider hover:bg-ivory-warm hover:border-charcoal transition-all duration-300"
               >
                 <FileText className="w-4 h-4 text-gold" />
                 <span>DOWNLOAD RESUME</span>
@@ -151,12 +151,12 @@ export default function Hero() {
             className="lg:col-span-5 relative"
           >
             <div className="relative mx-auto max-w-sm lg:max-w-none">
-              {/* Soft Beige Backing Frame */}
-              <div className="absolute -inset-3 bg-beige/60 rounded-3xl -rotate-1 pointer-events-none -z-10" />
-              <div className="absolute -inset-1.5 bg-ivory rounded-3xl rotate-1 pointer-events-none -z-10 border border-gold/25" />
+              {/* Soft Ivory Backing Frame */}
+              <div className="absolute -inset-3 bg-ivory-warm/80 rounded-3xl -rotate-1 pointer-events-none -z-10 border border-gold/20" />
+              <div className="absolute -inset-1.5 bg-white rounded-3xl rotate-1 pointer-events-none -z-10 border border-gold/25" />
 
               {/* Editorial Rectangular Portrait Frame */}
-              <div className="relative overflow-hidden rounded-2xl bg-beige border border-gold/30 aspect-[4/5] shadow-luxury group">
+              <div className="relative overflow-hidden rounded-2xl bg-ivory border border-gold/30 aspect-[4/5] shadow-luxury group">
                 {!imageError ? (
                   <img
                     src="/assets/profile/portrait.jpg"
@@ -171,7 +171,7 @@ export default function Hero() {
 
                 {/* Elegant Placeholder Fallback */}
                 {(!imageLoaded || imageError) && (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-ivory via-beige/60 to-cream">
+                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-white via-ivory to-ivory-warm">
                     <div className="w-14 h-14 rounded-full bg-white/80 border border-gold/30 flex items-center justify-center text-gold mb-3 shadow-xs">
                       <Sparkles className="w-6 h-6 stroke-[1.5]" />
                     </div>
@@ -186,7 +186,7 @@ export default function Hero() {
                 )}
 
                 {/* Floating Label: DESIGN × TECHNOLOGY × CREATIVITY */}
-                <div className="absolute bottom-4 left-4 right-4 bg-charcoal/90 backdrop-blur-md px-4 py-2.5 rounded-full text-[10px] font-mono tracking-widest-luxury uppercase text-cream border border-gold/30 text-center pointer-events-none shadow-sm">
+                <div className="absolute bottom-4 left-4 right-4 bg-charcoal/90 backdrop-blur-md px-4 py-2.5 rounded-full text-[10px] font-mono tracking-widest-luxury uppercase text-ivory border border-gold/30 text-center pointer-events-none shadow-sm">
                   DESIGN × TECHNOLOGY × CREATIVITY
                 </div>
               </div>

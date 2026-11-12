@@ -4,24 +4,26 @@
 
 @layer base {
   :root {
-    --color-cream: #FAF6EF;
-    --color-ivory: #FCF9F3;
-    --color-beige: #EAE2D3;
-    --color-charcoal: #24201A;
+    --color-ivory: #FDFBF7;
+    --color-ivory-light: #FFFFFF;
+    --color-ivory-warm: #FAF6EE;
+    --color-cream: #FDFBF7;
+    --color-beige: #F5EFE6;
+    --color-charcoal: #221F1B;
     --color-gold: #C5A059;
     --color-champagne: #D4AF67;
-    --color-taupe: #D5C4AB;
+    --color-taupe: #D8CEBE;
   }
 
   html {
     scroll-behavior: smooth;
-    background-color: var(--color-cream);
+    background-color: var(--color-ivory);
     color: var(--color-charcoal);
   }
 
   body {
     font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
-    background-color: var(--color-cream);
+    background-color: var(--color-ivory);
     color: var(--color-charcoal);
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
@@ -29,8 +31,8 @@
   }
 
   ::selection {
-    background-color: #EBD6A7;
-    color: #24201A;
+    background-color: #F5E8CE;
+    color: #221F1B;
   }
 
   /* Apple-inspired subtle luxury scrollbar */
@@ -38,23 +40,23 @@
     width: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #FAF6EF;
+    background: #FDFBF7;
   }
   ::-webkit-scrollbar-thumb {
-    background: #D5C4AB;
+    background: #E2D7C5;
     border-radius: 4px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #C5A059;
+    background: #D4AF67;
   }
 }
 
 @layer utilities {
   .border-luxury {
-    border-color: rgba(197, 160, 89, 0.3);
+    border-color: rgba(212, 175, 103, 0.3);
   }
   .border-luxury-subtle {
-    border-color: rgba(197, 160, 89, 0.18);
+    border-color: rgba(212, 175, 103, 0.18);
   }
   .border-champagne {
     border-color: rgba(212, 175, 103, 0.35);
