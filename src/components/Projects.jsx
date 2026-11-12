@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { projectFilterCategories, projects } from "../data/projects";
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
-import { Filter } from "lucide-react";
+import { Filter, Sparkles } from "lucide-react";
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState("ALL");
@@ -37,26 +37,26 @@ export default function Projects() {
             Some things I've created.
           </h2>
           <p className="text-xs sm:text-sm text-charcoal/70 leading-relaxed">
-            A collection of creative projects, visual stories and digital experiences.
+            Touch or click any project box to view deliverables, client campaigns, creative works, and live attachments.
           </p>
         </motion.div>
 
         {/* Filter Categories Bar */}
-        <div className="pb-8 mb-12 border-b border-gold/20">
+        <div className="pb-6 mb-10 border-b border-gold/20">
           <div className="flex items-center gap-2 mb-3 text-xs font-mono uppercase tracking-widest text-gold lg:hidden">
             <Filter className="w-3.5 h-3.5" />
             <span>FILTER WORK</span>
           </div>
-          <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">
             {projectFilterCategories.map((category) => {
               const isSelected = activeFilter === category;
               return (
                 <button
                   key={category}
                   onClick={() => setActiveFilter(category)}
-                  className={`text-xs uppercase tracking-wider px-4 py-2 rounded-full font-medium transition-all duration-300 ${
+                  className={`text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-full font-medium transition-all duration-300 ${
                     isSelected
-                      ? "bg-charcoal text-ivory shadow-xs"
+                      ? "bg-charcoal text-[#FAF7F2] shadow-xs"
                       : "bg-white text-charcoal/70 border border-gold/25 hover:border-gold hover:text-charcoal"
                   }`}
                 >
@@ -67,21 +67,21 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Asymmetric 2-Column Editorial Grid */}
+        {/* Responsive Grid of Small Animated Project Boxes */}
         <motion.div
           layout
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7"
         >
           <AnimatePresence>
             {filteredProjects.map((project, index) => (
               <motion.div
                 key={project.id}
                 layout
-                initial={{ opacity: 0, scale: 0.98 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.98 }}
-                transition={{ duration: 0.4 }}
-                className={project.isFeatured ? "md:col-span-2" : ""}
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.35, delay: index * 0.05 }}
+                className="h-full"
               >
                 <ProjectCard
                   project={project}
@@ -93,7 +93,7 @@ export default function Projects() {
           </AnimatePresence>
         </motion.div>
 
-        {/* Expandable Project Detail Modal */}
+        {/* Expandable Project Detail Modal ("Goes inside the project") */}
         <ProjectModal
           project={selectedProject}
           isOpen={Boolean(selectedProject)}

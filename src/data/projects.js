@@ -2,31 +2,57 @@ export const projectFilterCategories = [
   "ALL",
   "BRANDING",
   "GRAPHIC DESIGN",
-  "PHOTOGRAPHY",
-  "VIDEOGRAPHY",
   "DIGITAL MARKETING",
+  "VIDEOGRAPHY",
+  "PHOTOGRAPHY",
   "WEB DESIGN"
 ];
 
 export const projects = [
   {
     id: "arulmathi-silks",
+    number: "01",
     name: "ARULMATHI SILKS",
-    category: "Fashion Branding / Digital Marketing / Creative Production",
+    client: "Arulmathi Silks",
+    category: "Fashion Branding & Digital Marketing",
     filterTags: ["BRANDING", "GRAPHIC DESIGN", "DIGITAL MARKETING", "VIDEOGRAPHY"],
     thumbnail: "/assets/projects/arulmathi-silks/cover.jpg",
-    description: "A fashion and silk saree brand creative project involving social media management, campaign creatives, visual storytelling and promotional content.",
+    monogram: "AS",
+    accentColor: "from-amber-100/80 to-amber-50/40",
+    roleSubtitle: "Digital Marketing & Creative Design",
+    description: "Created promotional posters, campaign creatives, product-focused videos and social media content; supported page management and brand presentation.",
+    liveUrl: "https://www.instagram.com/naveen_j_prakash/",
+    instagramUrl: "https://www.instagram.com/naveen_j_prakash/",
+    driveUrl: "", // Attach Google Drive / Dropbox link here
     role: [
-      "Social Media Management",
+      "Digital Marketing",
       "Graphic Designer",
       "Video Editor",
-      "Creative Content Production"
+      "Social Media Management"
     ],
-    overview: "Arulmathi Silks represents the heritage and elegance of traditional Indian textiles. The project focused on bridging time-honored craftsmanship with modern digital audiences through curated social media campaigns, tactile visual compositions, and rhythmic promotional reels.",
+    overview: "Arulmathi Silks represents the heritage and elegance of traditional Indian textiles and silk sarees. The project focused on bridging time-honored craftsmanship with modern digital audiences through curated social media campaigns, tactile visual compositions, and rhythmic promotional reels.",
     objectives: [
       "Elevate brand presence across digital channels with consistent, premium visual identity.",
-      "Showcase fabric textures, intricate zari borders, and festive collections.",
-      "Develop engaging video edits optimized for short-form mobile viewing."
+      "Design festive saree campaign creatives, promotional posters, and social banners.",
+      "Capture and edit short-form promotional reels highlighting fabric texture and zari craftsmanship.",
+      "Support daily social media publishing, grid curation, and brand presentation."
+    ],
+    deliverables: [
+      {
+        title: "Promotional Posters & Creatives",
+        type: "Graphic Design",
+        description: "High-resolution posters, festival announcements, and collection promotional graphics."
+      },
+      {
+        title: "Short-Form Video Reels",
+        type: "Video Editing",
+        description: "Engaging vertical reels optimized for Instagram, highlighting saree drapes, fabric texture, and festive themes."
+      },
+      {
+        title: "Social Media Page Management",
+        type: "Digital Marketing",
+        description: "Content scheduling, highlight covers, brand voice consistency, and audience engagement."
+      }
     ],
     tools: ["Adobe Photoshop", "Adobe Premiere Pro", "Canva", "Meta Business Suite"],
     gallery: [
@@ -47,21 +73,47 @@ export const projects = [
   },
   {
     id: "hashtag-clothings",
-    name: "HASHTAG CLOTHINGS",
-    category: "Fashion / Social Media / Creative Marketing",
+    number: "02",
+    name: "HASHTAG CLOTHING",
+    client: "Hashtag Clothing",
+    category: "Social Media & Brand Promotion",
     filterTags: ["BRANDING", "GRAPHIC DESIGN", "DIGITAL MARKETING", "VIDEOGRAPHY"],
     thumbnail: "/assets/projects/hashtag-clothings/cover.jpg",
-    description: "A fashion-related creative project focused on social media visuals, promotional content and brand communication.",
+    monogram: "HC",
+    accentColor: "from-orange-100/80 to-amber-50/40",
+    roleSubtitle: "Social Media & Brand Promotion",
+    description: "Designed clothing promotions and social media creatives, edited fashion videos and reels, and supported content publishing and brand consistency.",
+    liveUrl: "https://www.instagram.com/naveen_j_prakash/",
+    instagramUrl: "https://www.instagram.com/naveen_j_prakash/",
+    driveUrl: "", // Attach Google Drive / Dropbox link here
     role: [
       "Graphic Designer",
       "Video Editor",
-      "Social Media Content Creator"
+      "Social Media Content Creator",
+      "Brand Promotion"
     ],
-    overview: "Hashtag Clothings is a contemporary streetwear and urban fashion brand. The project centered around establishing a modern, youth-centric visual style across digital touchpoints, launching new apparel drops with fast-paced video edits and crisp typography.",
+    overview: "Hashtag Clothing is a contemporary streetwear and modern fashion brand. The project centered around establishing a vibrant, youth-centric visual style across digital touchpoints, launching new apparel drops with fast-paced video edits and crisp typography.",
     objectives: [
       "Craft a vibrant, dynamic digital identity reflecting urban streetwear aesthetics.",
       "Produce promotional reels, story templates, and product launch creatives.",
       "Maintain active audience engagement through aesthetic consistency."
+    ],
+    deliverables: [
+      {
+        title: "Streetwear Promotional Creatives",
+        type: "Graphic Design",
+        description: "Dynamic product launch banners, story templates, and typographic drops."
+      },
+      {
+        title: "Fashion Reels & Short Videos",
+        type: "Video Editing",
+        description: "Fast-paced rhythmic fashion reels featuring modern streetwear styles and models."
+      },
+      {
+        title: "Content Publishing & Consistency",
+        type: "Brand Strategy",
+        description: "Cohesive aesthetic grid, hashtag strategy, and continuous brand voice."
+      }
     ],
     tools: ["Adobe Photoshop", "Adobe Illustrator", "Premiere Pro", "CapCut"],
     gallery: [
@@ -82,21 +134,47 @@ export const projects = [
   },
   {
     id: "personal-creative-projects",
+    number: "03",
     name: "PERSONAL CREATIVE PROJECTS",
-    category: "Photography / Videography / Visual Storytelling",
+    client: "DJ Photography / Personal Portfolio",
+    category: "Photography & Videography",
     filterTags: ["PHOTOGRAPHY", "VIDEOGRAPHY"],
     thumbnail: "/assets/projects/photography/cover.jpg",
-    description: "A curated selection of photography, videography, editing and visual storytelling work.",
+    monogram: "NP",
+    accentColor: "from-stone-200/80 to-amber-50/40",
+    roleSubtitle: "Visual Storyteller & Camera Director",
+    description: "A curated selection of commercial, product, portrait, and event photography, cinematography, and cinematic color grading spanning 3+ years.",
+    liveUrl: "https://www.instagram.com/naveen_j_prakash/",
+    instagramUrl: "https://www.instagram.com/naveen_j_prakash/",
+    driveUrl: "", // Attach Google Drive link here
     role: [
       "Photographer",
       "Videographer",
+      "Colour Grader",
       "Editor"
     ],
-    overview: "Drawing upon 3 years of hands-on camera work, this personal archive explores natural light portraiture, cultural documentary moments, and cinematic short-form visuals. It reflects a dedication to composition, depth, and storytelling.",
+    overview: "Drawing upon 3 years of hands-on camera work with DJ Photography, this archive explores commercial shoots, product setups, natural light portraiture, and cinematic short-form visuals. It reflects a dedication to composition, depth, and storytelling.",
     objectives: [
-      "Explore lighting, mood, and framing across varied environments.",
-      "Hone color grading techniques calibrated to natural skin tones and organic scenery.",
-      "Produce self-directed cinematic visual experiments."
+      "Produced product, model, portrait, commercial and event photography.",
+      "Planned and captured promotional videos, brand visuals and short-form social media reels.",
+      "Performed video editing, colour grading, photo retouching, lighting setup and post-production."
+    ],
+    deliverables: [
+      {
+        title: "Product & Model Photography",
+        type: "Photography",
+        description: "Studio and outdoor shoots with professional lighting, styling, and composition."
+      },
+      {
+        title: "Cinematic Brand Reels",
+        type: "Videography",
+        description: "High-definition video capture with intentional camera motion and storytelling."
+      },
+      {
+        title: "Post-Production & Colour Grading",
+        type: "Editing",
+        description: "Fine-tuned color grading calibrated for skin tones, luxury fabrics, and cinematic atmospheres."
+      }
     ],
     tools: ["DSLR / Mirrorless Systems", "Adobe Lightroom", "Adobe Photoshop", "Premiere Pro"],
     gallery: [
@@ -109,24 +187,50 @@ export const projects = [
         caption: "Documentary Visuals — Environmental Storytelling"
       }
     ],
-    isFeatured: true
+    isFeatured: false
   },
   {
     id: "ai-powered-web-experiences",
-    name: "AI-POWERED WEB EXPERIENCES",
-    category: "Web Design / UI/UX / Frontend Development",
+    number: "04",
+    name: "AI & WEB EXPERIENCES",
+    client: "Frontend & AI Engineering Lab",
+    category: "UI/UX & Frontend Development",
     filterTags: ["WEB DESIGN"],
     thumbnail: "/assets/projects/web/cover.jpg",
-    description: "A collection of self-initiated experiments exploring modern website interfaces, AI-powered development and frontend technologies.",
+    monogram: "AI",
+    accentColor: "from-amber-100/60 to-yellow-50/40",
+    roleSubtitle: "Frontend Developer & AI Prompt Engineer",
+    description: "Modern website interfaces and web applications built with React.js, Tailwind CSS, and AI-assisted engineering tools.",
+    liveUrl: "https://github.com/naveenjprakash114",
+    githubUrl: "https://github.com/naveenjprakash114/Naveen",
+    driveUrl: "",
     role: [
       "UI/UX Designer",
-      "AI-Assisted Frontend Developer"
+      "Frontend Developer",
+      "AI Prompt Engineer"
     ],
-    overview: "In pursuit of the long-term goal of becoming an AI Full-Stack Developer, this exploration investigates generative design workflows, prompt engineering for visual mockups, and building responsive React components styled with Tailwind CSS.",
+    overview: "Bridging creative design with modern web engineering, this exploration investigates generative design workflows, prompt engineering for visual mockups, and building responsive React components styled with Tailwind CSS.",
     objectives: [
-      "Integrate AI-assisted coding and design workflows into practical web projects.",
-      "Build Apple-inspired minimalist web interfaces with warm neutral palettes.",
-      "Implement responsive component architectures and smooth micro-interactions."
+      "Design user-focused UI/UX layouts and modern website interfaces.",
+      "Develop responsive frontend pages using React.js and AI-assisted development tools.",
+      "Implement smooth micro-interactions, responsive grids, and accessible components."
+    ],
+    deliverables: [
+      {
+        title: "Component Architecture",
+        type: "React.js",
+        description: "Modular, reusable component systems styled with Tailwind CSS."
+      },
+      {
+        title: "AI Creative Direction",
+        type: "Prompt Engineering",
+        description: "Structured prompt chains for multimodal design and rapid asset creation."
+      },
+      {
+        title: "Interactive Web Interfaces",
+        type: "UI/UX Design",
+        description: "Luxury minimalism, fluid transitions, and tactile user feedback."
+      }
     ],
     tools: ["React.js", "Vite", "Tailwind CSS", "Framer Motion", "Generative AI Tools"],
     gallery: [
@@ -138,4 +242,3 @@ export const projects = [
     isFeatured: false
   }
 ];
-
