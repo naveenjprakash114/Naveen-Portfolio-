@@ -28,8 +28,8 @@ export const personalInfo = {
   githubHandle: "naveenjprakash114",
   githubUrl: "https://github.com/naveenjprakash114",
   githubRepoUrl: "https://github.com/naveenjprakash114/Naveen",
-  currentCompany: "BitByte Technologies",
-  currentRole: "Digital Marketing & AI Creative Professional",
+  currentCompany: "Bit Byte Technologies",
+  currentRole: "Digital Marketing Executive & Frontend Developer",
   
   // Social links
   socialLinks: {
@@ -43,7 +43,7 @@ export const personalInfo = {
   hero: {
     smallIntro: "HELLO, I'M NAVEEN PRAKASH",
     mainHeading: "Creativity meets technology.\nIdeas become experiences.",
-    supportingText: "Digital Marketing • Graphic Designer • UI/UX Designer • AI Creative Technologist • Frontend Developer • Prompt Engineer",
+    supportingText: "Digital Marketing • Graphic Designer • UI/UX Designer • AI Creative Technologist • Frontend Developer • AI Prompt Engineer",
     locationBadge: "Based in Salem, Tamil Nadu, India",
   },
 
@@ -53,25 +53,25 @@ export const personalInfo = {
     "UI/UX DESIGNER",
     "AI CREATIVE TECHNOLOGIST",
     "FRONTEND DEVELOPER",
-    "PROMPT ENGINEER"
+    "AI PROMPT ENGINEER"
   ],
 
   about: {
     headline: "Behind the pixels, ideas and innovation.",
-    lead: "I'm Naveen Prakash, a Visual Communication graduate and multidisciplinary creative professional passionate about combining creativity, technology and artificial intelligence.",
+    lead: "Multidisciplinary creative and technology professional with experience in digital marketing, graphic design, photography, videography, video editing, UI/UX design and AI-assisted frontend development.",
     bioParagraphs: [
-      "My core specializations span Digital Marketing, Graphic Design, UI/UX Design, AI Creative Technology, Frontend Development, and Prompt Engineering.",
-      "I enjoy transforming creative ideas into meaningful digital experiences through visual storytelling, modern design principles and emerging AI technologies.",
-      "Currently, I work with the Digital Marketing team at BitByte Technologies, where I contribute to creative campaigns, AI-assisted design, digital branding and frontend UI development.",
-      "My long-term goal is to become an AI Full-Stack Developer and build innovative digital products that combine intelligent technology with exceptional user experiences."
+      "Skilled in creating brand-focused visual content, managing social media pages, producing product and model photography, editing promotional videos, and designing responsive web experiences.",
+      "Combines visual storytelling, design thinking and emerging AI tools to deliver engaging digital solutions.",
+      "Currently working as Digital Marketing Executive & Frontend Developer at Bit Byte Technologies, developing responsive frontend pages using React.js and AI-assisted workflows alongside digital branding.",
+      "Passionate about exploring the intersection of creative media, modern web technologies, and generative AI."
     ],
-    philosophy: "I believe great digital experiences are created when creativity, strategy and technology work together.",
-    positioningNote: "Presenting practical experience and self-developed technical capabilities focused on continuous growth, authenticity, and high craft."
+    philosophy: "Combines visual storytelling, design thinking and emerging AI tools to deliver engaging digital solutions.",
+    positioningNote: "Presenting practical experience across digital marketing, creative media, and frontend development."
   },
 
   education: {
-    degree: "B.Sc Visual Communication",
-    college: "AVS College of Arts & Science",
+    degree: "B.Sc. Visual Communication",
+    college: "AVS Arts & Science College",
     university: "Periyar University",
     graduationYear: "2022",
     additionalLearning: [
@@ -80,8 +80,28 @@ export const personalInfo = {
       "UI/UX Design",
       "AI Creative Direction",
       "Frontend Development (React.js)",
-      "Prompt Engineering"
+      "AI Prompt Engineering"
     ]
+  },
+
+  resumeProjects: [
+    {
+      name: "ARULMATHI SILKS",
+      subtitle: "Digital Marketing & Creative Design",
+      description: "Created promotional posters, campaign creatives, product-focused videos and social media content; supported page management and brand presentation."
+    },
+    {
+      name: "HASHTAG CLOTHING",
+      subtitle: "Social Media & Brand Promotion",
+      description: "Designed clothing promotions and social media creatives, edited fashion videos and reels, and supported content publishing and brand consistency."
+    }
+  ],
+
+  coreSkills: {
+    creativeMedia: ["Photography", "Product Photography", "Model Photography", "Videography", "Video Editing", "Colour Grading", "Photo Retouching"],
+    designMarketing: ["Graphic Design", "UI/UX Design", "Digital Marketing", "Social Media Management", "Content Creation", "Branding"],
+    developmentAI: ["React.js", "Frontend Development", "AI Prompt Engineering", "AI-assisted Development", "AI Creative Tools"],
+    software: ["Adobe Photoshop", "Illustrator", "Lightroom", "Premiere Pro", "After Effects", "Canva Pro"]
   }
 };
 
@@ -163,50 +183,44 @@ export const expertiseCategories = [
 export const experienceTimeline = [
   {
     id: "exp-3",
-    company: "BitByte Technologies",
-    role: "Digital Marketing & AI Creative Professional",
-    duration: "Present",
+    company: "Bit Byte Technologies",
+    role: "Digital Marketing Executive & Frontend Developer",
+    duration: "July 2026 – Present",
     isCurrent: true,
-    summary: "Leading digital marketing initiatives and exploring AI-augmented creative workflows, brand visuals, and React frontend implementation.",
+    summary: "Leading digital marketing, social media page curation, visual communication, and developing responsive UI/UX and React frontend interfaces.",
     responsibilities: [
-      "Digital marketing activities",
-      "Social media management",
-      "Content creation",
-      "Graphic design",
-      "Photography and videography",
-      "Video editing",
-      "AI Creative Direction",
-      "Prompt Engineering",
-      "AI-assisted UI/UX design",
-      "React frontend development"
-    ]
-  },
-  {
-    id: "exp-2",
-    company: "Shriram Finance Ltd.",
-    role: "Executive Officer",
-    duration: "6 Months",
-    isCurrent: false,
-    summary: "Coordinated client business operations, administration, and structured corporate communications.",
-    responsibilities: [
-      "Business operations",
-      "Customer coordination",
-      "Administrative support",
-      "Professional communication"
+      "Create digital posters, banners, promotional creatives and marketing content for brand communication.",
+      "Support social media page management, content planning, publishing and digital marketing activities.",
+      "Design user-focused UI/UX layouts and modern website interfaces.",
+      "Develop responsive frontend pages using React.js and AI-assisted development tools.",
+      "Use Adobe Creative Cloud, Canva and AI tools to support creative production and development workflows."
     ]
   },
   {
     id: "exp-1",
-    company: "DJ Photography",
-    role: "Photographer & Videographer",
+    company: "DJ PHOTOGRAPHY",
+    role: "Photographer, Videographer & Video Editor",
     duration: "3 Years",
     isCurrent: false,
-    summary: "Delivered comprehensive photographic and cinematographic coverage with deep visual narrative production.",
+    summary: "Produced commercial, product, portrait, and event visual content, short-form reels, and post-production creative assets.",
     responsibilities: [
-      "Professional photography",
-      "Videography",
-      "Visual storytelling",
-      "Photo and video production"
+      "Produced product, model, portrait, commercial and event photography.",
+      "Planned and captured promotional videos, brand visuals and short-form social media reels.",
+      "Performed video editing, colour grading, photo retouching, lighting setup and post-production.",
+      "Created posters, banners and advertising creatives for business and brand promotions."
+    ]
+  },
+  {
+    id: "exp-2",
+    company: "Shriram Finance Ltd",
+    role: "Executive Officer",
+    duration: "6 Months",
+    isCurrent: false,
+    summary: "Supported customer service, documentation, day-to-day business operations, and customer relationship management.",
+    responsibilities: [
+      "Supported customer service, documentation and day-to-day business operations.",
+      "Assisted with customer enquiries, record maintenance and coordination with internal teams.",
+      "Built experience in financial services, operational processes and customer relationship management."
     ]
   }
 ];
