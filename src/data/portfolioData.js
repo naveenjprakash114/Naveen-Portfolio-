@@ -24,13 +24,15 @@ export const personalInfo = {
   whatsappUrl: "https://wa.me/917397172114?text=Hello%20Naveen,%20I%20viewed%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project.",
   instagramHandle: "@naveen_j_prakash",
   instagramUrl: "https://www.instagram.com/naveen_j_prakash/",
+  linkedinHandle: "naveen-prakash-j-22b563249",
+  linkedinUrl: "https://www.linkedin.com/in/naveen-prakash-j-22b563249",
   currentCompany: "BitByte Technologies",
   currentRole: "Digital Marketing & AI Creative Professional",
   
-  // Social links - configurable placeholders (no invented fake URLs)
+  // Social links
   socialLinks: {
     instagram: "https://www.instagram.com/naveen_j_prakash/",
-    linkedin: "", // Configurable placeholder: e.g. "https://linkedin.com/in/naveen-prakash-j"
+    linkedin: "https://www.linkedin.com/in/naveen-prakash-j-22b563249",
     behance: "",  // Configurable placeholder: e.g. "https://behance.net/naveenprakash"
     dribbble: "", // Configurable placeholder: e.g. "https://dribbble.com/naveenprakash"
     github: "",   // Configurable placeholder: e.g. "https://github.com/naveenprakash"

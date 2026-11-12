@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { X, Printer, Download, MapPin, Mail, Phone, ExternalLink } from "lucide-react";
 import { personalInfo, experienceTimeline, expertiseCategories } from "../data/portfolioData";
+import { LinkedInIcon } from "./Icons";
 
 export default function ResumeModal({ isOpen, onClose }) {
   useEffect(() => {
@@ -92,6 +93,15 @@ export default function ResumeModal({ isOpen, onClose }) {
               <a href={`tel:${personalInfo.phone}`} className="flex items-center gap-1.5 hover:underline">
                 <Phone className="w-3.5 h-3.5 text-gold" />
                 {personalInfo.phoneDisplay}
+              </a>
+              <a
+                href={personalInfo.linkedinUrl || "https://www.linkedin.com/in/naveen-prakash-j-22b563249"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 hover:underline text-charcoal hover:text-gold transition-colors"
+              >
+                <LinkedInIcon className="w-3.5 h-3.5 text-gold" />
+                <span>LinkedIn</span>
               </a>
             </div>
           </div>

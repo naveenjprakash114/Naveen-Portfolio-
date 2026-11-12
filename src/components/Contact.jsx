@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, MessageCircle, ArrowUpRight, Copy, Check, AlertCircle, Send } from "lucide-react";
-import { InstagramIcon } from "./Icons";
+import { InstagramIcon, LinkedInIcon } from "./Icons";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -20,6 +20,7 @@ export default function Contact() {
   const phoneNumber = "+91 7397172114";
   const whatsappUrl = "https://wa.me/917397172114?text=Hello%20Naveen,%20I%20viewed%20your%20portfolio%20and%20would%20like%20to%20connect.";
   const instagramUrl = "https://www.instagram.com/naveen_j_prakash/";
+  const linkedinUrl = "https://www.linkedin.com/in/naveen-prakash-j-22b563249";
 
   const validate = () => {
     const errs = {};
@@ -235,6 +236,29 @@ export default function Contact() {
                   </div>
                   <ArrowUpRight className="w-4 h-4 text-charcoal/60 group-hover:text-charcoal transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </a>
+
+                {/* LinkedIn */}
+                <a
+                  href={linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-4 rounded-xl bg-white border border-gold/20 flex items-center justify-between group hover:border-gold transition-colors"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-full bg-cream border border-gold/30 flex items-center justify-center text-gold shrink-0 group-hover:bg-beige transition-colors">
+                      <LinkedInIcon className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <span className="text-[10px] font-mono uppercase tracking-wider text-charcoal/60 block">
+                        LINKEDIN
+                      </span>
+                      <span className="text-xs sm:text-sm font-medium text-charcoal">
+                        naveen-prakash-j-22b563249
+                      </span>
+                    </div>
+                  </div>
+                  <ArrowUpRight className="w-4 h-4 text-charcoal/60 group-hover:text-charcoal transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </a>
               </div>
             </div>
 
@@ -253,10 +277,15 @@ export default function Contact() {
                   <span>Instagram</span>
                   <span className="text-[10px] font-mono text-emerald-700">Active</span>
                 </a>
-                <div className="p-2.5 rounded-lg bg-cream text-charcoal/60 flex items-center justify-between">
+                <a
+                  href={linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2.5 rounded-lg bg-cream text-charcoal font-medium flex items-center justify-between hover:bg-beige transition-colors"
+                >
                   <span>LinkedIn</span>
-                  <span className="text-[10px] font-mono text-gold">Placeholder</span>
-                </div>
+                  <span className="text-[10px] font-mono text-emerald-700">Active</span>
+                </a>
                 <div className="p-2.5 rounded-lg bg-cream text-charcoal/60 flex items-center justify-between">
                   <span>Behance</span>
                   <span className="text-[10px] font-mono text-gold">Placeholder</span>

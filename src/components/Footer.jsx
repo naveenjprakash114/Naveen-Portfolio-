@@ -1,4 +1,5 @@
 import { ArrowUp } from "lucide-react";
+import { LinkedInIcon, InstagramIcon } from "./Icons";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -7,6 +8,9 @@ export default function Footer() {
       behavior: "smooth",
     });
   };
+
+  const linkedinUrl = "https://www.linkedin.com/in/naveen-prakash-j-22b563249";
+  const instagramUrl = "https://www.instagram.com/naveen_j_prakash/";
 
   return (
     <footer className="bg-cream border-t border-gold/20 py-16 text-charcoal">
@@ -23,9 +27,32 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Center: Creative Technologist | Digital Creative */}
-          <div className="text-xs uppercase font-mono tracking-wider text-charcoal/70">
-            Creative Technologist | Digital Creative
+          {/* Center: Creative Technologist & Social Links */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 text-xs font-mono">
+            <span className="text-charcoal/70 uppercase tracking-wider">
+              Creative Technologist
+            </span>
+            <span className="hidden sm:inline text-gold/40">•</span>
+            <div className="flex items-center gap-4">
+              <a
+                href={linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-charcoal/75 hover:text-gold uppercase tracking-wider transition-colors inline-flex items-center gap-1.5"
+              >
+                <LinkedInIcon className="w-3.5 h-3.5 text-gold" />
+                <span>LinkedIn</span>
+              </a>
+              <a
+                href={instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-charcoal/75 hover:text-gold uppercase tracking-wider transition-colors inline-flex items-center gap-1.5"
+              >
+                <InstagramIcon className="w-3.5 h-3.5 text-gold" />
+                <span>Instagram</span>
+              </a>
+            </div>
           </div>
 
           {/* Right: BACK TO TOP ↑ */}

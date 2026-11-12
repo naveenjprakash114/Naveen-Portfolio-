@@ -158,16 +158,27 @@ export default function Navbar() {
           </div>
 
           <div className="pt-6 border-t border-gold/20 space-y-3">
-            <div className="text-xs text-charcoal/70 flex justify-between">
-              <span>Salem, Tamil Nadu, India</span>
-              <a
-                href="https://wa.me/917397172114"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-charcoal hover:underline"
-              >
-                WhatsApp Direct
-              </a>
+            <div className="text-xs text-charcoal/70 flex items-center justify-between">
+              <span>Salem, India</span>
+              <div className="flex items-center gap-3">
+                <a
+                  href="https://www.linkedin.com/in/naveen-prakash-j-22b563249"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-charcoal hover:text-gold transition-colors"
+                >
+                  LinkedIn
+                </a>
+                <span className="text-gold/40">•</span>
+                <a
+                  href="https://wa.me/917397172114"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-charcoal hover:underline"
+                >
+                  WhatsApp
+                </a>
+              </div>
             </div>
             <a
               href="#contact"
