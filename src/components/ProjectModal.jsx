@@ -455,16 +455,22 @@ export default function ProjectModal({ project, isOpen, onClose }) {
               </div>
 
               {/* Scrollable Canvas for Full Landing Page */}
-              <div className="flex-1 overflow-y-auto p-4 sm:p-6 flex flex-col items-center bg-[#FAF7F2]">
-                <div className="w-full max-w-xl rounded-xl overflow-hidden shadow-card border border-gold/30 bg-white">
+              <div className="flex-1 overflow-y-auto p-4 sm:p-6 flex flex-col items-center bg-[#FAF7F2] space-y-3">
+                {/* Scroll Hint Pill */}
+                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/95 border border-gold/35 shadow-2xs text-[11px] font-mono text-charcoal/80">
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
+                  <span>Full-Length Landing Page • Scroll down to view all sections ↓</span>
+                </div>
+
+                <div className="w-full max-w-2xl rounded-xl overflow-hidden shadow-card border border-gold/30 bg-white">
                   <img
                     src={previewImage.url}
                     alt={previewImage.title || previewImage.caption}
-                    className="w-full h-auto object-contain"
+                    className="w-full h-auto object-contain block"
                   />
                 </div>
 
-                <p className="text-xs text-charcoal/80 text-center leading-relaxed max-w-lg mt-4 font-serif italic">
+                <p className="text-xs text-charcoal/80 text-center leading-relaxed max-w-lg font-serif italic pb-2">
                   "{previewImage.caption}"
                 </p>
               </div>
