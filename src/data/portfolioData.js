@@ -429,7 +429,68 @@ export const projectsData = [
         placeholderNote: "Fashion product launch teaser slot"
       }
     ],
-    projectUrl: null
+    projectUrl: "https://www.instagram.com/hashtagclothings31?srtk=Z3JhZjdyOWRvcHc5",
+    instagramUrl: "https://www.instagram.com/hashtagclothings31?srtk=Z3JhZjdyOWRvcHc5"
+  },
+  {
+    id: "tiny-hashtag",
+    title: "Tiny Hashtag",
+    subtitle: "Kids Fashion E-Commerce & Brand Creative",
+    category: "Kids Fashion / E-Commerce / Social Media",
+    tags: ["BRANDING & DESIGN", "DIGITAL MARKETING", "VIDEOGRAPHY"],
+    thumbnail: "/assets/projects/tiny-hashtag/cover.svg",
+    description: "A joyful children's apparel project creating festive social media campaigns, promotional videos, and digital marketing assets for Tiny Hashtag.",
+    client: "Tiny Hashtag",
+    year: "2024",
+    status: "Completed Commercial Project",
+    roles: [
+      "Graphic Design",
+      "Video Editing",
+      "Social Media Management",
+      "Content Creation"
+    ],
+    overview: "Tiny Hashtag is a contemporary children's apparel and babywear brand celebrated for cheerful, comfortable, and trendy fashion for kids. The project focused on building an engaging, parent-friendly visual presence on Instagram through vibrant seasonal drops, charming short-form video reels, and warm storytelling.",
+    objectives: [
+      "Establish a joyful, high-trust social identity for modern kids apparel and baby fashion.",
+      "Design festive launch graphics, seasonal discount flyers, and playful story highlights.",
+      "Shoot and edit engaging vertical video reels highlighting fabric softness, comfort, and lively styling.",
+      "Support daily content scheduling, feed aesthetics, and active audience interaction on Instagram."
+    ],
+    creativeDirection: "Warm, playful pastel tones, soft contrasts, friendly typography, and dynamic video pacing emphasizing fabric comfort and joyful childhood moments.",
+    toolsUsed: [
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+      "Adobe Premiere Pro",
+      "Canva",
+      "Meta Business Suite"
+    ],
+    gallery: [
+      {
+        url: "/assets/projects/tiny-hashtag/cover.svg",
+        caption: "Tiny Hashtag Kids Fashion — Official Brand & Campaign Creative",
+        type: "image"
+      },
+      {
+        url: "/assets/projects/hashtag-clothings/02.jpg",
+        caption: "Season Launch Preview & Product Story Template",
+        type: "image"
+      },
+      {
+        url: "/assets/projects/hashtag-clothings/01.jpg",
+        caption: "Apparel Feature Composition & Social Media Post",
+        type: "image"
+      }
+    ],
+    videoSlots: [
+      {
+        title: "Kids Fashion Showcase Reel",
+        duration: "0:30",
+        aspectRatio: "9:16",
+        placeholderNote: "Kids collection promotional video reel slot"
+      }
+    ],
+    projectUrl: "https://www.instagram.com/tinyhashtag?rpxt=cWN1dHF1aWVwNnFo",
+    instagramUrl: "https://www.instagram.com/tinyhashtag?rpxt=cWN1dHF1aWVwNnFo"
   },
   {
     id: "visual-narratives-photography",

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="tinyBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF5EE"/>
+      <stop offset="50%" stop-color="#F5EBDD"/>
+      <stop offset="100%" stop-color="#EEDFCE"/>
+    </linearGradient>
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F0D597"/>
+      <stop offset="50%" stop-color="#D4AF67"/>
+      <stop offset="100%" stop-color="#AA8232"/>
+    </linearGradient>
+    <linearGradient id="warmTerracotta" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E28773"/>
+      <stop offset="100%" stop-color="#C25A45"/>
+    </linearGradient>
+    <pattern id="tinyPolka" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1.5" fill="#D4AF67" opacity="0.25"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="800" height="600" fill="url(#tinyBg)"/>
+  <rect width="800" height="600" fill="url(#tinyPolka)"/>
+
+  <!-- Ornamental Border -->
+  <rect x="24" y="24" width="752" height="552" rx="20" fill="none" stroke="url(#goldAccent)" stroke-width="1.5"/>
+  <rect x="34" y="34" width="732" height="532" rx="14" fill="none" stroke="url(#goldAccent)" stroke-width="0.75" stroke-dasharray="6,4" opacity="0.6"/>
+
+  <!-- Top Category Tag -->
+  <g transform="translate(400, 75)">
+    <rect x="-110" y="-14" width="220" height="28" rx="14" fill="#FFFFFF" stroke="url(#goldAccent)" stroke-width="1"/>
+    <text x="0" y="4" font-family="'Manrope', sans-serif" font-size="10" fill="#221F1B" font-weight="700" text-anchor="middle" letter-spacing="3">KIDS &amp; BABY APPAREL</text>
+  </g>
+
+  <!-- Central Visual Emblem: Playful Tiny Clothes Hanger & Hashtag Motif -->
+  <g transform="translate(400, 215)">
+    <!-- Soft Glow Circle -->
+    <circle cx="0" cy="0" r="85" fill="#FFFFFF" stroke="url(#goldAccent)" stroke-width="1.5"/>
+
+    <!-- Kids Hanger Icon -->
+    <path d="M 0 -45 C 10 -45 18 -38 18 -28 C 18 -20 10 -18 0 -15 L -52 18 C -58 22 -52 28 -44 28 L 44 28 C 52 28 58 22 52 18 Z" fill="none" stroke="url(#warmTerracotta)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Hashtag Accent in Center -->
+    <g transform="translate(0, 10) scale(0.65)" stroke="url(#goldAccent)" stroke-width="5" stroke-linecap="round">
+      <line x1="-18" y1="-25" x2="-25" y2="25"/>
+      <line x1="10" y1="-25" x2="3" y2="25"/>
+      <line x1="-30" y1="-10" x2="20" y2="-10"/>
+      <line x1="-32" y1="10" x2="18" y2="10"/>
+    </g>
+
+    <!-- Star & Sparkle Accents -->
+    <path d="M -105 -25 Q -105 -15 -95 -15 Q -105 -15 -105 -5 Q -105 -15 -115 -15 Q -105 -15 -105 -25 Z" fill="url(#goldAccent)"/>
+    <path d="M 105 -35 Q 105 -25 115 -25 Q 105 -25 105 -15 Q 105 -25 95 -25 Q 105 -25 105 -35 Z" fill="url(#goldAccent)"/>
+    <circle cx="-90" cy="40" r="3" fill="url(#warmTerracotta)"/>
+    <circle cx="95" cy="35" r="3" fill="url(#warmTerracotta)"/>
+  </g>
+
+  <!-- Brand Typography -->
+  <text x="400" y="360" font-family="'Cormorant Garamond', Georgia, serif" font-size="44" fill="#221F1B" font-weight="700" text-anchor="middle" letter-spacing="4">TINY HASHTAG</text>
+  <line x1="280" y1="380" x2="520" y2="380" stroke="url(#goldAccent)" stroke-width="1" opacity="0.6"/>
+  <text x="400" y="408" font-family="'Manrope', sans-serif" font-size="12" fill="#6B5E4F" text-anchor="middle" letter-spacing="4" font-weight="600">CONTEMPORARY KIDS FASHION</text>
+
+  <!-- Tagline & Description -->
+  <text x="400" y="445" font-family="'Manrope', sans-serif" font-size="13" fill="#3D372E" text-anchor="middle" font-weight="500">Playful Designs • Pure Comfort • Modern Style</text>
+
+  <!-- Instagram Handle Badge Button -->
+  <g transform="translate(400, 500)">
+    <rect x="-140" y="-18" width="280" height="36" rx="18" fill="#221F1B"/>
+    <text x="0" y="5" font-family="'Manrope', sans-serif" font-size="12" fill="#FAF7F2" font-weight="700" text-anchor="middle" letter-spacing="1">@tinyhashtag on Instagram ↗</text>
+  </g>
+</svg>

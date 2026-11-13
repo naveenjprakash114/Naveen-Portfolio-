@@ -219,11 +219,42 @@ export default function ResumeModal({ isOpen, onClose }) {
               </div>
 
               <div className="space-y-1">
-                <div className="text-xs sm:text-sm font-bold text-charcoal">
-                  HASHTAG CLOTHING <span className="font-normal text-charcoal/60">|</span> <span className="text-gold font-semibold">Social Media &amp; Brand Promotion</span>
+                <div className="text-xs sm:text-sm font-bold text-charcoal flex items-center justify-between">
+                  <span>
+                    HASHTAG CLOTHING <span className="font-normal text-charcoal/60">|</span> <span className="text-gold font-semibold">Social Media &amp; Brand Promotion</span>
+                  </span>
+                  <a
+                    href="https://www.instagram.com/hashtagclothings31?srtk=Z3JhZjdyOWRvcHc5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[11px] font-mono text-gold hover:text-charcoal transition-colors font-medium flex items-center gap-1"
+                  >
+                    <span>@hashtagclothings31</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
                 </div>
                 <p className="text-xs text-charcoal/80 leading-relaxed">
                   Designed clothing promotions and social media creatives, edited fashion videos and reels, and supported content publishing and brand consistency.
+                </p>
+              </div>
+
+              <div className="space-y-1">
+                <div className="text-xs sm:text-sm font-bold text-charcoal flex items-center justify-between">
+                  <span>
+                    TINY HASHTAG <span className="font-normal text-charcoal/60">|</span> <span className="text-gold font-semibold">Kids Fashion &amp; Brand Creative</span>
+                  </span>
+                  <a
+                    href="https://www.instagram.com/tinyhashtag?rpxt=cWN1dHF1aWVwNnFo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[11px] font-mono text-gold hover:text-charcoal transition-colors font-medium flex items-center gap-1"
+                  >
+                    <span>@tinyhashtag</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                </div>
+                <p className="text-xs text-charcoal/80 leading-relaxed">
+                  Created playful kids apparel graphics, promotional campaign reels, festive launch creatives, and social content for Tiny Hashtag.
                 </p>
               </div>
             </div>
