@@ -11,7 +11,7 @@ export default function Navbar() {
       setScrolled(window.scrollY > 20);
 
       // Detect current section in view
-      const sections = ["home", "about", "expertise", "experience", "projects", "education", "contact"];
+      const sections = ["home", "about", "skills", "experience", "projects", "education", "contact"];
       const scrollPosition = window.scrollY + 120;
 
       for (const sectionId of sections) {
@@ -34,7 +34,7 @@ export default function Navbar() {
   const navLinks = [
     { label: "Home", href: "#home", id: "home" },
     { label: "About", href: "#about", id: "about" },
-    { label: "Expertise", href: "#expertise", id: "expertise" },
+    { label: "Skills", href: "#skills", id: "skills" },
     { label: "Experience", href: "#experience", id: "experience" },
     { label: "Projects", href: "#projects", id: "projects" },
     { label: "Contact", href: "#contact", id: "contact" },
