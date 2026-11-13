@@ -28,12 +28,8 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Center: Creative Technologist & Social Links */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 text-xs font-mono">
-            <span className="text-charcoal/70 uppercase tracking-wider">
-              AI Creative Technologist | Frontend Developer
-            </span>
-            <span className="hidden sm:inline text-gold/40">•</span>
+          {/* Center: Social Links */}
+          <div className="flex items-center gap-4 text-xs font-mono">
             <div className="flex items-center gap-4">
               <a
                 href={linkedinUrl}
