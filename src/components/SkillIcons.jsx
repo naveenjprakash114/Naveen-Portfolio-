@@ -242,3 +242,28 @@ export function SeoAnalyticsIcon({ className = "w-8 h-8" }) {
     </svg>
   );
 }
+
+export function AiTechnologistIcon({ className = "w-8 h-8" }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none">
+      <defs>
+        <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#8B5CF6" />
+          <stop offset="50%" stopColor="#EC4899" />
+          <stop offset="100%" stopColor="#F59E0B" />
+        </linearGradient>
+      </defs>
+      <path
+        d="M12 2L14.4 7.6L20 10L14.4 12.4L12 18L9.6 12.4L4 10L9.6 7.6L12 2Z"
+        fill="url(#aiGrad)"
+      />
+      <path
+        d="M19 16L20.2 18.8L23 20L20.2 21.2L19 24L17.8 21.2L15 20L17.8 18.8L19 16Z"
+        fill="#A855F7"
+      />
+      <circle cx="5" cy="18" r="2" fill="#6366F1" />
+      <path d="M5 16v-2M5 20v2M3 18H1M7 18h2" stroke="#6366F1" strokeWidth="1.2" strokeLinecap="round" />
+    </svg>
+  );
+}
+

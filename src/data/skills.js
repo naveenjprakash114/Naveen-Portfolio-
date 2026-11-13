@@ -2,6 +2,7 @@ export const skillCategories = [
   "All",
   "Frontend",
   "UI/UX",
+  "AI Creative",
   "Adobe Suite",
   "Graphic Design",
   "Marketing"
@@ -74,6 +75,16 @@ export const skillsList = [
     icon: "FigmaIcon",
     level: "Advanced",
     bgTint: "bg-[#F5F3FF]"
+  },
+
+  // 3. AI CREATIVE TECHNOLOGIST
+  {
+    id: "ai-creative-technologist",
+    name: "AI Creative Technologist",
+    category: "AI Creative",
+    icon: "AiTechnologistIcon",
+    level: "Specialist",
+    bgTint: "bg-[#FAF5FF]"
   },
 
   // 3. ADOBE CREATIVE SUITE
