@@ -1,5 +1,6 @@
 export const projectFilterCategories = [
   "ALL",
+  "E-COMMERCE",
   "BRANDING",
   "GRAPHIC DESIGN",
   "DIGITAL MARKETING",
@@ -14,12 +15,12 @@ export const projects = [
     number: "01",
     name: "ARULMATHI SILKS",
     client: "Arulmathi Silks",
-    category: "Fashion Branding & Digital Marketing",
-    filterTags: ["BRANDING", "GRAPHIC DESIGN", "DIGITAL MARKETING", "VIDEOGRAPHY"],
+    category: "Fashion E-Commerce & Digital Marketing",
+    filterTags: ["E-COMMERCE", "BRANDING", "GRAPHIC DESIGN", "DIGITAL MARKETING", "VIDEOGRAPHY"],
     thumbnail: "/assets/projects/arulmathi-silks/cover.jpg",
     monogram: "AS",
     accentColor: "from-amber-100/80 to-amber-50/40",
-    roleSubtitle: "Digital Marketing & Creative Design",
+    roleSubtitle: "E-Commerce Creative Design & Digital Marketing",
     description: "Created promotional posters, campaign creatives, product-focused videos and social media content; supported page management and brand presentation.",
     liveUrl: "https://www.instagram.com/naveen_j_prakash/",
     instagramUrl: "https://www.instagram.com/naveen_j_prakash/",
@@ -76,12 +77,12 @@ export const projects = [
     number: "02",
     name: "HASHTAG CLOTHING",
     client: "Hashtag Clothing",
-    category: "Social Media & Brand Promotion",
-    filterTags: ["BRANDING", "GRAPHIC DESIGN", "DIGITAL MARKETING", "VIDEOGRAPHY"],
+    category: "Apparel E-Commerce & Brand Promotion",
+    filterTags: ["E-COMMERCE", "BRANDING", "GRAPHIC DESIGN", "DIGITAL MARKETING", "VIDEOGRAPHY"],
     thumbnail: "/assets/projects/hashtag-clothings/cover.jpg",
     monogram: "HC",
     accentColor: "from-orange-100/80 to-amber-50/40",
-    roleSubtitle: "Social Media & Brand Promotion",
+    roleSubtitle: "E-Commerce Social Media & Brand Promotion",
     description: "Designed clothing promotions and social media creatives, edited fashion videos and reels, and supported content publishing and brand consistency.",
     liveUrl: "https://www.instagram.com/naveen_j_prakash/",
     instagramUrl: "https://www.instagram.com/naveen_j_prakash/",
@@ -133,8 +134,62 @@ export const projects = [
     isFeatured: false
   },
   {
-    id: "personal-creative-projects",
+    id: "ecommerce-store-platform",
     number: "03",
+    name: "MODERN E-COMMERCE STORE",
+    client: "D2C Retail & Fashion Storefront",
+    category: "E-Commerce UI/UX & Web Development",
+    filterTags: ["E-COMMERCE", "WEB DESIGN", "BRANDING", "DIGITAL MARKETING"],
+    thumbnail: "/assets/projects/web/cover.jpg",
+    monogram: "EC",
+    accentColor: "from-amber-100/90 to-yellow-50/50",
+    roleSubtitle: "E-Commerce UI/UX & Frontend Development",
+    description: "End-to-end e-commerce user experience design, product catalog curation, conversion-focused UI layouts, checkout flows, and digital promotional assets.",
+    liveUrl: "https://github.com/naveenjprakash114",
+    githubUrl: "https://github.com/naveenjprakash114/Naveen",
+    driveUrl: "", // Attach Google Drive / Figma link here
+    role: [
+      "E-Commerce UI/UX Designer",
+      "Frontend Developer",
+      "Digital Merchandiser",
+      "Conversion Optimizer"
+    ],
+    overview: "Designing intuitive, high-converting digital storefronts tailored for modern consumer brands. Focused on responsive product pages, fluid filter systems, mobile-first shopping carts, and elevated brand aesthetics that drive conversions.",
+    objectives: [
+      "Design mobile-first e-commerce layouts optimized for fast browsing and smooth cart conversion.",
+      "Implement structured product catalog cards, filter facets, and interactive product galleries.",
+      "Create high-impact promotional banners, seasonal sale creatives, and digital marketing landing pages.",
+      "Build seamless, responsive shopping experiences using React.js and modern frontend architectures."
+    ],
+    deliverables: [
+      {
+        title: "Storefront UI/UX & Checkout Flow",
+        type: "UI/UX Design",
+        description: "Clean product detail pages (PDP), interactive image carousels, size selectors, and frictionless checkout screens."
+      },
+      {
+        title: "Product Catalog & Merchandising",
+        type: "Digital Merchandising",
+        description: "Structured categorization, faceted filters, product highlight badges, and grid curation."
+      },
+      {
+        title: "Promotional Banners & Ad Creatives",
+        type: "Digital Marketing",
+        description: "Conversion-driven sale banners, seasonal launch graphics, and promotional marketing creatives."
+      }
+    ],
+    tools: ["React.js", "Tailwind CSS", "Figma", "Adobe Photoshop", "Canva Pro"],
+    gallery: [
+      {
+        url: "/assets/projects/web/01.jpg",
+        caption: "E-Commerce Product Detail & Modern Catalog Architecture"
+      }
+    ],
+    isFeatured: true
+  },
+  {
+    id: "personal-creative-projects",
+    number: "04",
     name: "PERSONAL CREATIVE PROJECTS",
     client: "DJ Photography / Personal Portfolio",
     category: "Photography & Videography",
@@ -191,7 +246,7 @@ export const projects = [
   },
   {
     id: "ai-powered-web-experiences",
-    number: "04",
+    number: "05",
     name: "AI & WEB EXPERIENCES",
     client: "Frontend & AI Engineering Lab",
     category: "UI/UX & Frontend Development",
