@@ -25,9 +25,12 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 
   if (!isOpen || !project) return null;
 
-  const currentLiveUrl = project.liveUrl || project.instagramUrl || "https://www.instagram.com/naveen_j_prakash/";
+  const currentLiveUrl = project.liveUrl || project.instagramUrl || (project.githubId ? `https://github.com/${project.githubId}` : null);
+  const isGitHub = Boolean(currentLiveUrl && currentLiveUrl.includes("github.com"));
+  const hasLinks = Boolean(currentLiveUrl || project.driveUrl || project.githubUrl);
 
   const handleCopyLink = () => {
+    if (!currentLiveUrl) return;
     navigator.clipboard.writeText(currentLiveUrl);
     setCopiedLink(true);
     setTimeout(() => setCopiedLink(false), 2200);
@@ -75,117 +78,138 @@ export default function ProjectModal({ project, isOpen, onClose }) {
           </button>
         </div>
 
-        {/* PROMINENT LIVE WORK & ATTACHMENT HUB */}
-        <div className="p-5 sm:p-6 rounded-2xl bg-white border border-gold/30 mb-8 shadow-subtle space-y-4">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-gold/15">
-            <div>
-              <span className="text-[11px] font-mono uppercase tracking-widest text-gold font-bold block">
-                PROJECT LINKS &amp; LIVE WORKS
-              </span>
-              <span className="text-xs text-charcoal/70">
-                View published campaign assets, social media works, and creative files
-              </span>
-            </div>
-
-            <button
-              onClick={() => setShowAttachHelp(!showAttachHelp)}
-              className="text-[11px] font-mono text-gold hover:text-charcoal transition-colors self-start sm:self-auto underline decoration-dotted"
-            >
-              {showAttachHelp ? "Hide Attachment Info" : "+ How to attach new works/links"}
-            </button>
-          </div>
-
-          {/* Quick Action Buttons for Works */}
-          <div className="flex flex-wrap items-center gap-3">
-            {currentLiveUrl ? (
-              <a
-                href={currentLiveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-charcoal text-[#FAF7F2] text-xs font-semibold uppercase tracking-wider hover:bg-charcoal/80 transition-colors shadow-xs"
-              >
-                <InstagramIcon className="w-4 h-4 text-champagne" />
-                <span>{project.liveUrlLabel || "View Live Works / Instagram"}</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-champagne" />
-              </a>
-            ) : null}
-
-            {project.driveUrl ? (
-              <a
-                href={project.driveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#FAF7F2] border border-gold/35 text-charcoal text-xs font-semibold uppercase tracking-wider hover:bg-white transition-colors"
-              >
-                <FolderOpen className="w-4 h-4 text-gold" />
-                <span>Drive Assets Folder</span>
-                <ExternalLink className="w-3.5 h-3.5 text-gold" />
-              </a>
-            ) : null}
-
-            {project.githubUrl ? (
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#FAF7F2] border border-gold/35 text-charcoal text-xs font-semibold uppercase tracking-wider hover:bg-white transition-colors"
-              >
-                <GitHubIcon className="w-4 h-4 text-gold" />
-                <span>View Repository</span>
-                <ExternalLink className="w-3.5 h-3.5 text-gold" />
-              </a>
-            ) : null}
-
-            <button
-              onClick={handleCopyLink}
-              className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[#FAF7F2] border border-gold/30 text-charcoal text-xs font-semibold uppercase tracking-wider hover:bg-white transition-colors"
-              title="Copy Work Link"
-            >
-              {copiedLink ? (
-                <>
-                  <Check className="w-3.5 h-3.5 text-emerald-600" />
-                  <span className="text-emerald-700">Link Copied!</span>
-                </>
-              ) : (
-                <>
-                  <Copy className="w-3.5 h-3.5 text-gold" />
-                  <span>Copy Work Link</span>
-                </>
-              )}
-            </button>
-          </div>
-
-          {/* Expandable Help Box for Attaching Links */}
-          {showAttachHelp && (
-            <div className="p-4 rounded-xl bg-[#FAF7F2] border border-gold/30 text-xs text-charcoal/80 space-y-2 animate-fadeIn">
-              <p className="font-semibold text-charcoal">
-                💡 How to attach your links or works to this project:
-              </p>
-              <p className="leading-relaxed">
-                You can attach any live URL (Instagram post, Reel, Google Drive folder, Behance case, or Website) by updating <code className="bg-white px-2 py-0.5 rounded border border-gold/30 font-mono text-[11px]">src/data/projects.js</code> in the <code className="bg-white px-2 py-0.5 rounded border border-gold/30 font-mono text-[11px]">liveUrl</code> or <code className="bg-white px-2 py-0.5 rounded border border-gold/30 font-mono text-[11px]">driveUrl</code> field.
-              </p>
-              <div className="pt-2 flex flex-col sm:flex-row gap-2">
-                <input
-                  type="text"
-                  placeholder="Paste work or drive link to test opening..."
-                  value={customLink}
-                  onChange={(e) => setCustomLink(e.target.value)}
-                  className="flex-grow px-3 py-1.5 rounded-lg border border-gold/30 bg-white text-xs text-charcoal focus:outline-none focus:border-gold"
-                />
-                {customLink && (
-                  <a
-                    href={customLink.startsWith("http") ? customLink : `https://${customLink}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-1.5 rounded-lg bg-charcoal text-white text-xs font-semibold text-center hover:bg-charcoal/80 transition-colors"
-                  >
-                    Open Link ↗
-                  </a>
-                )}
+        {/* PROMINENT LIVE WORK & ATTACHMENT HUB (Shown when project has external links) */}
+        {hasLinks ? (
+          <div className="p-5 sm:p-6 rounded-2xl bg-white border border-gold/30 mb-8 shadow-subtle space-y-4">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-gold/15">
+              <div>
+                <span className="text-[11px] font-mono uppercase tracking-widest text-gold font-bold block">
+                  {isGitHub ? "PROJECT REPOSITORY & CODE HUB" : "PROJECT LINKS & LIVE WORKS"}
+                </span>
+                <span className="text-xs text-charcoal/70">
+                  {isGitHub
+                    ? "Explore live code, repositories, and architectural documentation on GitHub"
+                    : "View published campaign assets, social media works, and creative files"}
+                </span>
               </div>
+
+              <button
+                onClick={() => setShowAttachHelp(!showAttachHelp)}
+                className="text-[11px] font-mono text-gold hover:text-charcoal transition-colors self-start sm:self-auto underline decoration-dotted"
+              >
+                {showAttachHelp ? "Hide Attachment Info" : "+ How to attach new works/links"}
+              </button>
             </div>
-          )}
-        </div>
+
+            {/* Quick Action Buttons for Works */}
+            <div className="flex flex-wrap items-center gap-3">
+              {currentLiveUrl ? (
+                <a
+                  href={currentLiveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-charcoal text-[#FAF7F2] text-xs font-semibold uppercase tracking-wider hover:bg-charcoal/80 transition-colors shadow-xs"
+                >
+                  {isGitHub ? (
+                    <GitHubIcon className="w-4 h-4 text-champagne" />
+                  ) : (
+                    <InstagramIcon className="w-4 h-4 text-champagne" />
+                  )}
+                  <span>
+                    {project.liveUrlLabel || (isGitHub ? `GitHub: @${project.githubId || "naveenjprakash114"}` : "View Live Works / Instagram")}
+                  </span>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-champagne" />
+                </a>
+              ) : null}
+
+              {project.driveUrl ? (
+                <a
+                  href={project.driveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#FAF7F2] border border-gold/35 text-charcoal text-xs font-semibold uppercase tracking-wider hover:bg-white transition-colors"
+                >
+                  <FolderOpen className="w-4 h-4 text-gold" />
+                  <span>Drive Assets Folder</span>
+                  <ExternalLink className="w-3.5 h-3.5 text-gold" />
+                </a>
+              ) : null}
+
+              {project.githubUrl && project.githubUrl !== currentLiveUrl ? (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#FAF7F2] border border-gold/35 text-charcoal text-xs font-semibold uppercase tracking-wider hover:bg-white transition-colors"
+                >
+                  <GitHubIcon className="w-4 h-4 text-gold" />
+                  <span>View Repository</span>
+                  <ExternalLink className="w-3.5 h-3.5 text-gold" />
+                </a>
+              ) : null}
+
+              {currentLiveUrl && (
+                <button
+                  onClick={handleCopyLink}
+                  className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[#FAF7F2] border border-gold/30 text-charcoal text-xs font-semibold uppercase tracking-wider hover:bg-white transition-colors"
+                  title="Copy Work Link"
+                >
+                  {copiedLink ? (
+                    <>
+                      <Check className="w-3.5 h-3.5 text-emerald-600" />
+                      <span className="text-emerald-700">Link Copied!</span>
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="w-3.5 h-3.5 text-gold" />
+                      <span>Copy Link</span>
+                    </>
+                  )}
+                </button>
+              )}
+            </div>
+
+            {/* Expandable Help Box for Attaching Links */}
+            {showAttachHelp && (
+              <div className="p-4 rounded-xl bg-[#FAF7F2] border border-gold/30 text-xs text-charcoal/80 space-y-2 animate-fadeIn">
+                <p className="font-semibold text-charcoal">
+                  💡 How to attach your links or works to this project:
+                </p>
+                <p className="leading-relaxed">
+                  You can attach any live URL (GitHub repo, Instagram post, Google Drive folder, or Website) by updating <code className="bg-white px-2 py-0.5 rounded border border-gold/30 font-mono text-[11px]">src/data/projects.js</code> in the <code className="bg-white px-2 py-0.5 rounded border border-gold/30 font-mono text-[11px]">liveUrl</code> or <code className="bg-white px-2 py-0.5 rounded border border-gold/30 font-mono text-[11px]">githubUrl</code> field.
+                </p>
+                <div className="pt-2 flex flex-col sm:flex-row gap-2">
+                  <input
+                    type="text"
+                    placeholder="Paste work or repo link to test opening..."
+                    value={customLink}
+                    onChange={(e) => setCustomLink(e.target.value)}
+                    className="flex-grow px-3 py-1.5 rounded-lg border border-gold/30 bg-white text-xs text-charcoal focus:outline-none focus:border-gold"
+                  />
+                  {customLink && (
+                    <a
+                      href={customLink.startsWith("http") ? customLink : `https://${customLink}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-1.5 rounded-lg bg-charcoal text-white text-xs font-semibold text-center hover:bg-charcoal/80 transition-colors"
+                    >
+                      Open Link ↗
+                    </a>
+                  )}
+                </div>
+              </div>
+            )}
+          </div>
+        ) : (
+          /* Case Study Archive Banner when no external link is attached (e.g. Photography) */
+          <div className="p-4 sm:p-5 rounded-2xl bg-white border border-gold/25 mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-charcoal/70">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-gold" />
+              <span className="font-medium text-charcoal">Visual Practice Archive &amp; Independent Case Study</span>
+            </div>
+            <span className="font-mono text-[11px] text-gold uppercase tracking-wider">Internal Portfolio Works</span>
+          </div>
+        )}
 
         {/* DELIVERABLES & WORKS PRODUCED */}
         <div className="space-y-4 mb-8">
@@ -324,7 +348,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#FAF7F2] border border-gold/30 text-charcoal text-xs font-semibold uppercase tracking-wider hover:bg-white transition-colors"
               >
-                <span>Open Work</span>
+                <span>{isGitHub ? "Open GitHub" : "Open Work"}</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-gold" />
               </a>
             )}

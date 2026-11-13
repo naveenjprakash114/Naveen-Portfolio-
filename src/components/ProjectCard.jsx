@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Sparkles } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import { GitHubIcon } from "./Icons";
 
 export default function ProjectCard({ project, index, onSelect }) {
   return (
@@ -15,7 +16,7 @@ export default function ProjectCard({ project, index, onSelect }) {
         {project.monogram || project.name.slice(0, 2)}
       </div>
 
-      {/* Subtle Brand Thumbnail Overlay (Very soft ambient branding) */}
+      {/* Subtle Brand Thumbnail Overlay */}
       {project.thumbnail && (
         <img
           src={project.thumbnail}
@@ -59,10 +60,23 @@ export default function ProjectCard({ project, index, onSelect }) {
           <span className="uppercase tracking-wider">Touch to Open</span>
         </div>
 
-        <span className="inline-flex items-center gap-1 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-wider text-charcoal/70 group-hover:text-gold transition-colors">
-          <span>View Works</span>
-          <ArrowUpRight className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-        </span>
+        {/* Dynamic target based on project type */}
+        {project.githubId ? (
+          <span className="inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] font-mono font-semibold tracking-wider text-charcoal/80 group-hover:text-gold transition-colors">
+            <GitHubIcon className="w-3 h-3 text-gold" />
+            <span>{project.githubId}</span>
+            <ArrowUpRight className="w-2.5 h-2.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </span>
+        ) : project.instagramHandle ? (
+          <span className="inline-flex items-center gap-1 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-wider text-charcoal/70 group-hover:text-gold transition-colors">
+            <span>{project.instagramHandle}</span>
+            <ArrowUpRight className="w-2.5 h-2.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </span>
+        ) : (
+          <span className="inline-flex items-center gap-1 text-[10px] sm:text-[11px] font-mono font-medium uppercase tracking-wider text-charcoal/50">
+            <span>Case Study</span>
+          </span>
+        )}
       </div>
     </motion.article>
   );

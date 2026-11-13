@@ -213,8 +213,10 @@ export const projects = [
     accentColor: "from-amber-100/90 to-yellow-50/50",
     roleSubtitle: "E-Commerce UI/UX & Frontend Development",
     description: "End-to-end e-commerce user experience design, product catalog curation, conversion-focused UI layouts, checkout flows, and digital promotional assets.",
+    githubId: "naveenjprakash114",
+    githubUrl: "https://github.com/naveenjprakash114",
     liveUrl: "https://github.com/naveenjprakash114",
-    githubUrl: "https://github.com/naveenjprakash114/Naveen",
+    liveUrlLabel: "View GitHub: @naveenjprakash114",
     driveUrl: "", // Attach Google Drive / Figma link here
     role: [
       "E-Commerce UI/UX Designer",
@@ -267,9 +269,10 @@ export const projects = [
     accentColor: "from-stone-200/80 to-amber-50/40",
     roleSubtitle: "Visual Storyteller & Camera Director",
     description: "A curated selection of commercial, product, portrait, and event photography, cinematography, and cinematic color grading spanning 3+ years.",
-    liveUrl: "https://www.instagram.com/naveen_j_prakash/",
-    instagramUrl: "https://www.instagram.com/naveen_j_prakash/",
-    driveUrl: "", // Attach Google Drive link here
+    liveUrl: "",
+    instagramUrl: "",
+    githubUrl: "",
+    driveUrl: "",
     role: [
       "Photographer",
       "Videographer",
@@ -324,8 +327,10 @@ export const projects = [
     accentColor: "from-amber-100/60 to-yellow-50/40",
     roleSubtitle: "Frontend Developer & AI Prompt Engineer",
     description: "Modern website interfaces and web applications built with React.js, Tailwind CSS, and AI-assisted engineering tools.",
+    githubId: "naveenjprakash114",
+    githubUrl: "https://github.com/naveenjprakash114",
     liveUrl: "https://github.com/naveenjprakash114",
-    githubUrl: "https://github.com/naveenjprakash114/Naveen",
+    liveUrlLabel: "View GitHub: @naveenjprakash114",
     driveUrl: "",
     role: [
       "UI/UX Designer",
