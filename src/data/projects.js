@@ -22,8 +22,10 @@ export const projects = [
     accentColor: "from-amber-100/80 to-amber-50/40",
     roleSubtitle: "E-Commerce Creative Design & Digital Marketing",
     description: "Created promotional posters, campaign creatives, product-focused videos and social media content; supported page management and brand presentation.",
-    liveUrl: "https://www.instagram.com/naveen_j_prakash/",
-    instagramUrl: "https://www.instagram.com/naveen_j_prakash/",
+    liveUrl: "https://www.instagram.com/arulmathisilksofficial?vrfl=MTU5bzFhYmR6anZrdg==",
+    instagramUrl: "https://www.instagram.com/arulmathisilksofficial?vrfl=MTU5bzFhYmR6anZrdg==",
+    liveUrlLabel: "Visit @arulmathisilksofficial on Instagram",
+    instagramHandle: "@arulmathisilksofficial",
     driveUrl: "", // Attach Google Drive / Dropbox link here
     role: [
       "Digital Marketing",

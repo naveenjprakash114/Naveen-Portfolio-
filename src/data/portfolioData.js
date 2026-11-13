@@ -88,7 +88,9 @@ export const personalInfo = {
     {
       name: "ARULMATHI SILKS",
       subtitle: "Digital Marketing & Creative Design",
-      description: "Created promotional posters, campaign creatives, product-focused videos and social media content; supported page management and brand presentation."
+      description: "Created promotional posters, campaign creatives, product-focused videos and social media content; supported page management and brand presentation.",
+      instagramUrl: "https://www.instagram.com/arulmathisilksofficial?vrfl=MTU5bzFhYmR6anZrdg==",
+      instagramHandle: "@arulmathisilksofficial"
     },
     {
       name: "HASHTAG CLOTHING",

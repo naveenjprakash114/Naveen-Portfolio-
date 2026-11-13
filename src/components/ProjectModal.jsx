@@ -105,7 +105,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-charcoal text-[#FAF7F2] text-xs font-semibold uppercase tracking-wider hover:bg-charcoal/80 transition-colors shadow-xs"
               >
                 <InstagramIcon className="w-4 h-4 text-champagne" />
-                <span>View Live Works / Instagram</span>
+                <span>{project.liveUrlLabel || "View Live Works / Instagram"}</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-champagne" />
               </a>
             ) : null}
