@@ -342,14 +342,26 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                   </div>
                 </div>
 
-                <button
-                  type="button"
-                  onClick={() => setPreviewImage(project.gallery[0])}
-                  className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white text-charcoal text-[11px] font-mono font-medium hover:bg-charcoal hover:text-white transition-colors shadow-2xs"
-                >
-                  <Maximize2 className="w-3 h-3 text-gold" />
-                  <span>Enlarge Full Screen</span>
-                </button>
+                <div className="flex items-center gap-2">
+                  <a
+                    href={project.gallery[0].url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/90 border border-gold/25 text-charcoal text-[11px] font-mono font-medium hover:bg-charcoal hover:text-white transition-colors shadow-2xs"
+                    title="Open original uploaded image in a new tab"
+                  >
+                    <ExternalLink className="w-3 h-3 text-gold" />
+                    <span className="hidden sm:inline">Open in New Tab</span>
+                  </a>
+                  <button
+                    type="button"
+                    onClick={() => setPreviewImage(project.gallery[0])}
+                    className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white text-charcoal text-[11px] font-mono font-medium hover:bg-charcoal hover:text-white transition-colors shadow-2xs"
+                  >
+                    <Maximize2 className="w-3 h-3 text-gold" />
+                    <span>Enlarge Full Screen</span>
+                  </button>
+                </div>
               </div>
 
               {/* Scrollable Landing Page Canvas */}
@@ -553,6 +565,16 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                 </span>
 
                 <div className="flex items-center gap-2">
+                  <a
+                    href={previewImage.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3.5 py-1.5 rounded-full bg-white border border-gold/30 text-charcoal text-xs font-semibold uppercase tracking-wider flex items-center gap-1 hover:bg-[#FAF7F2] transition-colors"
+                  >
+                    <span>Open Raw File</span>
+                    <ExternalLink className="w-3 h-3 text-gold" />
+                  </a>
+
                   {currentLiveUrl && (
                     <a
                       href={currentLiveUrl}
