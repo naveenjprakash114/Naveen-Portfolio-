@@ -74,9 +74,6 @@ export default function Footer() {
 
         {/* Bottom Row */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-charcoal/60">
-          <p className="italic font-serif">
-            "Designed with creativity. Built with curiosity."
-          </p>
           <p>© 2026 Naveen Prakash J. All Rights Reserved.</p>
         </div>
       </div>
