@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artisanal Storefront — Luxury Gelato & Frozen Dessert D2C</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#C5A880',
+            'gold-light': '#E8DCC4',
+            'gold-dark': '#9E7D4E',
+            midnight: '#180B26',
+            'midnight-dark': '#0F0619',
+            'midnight-light': '#241238',
+            cream: '#FAF7F2',
+            lavender: '#F4EFFC',
+            'lavender-soft': '#F8F5FC',
+            charcoal: '#1A181E'
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            cinzel: ['"Cinzel"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #FAF7F2;
+      color: #1A181E;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .hero-glow {
+      background: radial-gradient(circle at center, rgba(168, 85, 247, 0.25) 0%, rgba(147, 51, 234, 0.12) 35%, transparent 70%);
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #C5A880;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="bg-cream text-charcoal antialiased selection:bg-gold/30 selection:text-midnight">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="bg-midnight text-cream text-[11px] font-mono tracking-widest uppercase py-2 px-4 text-center border-b border-gold/30 flex items-center justify-center gap-3">
+    <span class="w-1.5 h-1.5 rounded-full bg-gold animate-pulse"></span>
+    <span>COMPLIMENTARY SUB-ZERO COLD SHIPPING ON ORDERS OVER $50 • USE CODE: <strong class="text-gold">FIRSTSCOOP15</strong></span>
+    <span class="w-1.5 h-1.5 rounded-full bg-gold animate-pulse"></span>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-cream/95 backdrop-blur-md border-b border-gold/20 px-6 sm:px-12 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-full bg-midnight text-gold flex items-center justify-center font-cinzel font-bold text-sm border border-gold/40 shadow-xs">
+        ✦
+      </div>
+      <div>
+        <span class="font-cinzel font-bold tracking-widest text-sm text-midnight block">ARTISANAL STOREFRONT</span>
+        <span class="text-[9px] font-mono uppercase tracking-widest text-gold block -mt-1">D2C GELATO &amp; FROZEN CONFECTIONS</span>
+      </div>
+    </div>
+
+    <nav class="hidden lg:flex items-center gap-8 text-xs font-mono uppercase tracking-wider text-charcoal/80">
+      <a href="#hero" class="hover:text-gold transition-colors">Home</a>
+      <a href="#customizer" class="hover:text-gold transition-colors">Customizer</a>
+      <a href="#flavors" class="hover:text-gold transition-colors">Flavors</a>
+      <a href="#promise" class="hover:text-gold transition-colors">Our Promise</a>
+      <a href="#reviews" class="hover:text-gold transition-colors">Reviews</a>
+      <a href="#offers" class="hover:text-gold transition-colors">Offers</a>
+      <a href="#faq" class="hover:text-gold transition-colors">FAQ</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <div class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-gold/30 text-xs font-mono text-charcoal/70">
+        <span>Cart</span>
+        <span class="w-4 h-4 rounded-full bg-midnight text-gold text-[10px] flex items-center justify-center font-bold">2</span>
+      </div>
+      <a href="#customizer" class="px-4 py-2 rounded-full bg-midnight text-gold text-xs font-mono font-semibold uppercase tracking-wider hover:bg-midnight-light transition-all shadow-xs border border-gold/30">
+        Order Now
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION: YOUR NEXT SCOOP IS ONLY BENEFITS AWAY -->
+  <section id="hero" class="relative pt-12 pb-20 px-6 sm:px-12 overflow-hidden bg-gradient-to-b from-lavender-soft via-cream to-cream">
+    <div class="max-w-4xl mx-auto text-center relative z-10 space-y-4">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/90 border border-gold/30 text-[10px] font-mono tracking-widest uppercase text-gold-dark shadow-2xs">
+        <span>✦</span>
+        <span>Artisanal Gelato &amp; Frozen Confections</span>
+        <span>✦</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-cinzel font-normal text-midnight tracking-tight leading-tight">
+        YOUR NEXT SCOOP<br>
+        <span class="font-serif italic font-normal text-gold-dark">IS ONLY BENEFITS AWAY.</span>
+      </h1>
+
+      <p class="text-xs sm:text-sm text-charcoal/70 max-w-xl mx-auto leading-relaxed">
+        Handcrafted small-batch Italian gelato, organic fruit sorbets, and luxury dessert sticks prepared from pasture-raised milk and rare botanical infusions.
+      </p>
+
+      <!-- HERO VISUAL: PURPLE POPSICLE WITH RADIAL GLOW -->
+      <div class="relative py-8 flex justify-center items-center">
+        <div class="absolute w-72 h-72 sm:w-96 sm:h-96 rounded-full hero-glow pointer-events-none"></div>
+
+        <!-- 3D Stylized Popsicle Visual Mockup -->
+        <div class="relative z-10 flex flex-col items-center">
+          <div class="w-24 sm:w-28 h-44 sm:h-52 rounded-t-3xl rounded-b-xl bg-gradient-to-b from-[#4A206A] via-[#32134E] to-[#1E0B30] border-2 border-gold/40 shadow-2xl flex flex-col items-center justify-between p-3 relative overflow-hidden group hover:scale-105 transition-transform duration-500">
+            <!-- Glaze sheen -->
+            <div class="absolute top-2 left-2 w-4 h-16 rounded-full bg-white/25 blur-[1px]"></div>
+            <div class="absolute top-3 right-3 text-gold text-[10px]">✦</div>
+            <div class="absolute bottom-6 left-3 text-gold/80 text-[8px]">✦</div>
+            
+            <!-- Chocolate drizzle accent -->
+            <div class="w-full h-8 border-b-2 border-dashed border-amber-300/30 mt-8"></div>
+
+            <div class="text-[9px] font-mono uppercase tracking-widest text-gold/90 text-center font-semibold pb-1">
+              Wild Berry<br>Lavender
+            </div>
+          </div>
+          <!-- Wooden stick -->
+          <div class="w-5 sm:w-6 h-12 bg-gradient-to-b from-[#D4AF7A] to-[#B38B50] rounded-b-lg shadow-md -mt-1 border-t border-black/20"></div>
+          <!-- Shadow reflection -->
+          <div class="w-28 h-3 rounded-full bg-midnight/15 blur-xs mt-2"></div>
+        </div>
+      </div>
+
+      <!-- HERO CTA BUTTONS -->
+      <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+        <a href="#customizer" class="px-7 py-3 rounded-full bg-midnight text-gold font-mono text-xs font-semibold uppercase tracking-wider hover:bg-midnight-light transition-all shadow-md border border-gold/40 flex items-center gap-2">
+          <span>Order Online</span>
+          <span>→</span>
+        </a>
+        <a href="#flavors" class="px-6 py-3 rounded-full bg-white text-charcoal font-mono text-xs font-medium uppercase tracking-wider hover:border-gold hover:text-gold-dark transition-all border border-gold/30 shadow-2xs">
+          Explore Menu
+        </a>
+      </div>
+
+      <!-- Trust Indicator -->
+      <div class="pt-4 flex items-center justify-center gap-4 text-[11px] font-mono text-charcoal/60">
+        <span>★★★★★ 4.9/5 Rating</span>
+        <span>•</span>
+        <span>2,800+ Verified Reviews</span>
+        <span>•</span>
+        <span>100% Organic &amp; Non-GMO</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: STEP-BY-STEP INTERACTIVE ORDER -->
+  <section id="customizer" class="py-16 px-6 sm:px-12 bg-white border-y border-gold/20">
+    <div class="max-w-6xl mx-auto space-y-10">
+      <div class="text-center space-y-2">
+        <span class="text-[11px] font-mono uppercase tracking-widest text-gold font-bold block">
+          CUSTOM D2C EXPERIENCE
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-cinzel font-normal text-midnight tracking-tight">
+          STEP-BY-STEP INTERACTIVE ORDER
+        </h2>
+        <p class="text-xs sm:text-sm text-charcoal/70 max-w-xl mx-auto">
+          Craft your artisanal frozen scoop in 3 intuitive steps with real-time flavor layering and pricing.
+        </p>
+      </div>
+
+      <!-- Customizer 2-Column Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Left: 6 Interactive Option Cards -->
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- Option 1 -->
+          <div class="p-4 rounded-2xl bg-cream border-2 border-gold/50 shadow-xs space-y-2 relative">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-gold font-semibold">Step 01 • Base</span>
+              <span class="w-4 h-4 rounded-full bg-midnight text-gold text-[9px] flex items-center justify-center font-bold">✓</span>
+            </div>
+            <h4 class="font-serif text-sm font-semibold text-midnight">Classic Farm-Fresh Cream</h4>
+            <p class="text-[11px] text-charcoal/70 leading-relaxed">Slow-churned pasture-raised jersey dairy with velvety custard finish.</p>
+            <div class="text-[10px] font-mono text-gold-dark font-medium pt-1">Included in Base</div>
+          </div>
+
+          <!-- Option 2 -->
+          <div class="p-4 rounded-2xl bg-white border border-gold/25 hover:border-gold shadow-2xs space-y-2 cursor-pointer transition-colors">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-charcoal/50">Step 01 • Vegan</span>
+              <span class="w-4 h-4 rounded-full border border-gold/40"></span>
+            </div>
+            <h4 class="font-serif text-sm font-semibold text-midnight">Organic Oat &amp; Coconut Velvet</h4>
+            <p class="text-[11px] text-charcoal/70 leading-relaxed">100% plant-based creaminess infused with raw cold-pressed vanilla.</p>
+            <div class="text-[10px] font-mono text-charcoal/60 pt-1">+$0.50 Upgrade</div>
+          </div>
+
+          <!-- Option 3 -->
+          <div class="p-4 rounded-2xl bg-cream border-2 border-gold/50 shadow-xs space-y-2 relative">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-gold font-semibold">Step 02 • Infusion</span>
+              <span class="w-4 h-4 rounded-full bg-midnight text-gold text-[9px] flex items-center justify-center font-bold">✓</span>
+            </div>
+            <h4 class="font-serif text-sm font-semibold text-midnight">Wild Berry &amp; French Lavender</h4>
+            <p class="text-[11px] text-charcoal/70 leading-relaxed">Hand-harvested Alpine blackberries stewed with organic Provence lavender.</p>
+            <div class="text-[10px] font-mono text-gold-dark font-medium pt-1">Signature Selection</div>
+          </div>
+
+          <!-- Option 4 -->
+          <div class="p-4 rounded-2xl bg-white border border-gold/25 hover:border-gold shadow-2xs space-y-2 cursor-pointer transition-colors">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-charcoal/50">Step 02 • Infusion</span>
+              <span class="w-4 h-4 rounded-full border border-gold/40"></span>
+            </div>
+            <h4 class="font-serif text-sm font-semibold text-midnight">Sicilian Bronte Pistachio Cream</h4>
+            <p class="text-[11px] text-charcoal/70 leading-relaxed">Pure stone-ground DOP pistachios from Mount Etna with mineral sea salt.</p>
+            <div class="text-[10px] font-mono text-charcoal/60 pt-1">+$1.00 Upgrade</div>
+          </div>
+
+          <!-- Option 5 -->
+          <div class="p-4 rounded-2xl bg-cream border-2 border-gold/50 shadow-xs space-y-2 relative">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-gold font-semibold">Step 03 • Crunch</span>
+              <span class="w-4 h-4 rounded-full bg-midnight text-gold text-[9px] flex items-center justify-center font-bold">✓</span>
+            </div>
+            <h4 class="font-serif text-sm font-semibold text-midnight">Single-Origin Cacao Nibs &amp; Gold</h4>
+            <p class="text-[11px] text-charcoal/70 leading-relaxed">Ecuadorian roasted nibs coated in 24K edible gold flakes and Maldon salt.</p>
+            <div class="text-[10px] font-mono text-gold-dark font-medium pt-1">Included</div>
+          </div>
+
+          <!-- Option 6 -->
+          <div class="p-4 rounded-2xl bg-white border border-gold/25 hover:border-gold shadow-2xs space-y-2 cursor-pointer transition-colors">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-charcoal/50">Step 03 • Drizzle</span>
+              <span class="w-4 h-4 rounded-full border border-gold/40"></span>
+            </div>
+            <h4 class="font-serif text-sm font-semibold text-midnight">Smoked Bourbon Salted Caramel</h4>
+            <p class="text-[11px] text-charcoal/70 leading-relaxed">Kettle-cooked organic sugar reduced with aged Kentucky bourbon.</p>
+            <div class="text-[10px] font-mono text-charcoal/60 pt-1">+$0.75 Upgrade</div>
+          </div>
+        </div>
+
+        <!-- Right: Live Order Preview Card -->
+        <div class="lg:col-span-5 p-6 rounded-3xl bg-gradient-to-br from-lavender-soft via-cream to-white border border-gold/40 shadow-card space-y-6">
+          <div class="border-b border-gold/20 pb-4">
+            <span class="text-[10px] font-mono uppercase tracking-widest text-gold font-bold block">ORDER SUMMARY</span>
+            <h3 class="font-cinzel text-xl font-semibold text-midnight">CUSTOMIZE YOUR SCOOP</h3>
+            <p class="text-xs text-charcoal/70 mt-1">Live calculation with cold dry-ice packaging included.</p>
+          </div>
+
+          <div class="space-y-3 text-xs">
+            <div class="flex justify-between items-center py-2 border-b border-gold/15">
+              <span class="text-charcoal/80">Base • Classic Farm-Fresh Dairy</span>
+              <span class="font-mono font-medium">$5.50</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-gold/15">
+              <span class="text-charcoal/80">Infusion • Wild Berry &amp; French Lavender</span>
+              <span class="font-mono font-medium">$2.00</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-gold/15">
+              <span class="text-charcoal/80">Topping • Single-Origin Cacao &amp; Gold</span>
+              <span class="font-mono font-medium">$1.00</span>
+            </div>
+            <div class="flex justify-between items-center py-2 text-sm font-semibold text-midnight pt-2">
+              <span class="font-serif">Item Total</span>
+              <span class="font-mono text-lg text-gold-dark">$8.50</span>
+            </div>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-white border border-gold/30 text-[11px] space-y-1">
+            <div class="flex items-center gap-1.5 text-gold-dark font-mono font-medium">
+              <span>✦</span>
+              <span>Sub-Zero Cold Retention Packaging</span>
+            </div>
+            <p class="text-charcoal/70">Guaranteed to arrive frozen solid for up to 36 hours from dispatch.</p>
+          </div>
+
+          <button class="w-full py-3.5 rounded-full bg-midnight text-gold font-mono text-xs font-semibold uppercase tracking-wider hover:bg-midnight-light transition-all shadow-md border border-gold/30 flex items-center justify-center gap-2">
+            <span>Add Custom Scoop to Bag</span>
+            <span>($8.50) →</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: CHOOSE YOUR FLAVOR (10 DESSERT CARDS) -->
+  <section id="flavors" class="py-20 px-6 sm:px-12 bg-cream">
+    <div class="max-w-7xl mx-auto space-y-10">
+      <div class="text-center space-y-2">
+        <span class="text-[11px] font-mono uppercase tracking-widest text-gold font-bold block">
+          CURATED ARTISANAL COLLECTION
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-cinzel font-normal text-midnight tracking-tight">
+          CHOOSE YOUR FLAVOR
+        </h2>
+        <p class="text-xs sm:text-sm text-charcoal/70 max-w-xl mx-auto">
+          Explore our permanent signature classics, seasonal micro-batches, and certified vegan fruit sorbets.
+        </p>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="flex flex-wrap items-center justify-center gap-2 text-xs font-mono uppercase tracking-wider">
+        <span class="px-4 py-1.5 rounded-full bg-midnight text-gold font-medium shadow-xs">All Flavors (10)</span>
+        <span class="px-4 py-1.5 rounded-full bg-white text-charcoal/70 border border-gold/25 hover:border-gold cursor-pointer">Bestsellers</span>
+        <span class="px-4 py-1.5 rounded-full bg-white text-charcoal/70 border border-gold/25 hover:border-gold cursor-pointer">Dairy-Free</span>
+        <span class="px-4 py-1.5 rounded-full bg-white text-charcoal/70 border border-gold/25 hover:border-gold cursor-pointer">Seasonal</span>
+        <span class="px-4 py-1.5 rounded-full bg-white text-charcoal/70 border border-gold/25 hover:border-gold cursor-pointer">Chocolates</span>
+      </div>
+
+      <!-- 10 Product Cards Grid (2 rows of 5) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+        <!-- Item 01 -->
+        <div class="p-4 rounded-2xl bg-white border border-gold/25 hover:border-gold hover:shadow-card transition-all flex flex-col justify-between space-y-3 group">
+          <div class="relative aspect-square rounded-xl bg-lavender-soft overflow-hidden flex items-center justify-center">
+            <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-[#2C1810] to-[#5C3A21] shadow-lg group-hover:scale-110 transition-transform duration-500 border border-gold/20 flex items-center justify-center text-gold text-xs font-serif">72%</div>
+            <span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-midnight/80 text-gold text-[9px] font-mono uppercase tracking-wider">Bestseller</span>
+          </div>
+          <div>
+            <h4 class="font-serif font-semibold text-sm text-midnight">Belgian Dark Truffle</h4>
+            <p class="text-[11px] text-charcoal/60 mt-0.5 line-clamp-2">Single-origin 72% Belgian cacao melted into custard gelato with cocoa dust.</p>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gold/15">
+            <span class="font-mono text-xs font-bold text-midnight">$7.50</span>
+            <button class="px-3 py-1 rounded-full bg-cream border border-gold/30 text-midnight text-[10px] font-mono font-semibold uppercase hover:bg-midnight hover:text-gold transition-colors">Add</button>
+          </div>
+        </div>
+
+        <!-- Item 02 -->
+        <div class="p-4 rounded-2xl bg-white border border-gold/25 hover:border-gold hover:shadow-card transition-all flex flex-col justify-between space-y-3 group">
+          <div class="relative aspect-square rounded-xl bg-lavender-soft overflow-hidden flex items-center justify-center">
+            <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-[#EED9B3] to-[#FAF0DC] shadow-lg group-hover:scale-110 transition-transform duration-500 border border-gold/20 flex items-center justify-center text-midnight text-xs font-serif">Vanilla</div>
+            <span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-midnight/80 text-gold text-[9px] font-mono uppercase tracking-wider">Classic</span>
+          </div>
+          <div>
+            <h4 class="font-serif font-semibold text-sm text-midnight">Madagascan Vanilla</h4>
+            <p class="text-[11px] text-charcoal/60 mt-0.5 line-clamp-2">Real bourbon vanilla bean specks steeped for 48 hours in organic milk.</p>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gold/15">
+            <span class="font-mono text-xs font-bold text-midnight">$6.90</span>
+            <button class="px-3 py-1 rounded-full bg-cream border border-gold/30 text-midnight text-[10px] font-mono font-semibold uppercase hover:bg-midnight hover:text-gold transition-colors">Add</button>
+          </div>
+        </div>
+
+        <!-- Item 03 -->
+        <div class="p-4 rounded-2xl bg-white border border-gold/25 hover:border-gold hover:shadow-card transition-all flex flex-col justify-between space-y-3 group">
+          <div class="relative aspect-square rounded-xl bg-lavender-soft overflow-hidden flex items-center justify-center">
+            <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-[#581845] to-[#900C3F] shadow-lg group-hover:scale-110 transition-transform duration-500 border border-gold/20 flex items-center justify-center text-cream text-xs font-serif">Berry</div>
+            <span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-midnight/80 text-gold text-[9px] font-mono uppercase tracking-wider">Vegan</span>
+          </div>
+          <div>
+            <h4 class="font-serif font-semibold text-sm text-midnight">Wild Berry &amp; Acai</h4>
+            <p class="text-[11px] text-charcoal/60 mt-0.5 line-clamp-2">Mountain-grown blackberries, wild blueberries, and raw Amazonian acai puree.</p>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gold/15">
+            <span class="font-mono text-xs font-bold text-midnight">$7.20</span>
+            <button class="px-3 py-1 rounded-full bg-cream border border-gold/30 text-midnight text-[10px] font-mono font-semibold uppercase hover:bg-midnight hover:text-gold transition-colors">Add</button>
+          </div>
+        </div>
+
+        <!-- Item 04 -->
+        <div class="p-4 rounded-2xl bg-white border border-gold/25 hover:border-gold hover:shadow-card transition-all flex flex-col justify-between space-y-3 group">
+          <div class="relative aspect-square rounded-xl bg-lavender-soft overflow-hidden flex items-center justify-center">
+            <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-[#606C38] to-[#99A86E] shadow-lg group-hover:scale-110 transition-transform duration-500 border border-gold/20 flex items-center justify-center text-midnight text-xs font-serif">Pistachio</div>
+            <span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-midnight/80 text-gold text-[9px] font-mono uppercase tracking-wider">Award</span>
+          </div>
+          <div>
+            <h4 class="font-serif font-semibold text-sm text-midnight">Bronte Pistachio</h4>
+            <p class="text-[11px] text-charcoal/60 mt-0.5 line-clamp-2">Authentic DOP Sicilian Bronte pistachio paste churned with sea salt.</p>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gold/15">
+            <span class="font-mono text-xs font-bold text-midnight">$8.50</span>
+            <button class="px-3 py-1 rounded-full bg-cream border border-gold/30 text-midnight text-[10px] font-mono font-semibold uppercase hover:bg-midnight hover:text-gold transition-colors">Add</button>
+          </div>
+        </div>
+
+        <!-- Item 05 -->
+        <div class="p-4 rounded-2xl bg-white border border-gold/25 hover:border-gold hover:shadow-card transition-all flex flex-col justify-between space-y-3 group">
+          <div class="relative aspect-square rounded-xl bg-lavender-soft overflow-hidden flex items-center justify-center">
+            <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-[#B27022] to-[#E3A857] shadow-lg group-hover:scale-110 transition-transform duration-500 border border-gold/20 flex items-center justify-center text-cream text-xs font-serif">Caramel</div>
+            <span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-midnight/80 text-gold text-[9px] font-mono uppercase tracking-wider">Staff Pick</span>
+          </div>
+          <div>
+            <h4 class="font-serif font-semibold text-sm text-midnight">Salted Dulce de Leche</h4>
+            <p class="text-[11px] text-charcoal/60 mt-0.5 line-clamp-2">Argentinian-style caramelized condensed milk ribbons with flaky sea salt.</p>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gold/15">
+            <span class="font-mono text-xs font-bold text-midnight">$7.80</span>
+            <button class="px-3 py-1 rounded-full bg-cream border border-gold/30 text-midnight text-[10px] font-mono font-semibold uppercase hover:bg-midnight hover:text-gold transition-colors">Add</button>
+          </div>
+        </div>
+
+        <!-- Item 06 -->
+        <div class="p-4 rounded-2xl bg-white border border-gold/25 hover:border-gold hover:shadow-card transition-all flex flex-col justify-between space-y-3 group">
+          <div class="relative aspect-square rounded-xl bg-lavender-soft overflow-hidden flex items-center justify-center">
+            <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-[#E67E22] to-[#F39C12] shadow-lg group-hover:scale-110 transition-transform duration-500 border border-gold/20 flex items-center justify-center text-midnight text-xs font-serif">Mango</div>
+            <span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-midnight/80 text-gold text-[9px] font-mono uppercase tracking-wider">Organic</span>
+          </div>
+          <div>
+            <h4 class="font-serif font-semibold text-sm text-midnight">Alphonso Mango Velvet</h4>
+            <p class="text-[11px] text-charcoal/60 mt-0.5 line-clamp-2">Single-grove Ratnagiri Alphonso mango puree with aromatic lime zest.</p>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gold/15">
+            <span class="font-mono text-xs font-bold text-midnight">$7.20</span>
+            <button class="px-3 py-1 rounded-full bg-cream border border-gold/30 text-midnight text-[10px] font-mono font-semibold uppercase hover:bg-midnight hover:text-gold transition-colors">Add</button>
+          </div>
+        </div>
+
+        <!-- Item 07 -->
+        <div class="p-4 rounded-2xl bg-white border border-gold/25 hover:border-gold hover:shadow-card transition-all flex flex-col justify-between space-y-3 group">
+          <div class="relative aspect-square rounded-xl bg-lavender-soft overflow-hidden flex items-center justify-center">
+            <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-[#3D2314] to-[#6E472A] shadow-lg group-hover:scale-110 transition-transform duration-500 border border-gold/20 flex items-center justify-center text-gold text-xs font-serif">Espresso</div>
+            <span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-midnight/80 text-gold text-[9px] font-mono uppercase tracking-wider">Signature</span>
+          </div>
+          <div>
+            <h4 class="font-serif font-semibold text-sm text-midnight">Roasted Espresso Nut</h4>
+            <p class="text-[11px] text-charcoal/60 mt-0.5 line-clamp-2">Freshly pulled Arabica espresso steeped with toasted Piedmont hazelnut praline.</p>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gold/15">
+            <span class="font-mono text-xs font-bold text-midnight">$7.50</span>
+            <button class="px-3 py-1 rounded-full bg-cream border border-gold/30 text-midnight text-[10px] font-mono font-semibold uppercase hover:bg-midnight hover:text-gold transition-colors">Add</button>
+          </div>
+        </div>
+
+        <!-- Item 08 -->
+        <div class="p-4 rounded-2xl bg-white border border-gold/25 hover:border-gold hover:shadow-card transition-all flex flex-col justify-between space-y-3 group">
+          <div class="relative aspect-square rounded-xl bg-lavender-soft overflow-hidden flex items-center justify-center">
+            <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-[#C0392B] to-[#F1948A] shadow-lg group-hover:scale-110 transition-transform duration-500 border border-gold/20 flex items-center justify-center text-cream text-xs font-serif">Berry</div>
+            <span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-midnight/80 text-gold text-[9px] font-mono uppercase tracking-wider">Summer</span>
+          </div>
+          <div>
+            <h4 class="font-serif font-semibold text-sm text-midnight">Strawberries &amp; Cream</h4>
+            <p class="text-[11px] text-charcoal/60 mt-0.5 line-clamp-2">Sweet Mara des Bois strawberries folded into rich English clotted cream.</p>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gold/15">
+            <span class="font-mono text-xs font-bold text-midnight">$7.40</span>
+            <button class="px-3 py-1 rounded-full bg-cream border border-gold/30 text-midnight text-[10px] font-mono font-semibold uppercase hover:bg-midnight hover:text-gold transition-colors">Add</button>
+          </div>
+        </div>
+
+        <!-- Item 09 -->
+        <div class="p-4 rounded-2xl bg-white border border-gold/25 hover:border-gold hover:shadow-card transition-all flex flex-col justify-between space-y-3 group">
+          <div class="relative aspect-square rounded-xl bg-lavender-soft overflow-hidden flex items-center justify-center">
+            <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-[#D4AC0D] to-[#F7DC6F] shadow-lg group-hover:scale-110 transition-transform duration-500 border border-gold/20 flex items-center justify-center text-midnight text-xs font-serif">Yuzu</div>
+            <span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-midnight/80 text-gold text-[9px] font-mono uppercase tracking-wider">Refreshing</span>
+          </div>
+          <div>
+            <h4 class="font-serif font-semibold text-sm text-midnight">Yuzu Citrus &amp; Mint</h4>
+            <p class="text-[11px] text-charcoal/60 mt-0.5 line-clamp-2">Crisp Japanese yuzu fruit juice blended with crushed peppermint leaves.</p>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gold/15">
+            <span class="font-mono text-xs font-bold text-midnight">$7.60</span>
+            <button class="px-3 py-1 rounded-full bg-cream border border-gold/30 text-midnight text-[10px] font-mono font-semibold uppercase hover:bg-midnight hover:text-gold transition-colors">Add</button>
+          </div>
+        </div>
+
+        <!-- Item 10 -->
+        <div class="p-4 rounded-2xl bg-white border border-gold/25 hover:border-gold hover:shadow-card transition-all flex flex-col justify-between space-y-3 group">
+          <div class="relative aspect-square rounded-xl bg-lavender-soft overflow-hidden flex items-center justify-center">
+            <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-[#17202A] to-[#34495E] shadow-lg group-hover:scale-110 transition-transform duration-500 border border-gold/20 flex items-center justify-center text-gold text-xs font-serif">Cocoa</div>
+            <span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-midnight/80 text-gold text-[9px] font-mono uppercase tracking-wider">Gourmet</span>
+          </div>
+          <div>
+            <h4 class="font-serif font-semibold text-sm text-midnight">Midnight Cocoa Crunch</h4>
+            <p class="text-[11px] text-charcoal/60 mt-0.5 line-clamp-2">Black Dutch cocoa base with roasted cacao nib crunch and Maldon crystals.</p>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-gold/15">
+            <span class="font-mono text-xs font-bold text-midnight">$7.90</span>
+            <button class="px-3 py-1 rounded-full bg-cream border border-gold/30 text-midnight text-[10px] font-mono font-semibold uppercase hover:bg-midnight hover:text-gold transition-colors">Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: BRAND PROMISE -->
+  <section id="promise" class="py-16 px-6 sm:px-12 bg-white text-center border-t border-gold/20">
+    <div class="max-w-3xl mx-auto space-y-4">
+      <span class="text-gold text-sm tracking-widest font-mono">✦ ✦ ✦</span>
+      <h2 class="text-2xl sm:text-3xl font-cinzel font-normal text-midnight tracking-tight leading-snug">
+        HANDCRAFTED. NATURAL INGREDIENTS.<br>
+        <span class="font-serif italic text-gold-dark">THAT'S THE PROMISE.</span>
+      </h2>
+      <p class="text-xs sm:text-sm text-charcoal/70 leading-relaxed max-w-xl mx-auto">
+        Every batch is produced in micro-churners under precise temperature controls, using only pasture-grazed milk and sun-ripened whole fruits.
+      </p>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 text-left">
+        <div class="p-4 rounded-xl bg-cream border border-gold/20">
+          <div class="text-gold text-lg mb-1">01</div>
+          <h4 class="font-serif font-semibold text-xs text-midnight">Small Batches</h4>
+          <p class="text-[10px] text-charcoal/60 mt-0.5">Slow-churned daily in small quantities for peak freshness.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-cream border border-gold/20">
+          <div class="text-gold text-lg mb-1">02</div>
+          <h4 class="font-serif font-semibold text-xs text-midnight">100% Organic</h4>
+          <p class="text-[10px] text-charcoal/60 mt-0.5">Certified non-GMO, zero artificial preservatives or colors.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-cream border border-gold/20">
+          <div class="text-gold text-lg mb-1">03</div>
+          <h4 class="font-serif font-semibold text-xs text-midnight">Farm-Direct</h4>
+          <p class="text-[10px] text-charcoal/60 mt-0.5">Single-origin dairy and fruits sourced directly from grower estates.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-cream border border-gold/20">
+          <div class="text-gold text-lg mb-1">04</div>
+          <h4 class="font-serif font-semibold text-xs text-midnight">Sub-Zero Courier</h4>
+          <p class="text-[10px] text-charcoal/60 mt-0.5">Delivered in insulated biodegradable dry-ice packaging.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: CLIENT REVIEWS (8 TESTIMONIAL CARDS) -->
+  <section id="reviews" class="py-16 px-6 sm:px-12 bg-cream border-t border-gold/20">
+    <div class="max-w-6xl mx-auto space-y-8">
+      <div class="text-center space-y-1">
+        <span class="text-[10px] font-mono uppercase tracking-widest text-gold font-bold block">VERIFIED CUSTOMERS</span>
+        <h3 class="font-cinzel text-2xl font-semibold text-midnight">CLIENT REVIEWS</h3>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+        <div class="p-4 rounded-xl bg-white border border-gold/25 space-y-2">
+          <div class="text-gold text-xs">★★★★★</div>
+          <p class="text-[11px] text-charcoal/80 italic font-serif">"The Bronte Pistachio is the best gelato I've tasted outside Florence. Unbelievable texture!"</p>
+          <span class="text-[10px] font-mono text-gold-dark font-medium block">— Sofia R., San Francisco</span>
+        </div>
+        <div class="p-4 rounded-xl bg-white border border-gold/25 space-y-2">
+          <div class="text-gold text-xs">★★★★★</div>
+          <p class="text-[11px] text-charcoal/80 italic font-serif">"Arrived rock-solid in dry ice in Austin during summer heat. The packaging is pure genius."</p>
+          <span class="text-[10px] font-mono text-gold-dark font-medium block">— David L., Austin</span>
+        </div>
+        <div class="p-4 rounded-xl bg-white border border-gold/25 space-y-2">
+          <div class="text-gold text-xs">★★★★★</div>
+          <p class="text-[11px] text-charcoal/80 italic font-serif">"The customizer experience was so seamless. My kids loved building their custom stick."</p>
+          <span class="text-[10px] font-mono text-gold-dark font-medium block">— Elena M., New York</span>
+        </div>
+        <div class="p-4 rounded-xl bg-white border border-gold/25 space-y-2">
+          <div class="text-gold text-xs">★★★★★</div>
+          <p class="text-[11px] text-charcoal/80 italic font-serif">"As a vegan, the oat milk wild berry sorbet is simply world-class. Re-ordered the 8-pack!"</p>
+          <span class="text-[10px] font-mono text-gold-dark font-medium block">— Marcus T., Seattle</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: PROMOTIONAL OFFERS & EXCLUSIVE DISCOUNTS -->
+  <section id="offers" class="py-16 px-6 sm:px-12 bg-white border-t border-gold/20">
+    <div class="max-w-4xl mx-auto rounded-3xl bg-midnight text-cream p-8 sm:p-12 border border-gold/40 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="space-y-3 max-w-md">
+        <span class="px-3 py-1 rounded-full bg-gold/20 border border-gold/40 text-gold text-[10px] font-mono uppercase tracking-widest">
+          LIMITED WELCOME OFFER
+        </span>
+        <h3 class="font-cinzel text-2xl sm:text-3xl font-semibold tracking-tight text-cream">
+          PROMOTIONAL OFFERS &amp; EXCLUSIVE DISCOUNTS
+        </h3>
+        <p class="text-xs text-cream/70 leading-relaxed">
+          Join the Connoisseurs Circle to receive 15% off your initial shipment and early access to seasonal harvest drops.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-midnight-light border border-gold/30 text-center space-y-3 w-full sm:w-auto shrink-0">
+        <span class="text-[10px] font-mono uppercase tracking-widest text-gold block">COUPON CODE</span>
+        <div class="px-5 py-2 rounded-lg bg-midnight border border-dashed border-gold text-base font-mono font-bold text-gold tracking-widest">
+          FIRSTSCOOP15
+        </div>
+        <span class="text-[10px] text-cream/60 block">15% Off Your Entire Cart</span>
+        <button class="w-full py-2 rounded-full bg-gold text-midnight font-mono text-xs font-semibold uppercase hover:bg-gold-light transition-colors">
+          Apply to Cart
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA: YOUR NEXT SCOOP IS ONLY BENEFITS AWAY -->
+  <section class="py-20 px-6 sm:px-12 bg-cream text-center border-t border-gold/20">
+    <div class="max-w-2xl mx-auto space-y-4">
+      <span class="text-gold text-xs font-mono tracking-widest uppercase">✦ BEGIN YOUR TASTING EXPERIENCE ✦</span>
+      <h2 class="text-3xl sm:text-4xl font-cinzel text-midnight">
+        YOUR NEXT SCOOP<br>
+        <span class="font-serif italic font-normal text-gold-dark">IS ONLY BENEFITS AWAY.</span>
+      </h2>
+      <p class="text-xs sm:text-sm text-charcoal/70">
+        Place your order before 2:00 PM EST for same-day refrigerated dispatch.
+      </p>
+      <div class="pt-4 flex justify-center gap-3">
+        <a href="#customizer" class="px-8 py-3 rounded-full bg-midnight text-gold font-mono text-xs font-semibold uppercase tracking-wider hover:bg-midnight-light transition-all shadow-md border border-gold/30">
+          Order Online Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LUXURY FOOTER -->
+  <footer class="bg-midnight-dark text-cream/80 border-t border-gold/30 px-6 sm:px-12 py-12 text-xs">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-4 gap-8 pb-8 border-b border-gold/15">
+      <div class="space-y-2">
+        <span class="font-cinzel text-sm font-bold text-gold block">ARTISANAL STOREFRONT</span>
+        <p class="text-[11px] text-cream/60 leading-relaxed">
+          Luxury D2C Italian gelato &amp; artisanal frozen dessert experience by Naveen Prakash.
+        </p>
+      </div>
+      <div class="space-y-1.5 font-mono text-[11px]">
+        <span class="text-gold uppercase tracking-wider block font-semibold">Explore</span>
+        <a href="#flavors" class="block hover:text-gold">Catalog Grid</a>
+        <a href="#customizer" class="block hover:text-gold">Interactive Builder</a>
+        <a href="#promise" class="block hover:text-gold">Quality Standards</a>
+      </div>
+      <div class="space-y-1.5 font-mono text-[11px]">
+        <span class="text-gold uppercase tracking-wider block font-semibold">Storefront</span>
+        <span class="block text-cream/60">New York • Florence • Tokyo</span>
+        <span class="block text-cream/60">Mon - Sun: 10:00 - 22:00</span>
+      </div>
+      <div class="space-y-2 font-mono text-[11px]">
+        <span class="text-gold uppercase tracking-wider block font-semibold">Portfolio Project</span>
+        <span class="block text-cream/60">Designed &amp; Developed for D2C Brands</span>
+        <span class="block text-gold">Tech: React • Tailwind • Figma</span>
+      </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[10px] font-mono text-cream/50">
+      <span>© 2026 Artisanal Storefront. Portfolio Case Study by Naveen Prakash.</span>
+      <div class="flex items-center gap-4">
+        <span>Sub-Zero Shipping</span>
+        <span>•</span>
+        <span>Encrypted Checkout</span>
+        <span>•</span>
+        <span>100% Organic Certified</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
