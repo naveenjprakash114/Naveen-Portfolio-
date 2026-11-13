@@ -338,20 +338,20 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                     <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
                   </div>
                   <div className="flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-white/80 border border-gold/20 text-[11px] font-mono text-charcoal/70 ml-2">
-                    <span>https://store.naveen.dev/landing-page</span>
+                    <span>https://scoopzone.in/</span>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-2">
                   <a
-                    href="/assets/projects/web/landing-page-exact.html"
+                    href={project.gallery[0].url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/90 border border-gold/25 text-charcoal text-[11px] font-mono font-medium hover:bg-charcoal hover:text-white transition-colors shadow-2xs"
-                    title="Open full 1440px desktop page in a new tab"
+                    title="Open full image in a new tab"
                   >
                     <ExternalLink className="w-3 h-3 text-gold" />
-                    <span>Open 1440px Page ↗</span>
+                    <span className="hidden sm:inline">Open Full Image</span>
                   </a>
                   <button
                     type="button"
@@ -364,38 +364,33 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                 </div>
               </div>
 
-              {/* Scrollable Landing Page Canvas (1440px Desktop Design) */}
-              <div className="relative bg-white overflow-hidden">
-                <iframe
-                  src="/assets/projects/web/landing-page-exact.html"
-                  title="Artisanal Storefront Desktop Landing Page (1440px Design)"
-                  className="w-full h-[580px] border-0 block"
+              {/* Scrollable Landing Page Canvas */}
+              <div
+                className="max-h-[640px] overflow-y-auto bg-white cursor-pointer relative"
+                onClick={() => setPreviewImage(project.gallery[0])}
+                title="Click to view full screen"
+              >
+                <img
+                  src={project.gallery[0].url}
+                  alt={project.gallery[0].title || "ScoopZone E-Commerce Landing Page"}
+                  className="w-full h-auto block"
                 />
               </div>
 
               {/* Footer / Caption */}
               <div className="p-3.5 bg-white border-t border-gold/15 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
                 <p className="text-[11px] text-charcoal/75 font-serif italic">
-                  Exact desktop landing page design: "YOUR NEXT SCOOP IS ONLY BENEFITS AWAY" with interactive customizer, 10-item flavor catalog, reviews, and D2C checkout.
+                  {project.gallery[0].caption}
                 </p>
                 <div className="flex items-center gap-3 shrink-0 self-end sm:self-auto">
-                  <a
-                    href="/assets/projects/web/landing-page-original.png"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[10px] font-mono text-charcoal/60 hover:text-gold transition-colors"
-                  >
-                    Original Upload ↗
-                  </a>
-                  <a
-                    href="/assets/projects/web/landing-page-exact.html"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    type="button"
+                    onClick={() => setPreviewImage(project.gallery[0])}
                     className="text-[11px] font-mono font-semibold uppercase tracking-wider text-charcoal hover:text-gold flex items-center gap-1"
                   >
                     <Eye className="w-3.5 h-3.5 text-gold" />
-                    <span>View 1440px Live ↗</span>
-                  </a>
+                    <span>Inspect Full Page ↗</span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -526,7 +521,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                     <span className="w-3 h-3 rounded-full bg-emerald-400" />
                   </div>
                   <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/70 border border-gold/25 text-[11px] font-mono text-charcoal/70 ml-2">
-                    <span>https://store.naveen.dev/landing-page</span>
+                    <span>https://scoopzone.in/</span>
                   </div>
                 </div>
 
@@ -553,19 +548,11 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                 </div>
 
                 <div className="w-full max-w-4xl rounded-xl overflow-hidden shadow-card border border-gold/30 bg-white">
-                  {project.id === "ecommerce-store-platform" ? (
-                    <iframe
-                      src="/assets/projects/web/landing-page-exact.html"
-                      title="Artisanal Storefront 1440px Desktop Landing Page"
-                      className="w-full h-[700px] border-0 block"
-                    />
-                  ) : (
-                    <img
-                      src={previewImage.url}
-                      alt={previewImage.title || previewImage.caption}
-                      className="w-full h-auto object-contain block"
-                    />
-                  )}
+                  <img
+                    src={previewImage.url}
+                    alt={previewImage.title || previewImage.caption}
+                    className="w-full h-auto object-contain block"
+                  />
                 </div>
 
                 <p className="text-xs text-charcoal/80 text-center leading-relaxed max-w-lg font-serif italic pb-2">

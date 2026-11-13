@@ -205,14 +205,14 @@ export const projects = [
     id: "ecommerce-store-platform",
     number: "04",
     name: "MODERN E-COMMERCE STORE",
-    client: "Artisanal D2C Storefront",
+    client: "ScoopZone — Ice Cream Delivery",
     category: "E-Commerce UI/UX & Web Development",
     filterTags: ["E-COMMERCE", "WEB DESIGN", "BRANDING", "DIGITAL MARKETING"],
-    thumbnail: "/assets/projects/web/cover.svg",
-    monogram: "EC",
+    thumbnail: "/assets/projects/web/scoopzone-landing-page.jpg",
+    monogram: "SZ",
     accentColor: "from-amber-100/90 to-yellow-50/50",
     roleSubtitle: "E-Commerce UI/UX & Frontend Development",
-    description: "End-to-end e-commerce landing page design, artisanal product catalog, interactive flavor ordering flow, review sections, and conversion-optimized cart checkout.",
+    description: "End-to-end e-commerce landing page design for ScoopZone: 'Ice Cream, Delivered Before The Melt.' Featuring 8-10 min delivery promise, brand partners, 50+ flavor catalog, 3-step ordering flow, and customer proof.",
     githubId: "naveenjprakash114",
     githubUrl: "https://github.com/naveenjprakash114",
     liveUrl: "https://github.com/naveenjprakash114",
@@ -224,7 +224,7 @@ export const projects = [
       "Digital Merchandiser",
       "Conversion Optimizer"
     ],
-    overview: "Designed an artisanal D2C e-commerce storefront landing page featuring a captivating hero product presentation, interactive ordering steps, a comprehensive dessert catalog grid, customer proof, and a streamlined cart experience built for modern consumer brands.",
+    overview: "Designed an engaging, conversion-optimized D2C e-commerce storefront landing page for ScoopZone, a quick ice cream delivery platform promising cold, fresh delivery within 8–10 minutes. Includes brand partnerships (Baskin Robbins, Arun, Boomerang, Ibaco), 50+ flavor varieties catalog, a 3-step ordering journey, customer reviews, and seasonal combo packs.",
     objectives: [
       "Design a high-converting, mobile-responsive e-commerce landing page with rich product storytelling.",
       "Implement structured product catalog cards, filter facets, and interactive product ordering flows.",
@@ -251,9 +251,9 @@ export const projects = [
     tools: ["React.js", "Tailwind CSS", "Figma", "Adobe Photoshop", "Canva Pro"],
     gallery: [
       {
-        url: "/assets/projects/web/ecommerce-landing-page.png",
-        title: "Full E-Commerce Storefront Landing Page",
-        caption: "High-converting D2C landing page featuring hero product presentation, interactive flavor selector, artisanal catalog grid, customer reviews, and responsive checkout flow."
+        url: "/assets/projects/web/scoopzone-landing-page.jpg",
+        title: "ScoopZone Official Storefront Landing Page",
+        caption: "High-converting D2C landing page: 'Ice Cream, Delivered Before The Melt.' Featuring top brands (Baskin Robbins, Arun, Boomerang, Ibaco), 8–10 min delivery promise, popular flavours catalog, 3-step order flow, combo packs, and customer reviews."
       }
     ],
     isFeatured: true
