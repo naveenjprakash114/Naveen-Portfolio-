@@ -254,16 +254,6 @@ export const projects = [
         url: "/assets/projects/web/ecommerce-landing-page.png",
         title: "Full E-Commerce Storefront Landing Page",
         caption: "High-converting D2C landing page featuring hero product presentation, interactive flavor selector, artisanal catalog grid, customer reviews, and responsive checkout flow."
-      },
-      {
-        url: "/assets/projects/web/cover.svg",
-        title: "Hero Product Showcase & Visual Branding",
-        caption: "Atmospheric hero section with artisanal dessert presentation, dynamic CTA buttons, and luxury culinary branding."
-      },
-      {
-        url: "/assets/projects/web/01.jpg",
-        title: "Product Catalog & Cart Interaction",
-        caption: "Faceted category navigation, nutritional highlights, and responsive cart conversion."
       }
     ],
     isFeatured: true

@@ -312,8 +312,79 @@ export default function ProjectModal({ project, isOpen, onClose }) {
           </div>
         </div>
 
-        {/* Visual Gallery Stills & Full Landing Pages */}
-        {project.gallery && project.gallery.length > 0 && (
+        {/* Single Full Landing Page Showcase (for E-commerce and single landing page showcases) */}
+        {project.gallery && project.gallery.length === 1 && (
+          <div className="space-y-4 mb-8">
+            <div className="flex items-center justify-between pb-2 border-b border-gold/15">
+              <div className="flex items-center gap-2">
+                <span className="w-5 h-[1px] bg-gold" />
+                <h3 className="text-xs font-mono uppercase tracking-widest text-gold font-bold">
+                  E-COMMERCE STOREFRONT LANDING PAGE
+                </h3>
+              </div>
+              <span className="text-[11px] font-mono text-charcoal/60 hidden sm:inline-block">
+                Scroll inside frame to explore entire design ↓
+              </span>
+            </div>
+
+            {/* Interactive Browser Frame Container */}
+            <div className="rounded-2xl border border-gold/30 bg-[#FAF7F2] overflow-hidden shadow-card">
+              {/* Browser Header Bar */}
+              <div className="px-4 py-2.5 bg-[#EFE7DB] border-b border-gold/25 flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-rose-400" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-amber-400" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
+                  </div>
+                  <div className="flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-white/80 border border-gold/20 text-[11px] font-mono text-charcoal/70 ml-2">
+                    <span>https://store.naveen.dev/landing-page</span>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => setPreviewImage(project.gallery[0])}
+                  className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white text-charcoal text-[11px] font-mono font-medium hover:bg-charcoal hover:text-white transition-colors shadow-2xs"
+                >
+                  <Maximize2 className="w-3 h-3 text-gold" />
+                  <span>Enlarge Full Screen</span>
+                </button>
+              </div>
+
+              {/* Scrollable Landing Page Canvas */}
+              <div
+                className="max-h-[520px] overflow-y-auto bg-white cursor-pointer relative"
+                onClick={() => setPreviewImage(project.gallery[0])}
+                title="Click to view full screen"
+              >
+                <img
+                  src={project.gallery[0].url}
+                  alt={project.gallery[0].title || "E-Commerce Landing Page"}
+                  className="w-full h-auto block"
+                />
+              </div>
+
+              {/* Footer / Caption */}
+              <div className="p-3.5 bg-white border-t border-gold/15 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+                <p className="text-[11px] text-charcoal/75 font-serif italic">
+                  {project.gallery[0].caption}
+                </p>
+                <button
+                  type="button"
+                  onClick={() => setPreviewImage(project.gallery[0])}
+                  className="text-[11px] font-mono font-semibold uppercase tracking-wider text-charcoal hover:text-gold flex items-center gap-1 shrink-0 self-end sm:self-auto"
+                >
+                  <Eye className="w-3.5 h-3.5 text-gold" />
+                  <span>Inspect Full Page ↗</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Multi-Item Gallery (for projects with multiple posters/assets) */}
+        {project.gallery && project.gallery.length > 1 && (
           <div className="space-y-4 mb-8">
             <div className="flex items-center justify-between pb-2 border-b border-gold/15">
               <div className="flex items-center gap-2">
