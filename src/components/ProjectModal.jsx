@@ -507,7 +507,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
             onClick={() => setPreviewImage(null)}
           >
             <div
-              className="bg-[#FAF7F2] border border-gold/40 rounded-3xl max-w-3xl w-full max-h-[92vh] overflow-hidden shadow-2xl flex flex-col relative text-charcoal"
+              className="bg-[#FAF7F2] border border-gold/40 rounded-3xl max-w-5xl w-full max-h-[92vh] overflow-hidden shadow-2xl flex flex-col relative text-charcoal"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Browser Mockup Top Bar */}
@@ -545,7 +545,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                   <span>Full-Length Landing Page • Scroll down to view all sections ↓</span>
                 </div>
 
-                <div className="w-full max-w-2xl rounded-xl overflow-hidden shadow-card border border-gold/30 bg-white">
+                <div className="w-full max-w-4xl rounded-xl overflow-hidden shadow-card border border-gold/30 bg-white">
                   <img
                     src={previewImage.url}
                     alt={previewImage.title || previewImage.caption}
