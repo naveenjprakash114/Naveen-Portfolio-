@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ecomBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181124"/>
+      <stop offset="50%" stop-color="#100A1A"/>
+      <stop offset="100%" stop-color="#090510"/>
+    </linearGradient>
+    <radialGradient id="berryGlow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#7B3FE4" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#4C1D95" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#181124" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldEcom" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCE6A4"/>
+      <stop offset="50%" stop-color="#D4AF67"/>
+      <stop offset="100%" stop-color="#A57F2E"/>
+    </linearGradient>
+    <linearGradient id="popsicleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6D28D9"/>
+      <stop offset="50%" stop-color="#4C1D95"/>
+      <stop offset="100%" stop-color="#2E1065"/>
+    </linearGradient>
+    <linearGradient id="stickGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4A373"/>
+      <stop offset="100%" stop-color="#FAEDCD"/>
+    </linearGradient>
+    <pattern id="storeGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#D4AF67" stroke-width="0.5" opacity="0.1"/>
+    </pattern>
+  </defs>
+
+  <!-- Dark Luxury Background -->
+  <rect width="800" height="600" fill="url(#ecomBg)"/>
+  <rect width="800" height="600" fill="url(#berryGlow)"/>
+  <rect width="800" height="600" fill="url(#storeGrid)"/>
+
+  <!-- Ornamental Gold Border -->
+  <rect x="24" y="24" width="752" height="552" rx="20" fill="none" stroke="url(#goldEcom)" stroke-width="1.5"/>
+  <rect x="34" y="34" width="732" height="532" rx="14" fill="none" stroke="url(#goldEcom)" stroke-width="0.75" stroke-dasharray="6,4" opacity="0.4"/>
+
+  <!-- Top Category Tag -->
+  <g transform="translate(400, 75)">
+    <rect x="-130" y="-14" width="260" height="28" rx="14" fill="#090510" stroke="url(#goldEcom)" stroke-width="1"/>
+    <text x="0" y="4" font-family="'Manrope', sans-serif" font-size="10" fill="url(#goldEcom)" font-weight="700" text-anchor="middle" letter-spacing="3">D2C STOREFRONT LANDING PAGE</text>
+  </g>
+
+  <!-- Central Visual Emblem: Artisanal Gelato Popsicle -->
+  <g transform="translate(400, 205)">
+    <!-- Aura Glow behind popsicle -->
+    <circle cx="0" cy="0" r="90" fill="#7C3AED" opacity="0.25" filter="blur(16px)"/>
+    
+    <!-- Popsicle Body -->
+    <rect x="-35" y="-60" width="70" height="110" rx="35" fill="url(#popsicleGrad)" stroke="url(#goldEcom)" stroke-width="1.5"/>
+    
+    <!-- Texture sprinkles / glaze on popsicle -->
+    <g fill="url(#goldEcom)" opacity="0.75">
+      <circle cx="-15" cy="-30" r="2.5"/>
+      <circle cx="12" cy="-25" r="2"/>
+      <circle cx="-5" cy="-10" r="2.5"/>
+      <circle cx="18" cy="5" r="2"/>
+      <circle cx="-20" cy="15" r="2"/>
+      <circle cx="2" cy="25" r="2.5"/>
+    </g>
+
+    <!-- Wooden Stick -->
+    <rect x="-8" y="50" width="16" height="42" rx="4" fill="url(#stickGrad)"/>
+    
+    <!-- Subtle Star Sparkles around -->
+    <path d="M -85 -20 Q -85 -10 -75 -10 Q -85 -10 -85 0 Q -85 -10 -95 -10 Q -85 -10 -85 -20 Z" fill="url(#goldEcom)"/>
+    <path d="M 85 -30 Q 85 -20 95 -20 Q 85 -20 85 -10 Q 85 -20 75 -20 Q 85 -20 85 -30 Z" fill="url(#goldEcom)"/>
+  </g>
+
+  <!-- Brand Headline Typography -->
+  <text x="400" y="355" font-family="'Cormorant Garamond', Georgia, serif" font-size="44" fill="url(#goldEcom)" font-weight="700" text-anchor="middle" letter-spacing="3">ARTISANAL STOREFRONT</text>
+  <line x1="240" y1="375" x2="560" y2="375" stroke="url(#goldEcom)" stroke-width="1" opacity="0.6"/>
+  <text x="400" y="404" font-family="'Manrope', sans-serif" font-size="12" fill="#E8DDCB" text-anchor="middle" letter-spacing="4" font-weight="600">E-COMMERCE LANDING PAGE &amp; CART FLOW</text>
+
+  <!-- Tagline -->
+  <text x="400" y="442" font-family="'Manrope', sans-serif" font-size="13" fill="#D6C5AD" text-anchor="middle" font-weight="500">Curated Flavor Catalog • Interactive Orders • Seamless Checkout</text>
+
+  <!-- GitHub ID Badge Button -->
+  <g transform="translate(400, 500)">
+    <rect x="-155" y="-18" width="310" height="36" rx="18" fill="url(#goldEcom)"/>
+    <text x="0" y="5" font-family="'Manrope', sans-serif" font-size="12" fill="#090510" font-weight="700" text-anchor="middle" letter-spacing="1">github.com/naveenjprakash114 ↗</text>
+  </g>
+</svg>

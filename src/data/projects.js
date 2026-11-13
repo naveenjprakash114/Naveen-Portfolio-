@@ -205,14 +205,14 @@ export const projects = [
     id: "ecommerce-store-platform",
     number: "04",
     name: "MODERN E-COMMERCE STORE",
-    client: "D2C Retail & Fashion Storefront",
+    client: "Artisanal D2C Storefront",
     category: "E-Commerce UI/UX & Web Development",
     filterTags: ["E-COMMERCE", "WEB DESIGN", "BRANDING", "DIGITAL MARKETING"],
-    thumbnail: "/assets/projects/web/cover.jpg",
+    thumbnail: "/assets/projects/web/cover.svg",
     monogram: "EC",
     accentColor: "from-amber-100/90 to-yellow-50/50",
     roleSubtitle: "E-Commerce UI/UX & Frontend Development",
-    description: "End-to-end e-commerce user experience design, product catalog curation, conversion-focused UI layouts, checkout flows, and digital promotional assets.",
+    description: "End-to-end e-commerce landing page design, artisanal product catalog, interactive flavor ordering flow, review sections, and conversion-optimized cart checkout.",
     githubId: "naveenjprakash114",
     githubUrl: "https://github.com/naveenjprakash114",
     liveUrl: "https://github.com/naveenjprakash114",
@@ -224,35 +224,46 @@ export const projects = [
       "Digital Merchandiser",
       "Conversion Optimizer"
     ],
-    overview: "Designing intuitive, high-converting digital storefronts tailored for modern consumer brands. Focused on responsive product pages, fluid filter systems, mobile-first shopping carts, and elevated brand aesthetics that drive conversions.",
+    overview: "Designed an artisanal D2C e-commerce storefront landing page featuring a captivating hero product presentation, interactive ordering steps, a comprehensive dessert catalog grid, customer proof, and a streamlined cart experience built for modern consumer brands.",
     objectives: [
-      "Design mobile-first e-commerce layouts optimized for fast browsing and smooth cart conversion.",
-      "Implement structured product catalog cards, filter facets, and interactive product galleries.",
-      "Create high-impact promotional banners, seasonal sale creatives, and digital marketing landing pages.",
+      "Design a high-converting, mobile-responsive e-commerce landing page with rich product storytelling.",
+      "Implement structured product catalog cards, filter facets, and interactive product ordering flows.",
+      "Create high-impact promotional banners, seasonal launch graphics, and digital marketing assets.",
       "Build seamless, responsive shopping experiences using React.js and modern frontend architectures."
     ],
     deliverables: [
       {
-        title: "Storefront UI/UX & Checkout Flow",
-        type: "UI/UX Design",
-        description: "Clean product detail pages (PDP), interactive image carousels, size selectors, and frictionless checkout screens."
+        title: "D2C Storefront Landing Page",
+        type: "UI/UX & Web Design",
+        description: "Full-length conversion landing page with dynamic hero product showcase, ordering flow, and customer testimonials."
       },
       {
         title: "Product Catalog & Merchandising",
-        type: "Digital Merchandising",
+        type: "Frontend Development",
         description: "Structured categorization, faceted filters, product highlight badges, and grid curation."
       },
       {
-        title: "Promotional Banners & Ad Creatives",
-        type: "Digital Marketing",
-        description: "Conversion-driven sale banners, seasonal launch graphics, and promotional marketing creatives."
+        title: "Checkout Flow & Cart Conversion",
+        type: "E-Commerce Strategy",
+        description: "Frictionless mobile-first cart drawer, bundle offers, and payment integration."
       }
     ],
     tools: ["React.js", "Tailwind CSS", "Figma", "Adobe Photoshop", "Canva Pro"],
     gallery: [
       {
+        url: "/assets/projects/web/ecommerce-landing-page.png",
+        title: "Full E-Commerce Storefront Landing Page",
+        caption: "High-converting D2C landing page featuring hero product presentation, interactive flavor selector, artisanal catalog grid, customer reviews, and responsive checkout flow."
+      },
+      {
+        url: "/assets/projects/web/cover.svg",
+        title: "Hero Product Showcase & Visual Branding",
+        caption: "Atmospheric hero section with artisanal dessert presentation, dynamic CTA buttons, and luxury culinary branding."
+      },
+      {
         url: "/assets/projects/web/01.jpg",
-        caption: "E-Commerce Product Detail & Modern Catalog Architecture"
+        title: "Product Catalog & Cart Interaction",
+        caption: "Faceted category navigation, nutritional highlights, and responsive cart conversion."
       }
     ],
     isFeatured: true
