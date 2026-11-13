@@ -116,7 +116,7 @@ export default function Contact() {
           <div className="flex items-center gap-2.5">
             <span className="w-6 h-[1px] bg-gold" />
             <span className="text-xs uppercase tracking-widest-luxury font-mono text-gold">
-              07 / LET'S CONNECT
+              06 / LET'S CONNECT
             </span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-serif font-normal text-charcoal tracking-tight leading-tight">
