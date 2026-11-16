@@ -340,19 +340,39 @@ export default function ProjectModal({ project, isOpen, onClose }) {
             {/* Interactive Browser Frame Container */}
             <div className="rounded-2xl border border-gold/30 bg-[#FAF7F2] overflow-hidden shadow-card">
               {/* Browser Header Bar */}
-              <div className="px-4 py-2.5 bg-[#EFE7DB] border-b border-gold/25 flex items-center justify-between">
+              <div className="px-4 py-2.5 bg-[#EFE7DB] border-b border-gold/25 flex flex-wrap items-center justify-between gap-2">
                 <div className="flex items-center gap-2">
                   <div className="flex items-center gap-1.5">
                     <span className="w-2.5 h-2.5 rounded-full bg-rose-400" />
                     <span className="w-2.5 h-2.5 rounded-full bg-amber-400" />
                     <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
                   </div>
-                  <div className="flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-white/80 border border-gold/20 text-[11px] font-mono text-charcoal/70 ml-2">
-                    <span>https://scoopzone.in/</span>
-                  </div>
+                  <a
+                    href={project.liveUrl || "https://ice-cream-ecommerce-dtigp0wua-naveenjprakash114.vercel.app/"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-white/90 border border-gold/25 text-[11px] font-mono text-charcoal/80 ml-1 hover:border-gold hover:text-gold transition-colors"
+                    title="Open live website in new tab"
+                  >
+                    <span>https://ice-cream-ecommerce...vercel.app</span>
+                    <ExternalLink className="w-2.5 h-2.5 text-gold" />
+                  </a>
                 </div>
 
                 <div className="flex items-center gap-2">
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-charcoal text-[#FAF7F2] text-[11px] font-mono font-medium hover:bg-charcoal/80 transition-colors shadow-2xs"
+                      title="Launch live website on Vercel"
+                    >
+                      <Globe className="w-3 h-3 text-champagne" />
+                      <span className="hidden sm:inline">Open Live Store</span>
+                      <ArrowUpRight className="w-3 h-3 text-champagne" />
+                    </a>
+                  )}
                   <a
                     href={project.gallery[0].url}
                     target="_blank"
@@ -455,9 +475,15 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                     <span className="w-3 h-3 rounded-full bg-amber-400" />
                     <span className="w-3 h-3 rounded-full bg-emerald-400" />
                   </div>
-                  <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/70 border border-gold/25 text-[11px] font-mono text-charcoal/70 ml-2">
-                    <span>https://scoopzone.in/</span>
-                  </div>
+                  <a
+                    href={project.liveUrl || "https://ice-cream-ecommerce-dtigp0wua-naveenjprakash114.vercel.app/"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/70 border border-gold/25 text-[11px] font-mono text-charcoal/70 ml-2 hover:border-gold hover:text-gold transition-colors"
+                  >
+                    <span>https://ice-cream-ecommerce...vercel.app</span>
+                    <ExternalLink className="w-2.5 h-2.5 text-gold" />
+                  </a>
                 </div>
 
                 <div className="flex items-center gap-2">

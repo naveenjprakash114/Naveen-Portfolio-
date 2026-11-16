@@ -173,8 +173,8 @@ export const projects = [
     description: "End-to-end e-commerce landing page design for ScoopZone: 'Ice Cream, Delivered Before The Melt.' Featuring 8-10 min delivery promise, brand partners, 50+ flavor catalog, 3-step ordering flow, and customer proof.",
     githubId: "naveenjprakash114",
     githubUrl: "https://github.com/naveenjprakash114",
-    liveUrl: "https://github.com/naveenjprakash114",
-    liveUrlLabel: "View GitHub: @naveenjprakash114",
+    liveUrl: "https://ice-cream-ecommerce-dtigp0wua-naveenjprakash114.vercel.app/",
+    liveUrlLabel: "Live Storefront (Vercel)",
     driveUrl: "", // Attach Google Drive / Figma link here
     role: [
       "E-Commerce UI/UX Designer",
