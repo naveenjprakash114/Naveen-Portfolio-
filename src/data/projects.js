@@ -271,7 +271,7 @@ export const projects = [
     description: "Modern website interfaces and web applications built with React.js, Tailwind CSS, and AI-assisted engineering tools.",
     githubId: "naveenjprakash114",
     githubUrl: "https://github.com/naveenjprakash114",
-    liveUrl: "https://photography-website-o0e2qb7uy-naveenjprakash114.vercel.app/",
+    liveUrl: "https://photography-website-d0bk2h5zr-naveenjprakash114.vercel.app/",
     liveUrlLabel: "Live Website (Vercel)",
     driveUrl: "",
     role: [
