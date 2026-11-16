@@ -58,20 +58,6 @@ export const projects = [
       }
     ],
     tools: ["Adobe Photoshop", "Adobe Premiere Pro", "Canva", "Meta Business Suite"],
-    gallery: [
-      {
-        url: "/assets/projects/arulmathi-silks/01.jpg",
-        caption: "Festive Saree Collection — Graphic Campaign Asset"
-      },
-      {
-        url: "/assets/projects/arulmathi-silks/02.jpg",
-        caption: "Social Reel Still — Cinematic Fabric & Texture Highlight"
-      },
-      {
-        url: "/assets/projects/arulmathi-silks/03.jpg",
-        caption: "Promotional Banner — Editorial Textile Typography"
-      }
-    ],
     isFeatured: true
   },
   {
@@ -121,20 +107,6 @@ export const projects = [
       }
     ],
     tools: ["Adobe Photoshop", "Adobe Illustrator", "Premiere Pro", "CapCut"],
-    gallery: [
-      {
-        url: "/assets/projects/hashtag-clothings/cover.svg",
-        caption: "Hashtag Clothings — Streetwear Visual Campaign Poster"
-      },
-      {
-        url: "/assets/projects/hashtag-clothings/02.jpg",
-        caption: "Story Template Design — Season Launch Preview"
-      },
-      {
-        url: "/assets/projects/hashtag-clothings/03.jpg",
-        caption: "Social Creative — Apparel Feature Composition"
-      }
-    ],
     isFeatured: true
   },
   {
@@ -185,20 +157,6 @@ export const projects = [
       }
     ],
     tools: ["Adobe Photoshop", "Adobe Illustrator", "Premiere Pro", "CapCut", "Meta Business Suite"],
-    gallery: [
-      {
-        url: "/assets/projects/tiny-hashtag/cover.svg",
-        caption: "Tiny Hashtag Kids Fashion — Official Brand & Campaign Creative"
-      },
-      {
-        url: "/assets/projects/hashtag-clothings/02.jpg",
-        caption: "Season Launch Preview & Product Story Template"
-      },
-      {
-        url: "/assets/projects/hashtag-clothings/01.jpg",
-        caption: "Apparel Feature Composition & Social Media Post"
-      }
-    ],
     isFeatured: true
   },
   {
@@ -304,16 +262,6 @@ export const projects = [
       }
     ],
     tools: ["DSLR / Mirrorless Systems", "Adobe Lightroom", "Adobe Photoshop", "Premiere Pro"],
-    gallery: [
-      {
-        url: "/assets/projects/photography/01.jpg",
-        caption: "Natural Light Portraiture — Composition & Tone Study"
-      },
-      {
-        url: "/assets/projects/photography/02.jpg",
-        caption: "Documentary Visuals — Environmental Storytelling"
-      }
-    ],
     isFeatured: false
   },
   {
@@ -362,12 +310,6 @@ export const projects = [
       }
     ],
     tools: ["React.js", "Vite", "Tailwind CSS", "Framer Motion", "Generative AI Tools"],
-    gallery: [
-      {
-        url: "/assets/projects/web/01.jpg",
-        caption: "Component Architecture & Minimalist Interface Concept"
-      }
-    ],
     isFeatured: false
   }
 ];

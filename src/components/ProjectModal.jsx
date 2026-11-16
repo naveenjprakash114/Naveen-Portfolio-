@@ -312,8 +312,8 @@ export default function ProjectModal({ project, isOpen, onClose }) {
           </div>
         </div>
 
-        {/* Single Full Landing Page Showcase (for E-commerce and single landing page showcases) */}
-        {project.gallery && project.gallery.length === 1 && (
+        {/* Single Full Landing Page Showcase (Specifically for Modern E-Commerce Store) */}
+        {project.id === "ecommerce-store-platform" && project.gallery && project.gallery.length > 0 && (
           <div className="space-y-4 mb-8">
             <div className="flex items-center justify-between pb-2 border-b border-gold/15">
               <div className="flex items-center gap-2">
@@ -397,82 +397,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
           </div>
         )}
 
-        {/* Multi-Item Gallery (for projects with multiple posters/assets) */}
-        {project.gallery && project.gallery.length > 1 && (
-          <div className="space-y-4 mb-8">
-            <div className="flex items-center justify-between pb-2 border-b border-gold/15">
-              <div className="flex items-center gap-2">
-                <span className="w-5 h-[1px] bg-gold" />
-                <h3 className="text-xs font-mono uppercase tracking-widest text-gold font-bold">
-                  PROJECT DESIGNS &amp; LANDING PAGES
-                </h3>
-              </div>
-              <span className="text-[11px] font-mono text-charcoal/60 hidden sm:inline-block">
-                Click preview to inspect full design
-              </span>
-            </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-              {project.gallery.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="group rounded-2xl bg-white border border-gold/25 overflow-hidden flex flex-col justify-between hover:border-gold/60 hover:shadow-card-hover transition-all duration-300"
-                >
-                  {/* Image Frame */}
-                  <div
-                    onClick={() => setPreviewImage(item)}
-                    className="relative aspect-[4/3] sm:aspect-[16/10] bg-[#FAF7F2] overflow-hidden cursor-pointer"
-                  >
-                    <img
-                      src={item.url}
-                      alt={item.title || item.caption}
-                      className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
-                      loading="lazy"
-                    />
-
-                    {/* Tag badge */}
-                    <div className="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-full bg-charcoal/85 backdrop-blur-xs text-[#FAF7F2] text-[9px] font-mono tracking-wider uppercase border border-gold/30">
-                      {item.title ? "Design Asset" : `Asset 0${idx + 1}`}
-                    </div>
-
-                    {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-charcoal/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 p-3">
-                      <span className="px-3.5 py-1.5 rounded-full bg-white text-charcoal text-xs font-semibold uppercase tracking-wider flex items-center gap-1.5 shadow-md">
-                        <Eye className="w-3.5 h-3.5 text-gold" />
-                        <span>Enlarge Design</span>
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Caption & Title */}
-                  <div className="p-3.5 space-y-1.5 bg-white">
-                    {item.title && (
-                      <h4 className="font-serif text-sm font-semibold text-charcoal line-clamp-1">
-                        {item.title}
-                      </h4>
-                    )}
-                    <p className="text-[11px] text-charcoal/70 leading-relaxed font-normal line-clamp-2">
-                      {item.caption}
-                    </p>
-                    <div className="pt-2 border-t border-gold/15 flex items-center justify-between">
-                      <span className="text-[10px] font-mono uppercase tracking-wider text-gold font-medium">
-                        {project.name}
-                      </span>
-                      <button
-                        type="button"
-                        onClick={() => setPreviewImage(item)}
-                        className="text-[10px] font-mono font-semibold uppercase tracking-wider text-charcoal hover:text-gold flex items-center gap-0.5"
-                      >
-                        <span>Inspect</span>
-                        <ArrowUpRight className="w-2.5 h-2.5" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
 
         {/* Bottom Bar with Direct Link & Close */}
         <div className="pt-6 border-t border-gold/25 flex flex-col sm:flex-row items-center justify-between gap-4">
