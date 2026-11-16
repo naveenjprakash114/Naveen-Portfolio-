@@ -61,7 +61,13 @@ export default function ProjectCard({ project, index, onSelect }) {
         </div>
 
         {/* Dynamic target based on project type */}
-        {project.liveUrl && !project.liveUrl.includes("github.com") && !project.liveUrl.includes("instagram.com") ? (
+        {project.liveLinks && project.liveLinks.length > 1 ? (
+          <span className="inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] font-mono font-semibold tracking-wider text-charcoal/80 group-hover:text-gold transition-colors">
+            <Globe className="w-3 h-3 text-gold" />
+            <span>{project.liveCardLabel || `${project.liveLinks.length} Live Web Apps`}</span>
+            <ArrowUpRight className="w-2.5 h-2.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </span>
+        ) : project.liveUrl && !project.liveUrl.includes("github.com") && !project.liveUrl.includes("instagram.com") ? (
           <span className="inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] font-mono font-semibold tracking-wider text-charcoal/80 group-hover:text-gold transition-colors">
             <Globe className="w-3 h-3 text-gold" />
             <span>{project.liveCardLabel || "Live Website"}</span>

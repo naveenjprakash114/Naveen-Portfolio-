@@ -25,11 +25,11 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 
   if (!isOpen || !project) return null;
 
-  const currentLiveUrl = project.liveUrl || project.instagramUrl || (project.githubId ? `https://github.com/${project.githubId}` : null);
+  const currentLiveUrl = (project.liveLinks && project.liveLinks[0]?.url) || project.liveUrl || project.instagramUrl || (project.githubId ? `https://github.com/${project.githubId}` : null);
   const isGitHub = Boolean(currentLiveUrl && currentLiveUrl.includes("github.com"));
   const isInstagram = Boolean(currentLiveUrl && currentLiveUrl.includes("instagram.com"));
   const isLiveWeb = Boolean(currentLiveUrl && !isGitHub && !isInstagram);
-  const hasLinks = Boolean(currentLiveUrl || project.driveUrl || project.githubUrl);
+  const hasLinks = Boolean(currentLiveUrl || project.driveUrl || project.githubUrl || (project.liveLinks && project.liveLinks.length > 0));
 
   const handleCopyLink = () => {
     if (!currentLiveUrl) return;
@@ -111,7 +111,21 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 
             {/* Quick Action Buttons for Works */}
             <div className="flex flex-wrap items-center gap-3">
-              {currentLiveUrl ? (
+              {project.liveLinks && project.liveLinks.length > 0 ? (
+                project.liveLinks.map((link, idx) => (
+                  <a
+                    key={idx}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-charcoal text-[#FAF7F2] text-xs font-semibold uppercase tracking-wider hover:bg-charcoal/80 transition-colors shadow-xs"
+                  >
+                    <Globe className="w-4 h-4 text-champagne" />
+                    <span>{link.label || "Live Website"}</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-champagne" />
+                  </a>
+                ))
+              ) : currentLiveUrl ? (
                 <a
                   href={currentLiveUrl}
                   target="_blank"
@@ -145,7 +159,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                 </a>
               ) : null}
 
-              {project.githubUrl && project.githubUrl !== currentLiveUrl ? (
+              {project.githubUrl && project.githubUrl !== currentLiveUrl && (!project.liveLinks || !project.liveLinks.some(l => l.url === project.githubUrl)) ? (
                 <a
                   href={project.githubUrl}
                   target="_blank"
@@ -327,8 +341,22 @@ export default function ProjectModal({ project, isOpen, onClose }) {
             Portfolio project for <strong className="text-charcoal">{project.name}</strong>
           </div>
 
-          <div className="flex items-center gap-3">
-            {currentLiveUrl && (
+          <div className="flex flex-wrap items-center gap-3">
+            {project.liveLinks && project.liveLinks.length > 0 ? (
+              project.liveLinks.map((link, idx) => (
+                <a
+                  key={idx}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#FAF7F2] border border-gold/30 text-charcoal text-xs font-semibold uppercase tracking-wider hover:bg-white transition-colors"
+                >
+                  <Globe className="w-3.5 h-3.5 text-gold" />
+                  <span>{link.label ? link.label.replace(" (Vercel)", "") : "Live Web App"}</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-gold" />
+                </a>
+              ))
+            ) : currentLiveUrl ? (
               <a
                 href={currentLiveUrl}
                 target="_blank"
@@ -338,7 +366,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                 <span>{isLiveWeb ? "Open Live Website" : isGitHub ? "Open GitHub" : isInstagram ? "Open Instagram" : "Open Work"}</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-gold" />
               </a>
-            )}
+            ) : null}
 
             <button
               onClick={onClose}
