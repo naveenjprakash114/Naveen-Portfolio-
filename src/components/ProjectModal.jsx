@@ -46,9 +46,10 @@ export default function ProjectModal({ project, isOpen, onClose }) {
       aria-modal="true"
     >
       <div
-        className="bg-[#FAF7F2] border border-gold/40 rounded-3xl max-w-4xl w-full max-h-[92vh] overflow-y-auto shadow-2xl p-6 sm:p-10 my-auto text-charcoal"
+        className="bg-[#FAF7F2] border border-gold/40 rounded-3xl max-w-4xl w-full max-h-[92vh] overflow-hidden shadow-2xl my-auto text-charcoal flex flex-col relative"
         onClick={(e) => e.stopPropagation()}
       >
+        <div className="overflow-y-auto flex-1 p-6 sm:p-10 modal-scrollbar">
         {/* Top Header & Breadcrumb */}
         <div className="flex items-start justify-between gap-4 pb-6 border-b border-gold/25 mb-6">
           <div className="space-y-1">
@@ -399,6 +400,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
               Close
             </button>
           </div>
+        </div>
         </div>
       </div>
     </div>

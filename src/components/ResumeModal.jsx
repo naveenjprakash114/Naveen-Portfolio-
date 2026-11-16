@@ -36,9 +36,10 @@ export default function ResumeModal({ isOpen, onClose }) {
       aria-modal="true"
     >
       <div
-        className="bg-[#FAF7F2] border border-gold/40 rounded-3xl max-w-4xl w-full max-h-[92vh] overflow-y-auto shadow-2xl p-6 sm:p-10 my-auto"
+        className="bg-[#FAF7F2] border border-gold/40 rounded-3xl max-w-4xl w-full max-h-[92vh] overflow-hidden shadow-2xl my-auto flex flex-col relative"
         onClick={(e) => e.stopPropagation()}
       >
+        <div className="overflow-y-auto flex-1 p-6 sm:p-10 modal-scrollbar">
         {/* Modal Action Bar */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 mb-8 border-b border-gold/30 print:hidden">
           <div>
@@ -312,6 +313,7 @@ export default function ResumeModal({ isOpen, onClose }) {
             NAVEEN PRAKASH J
           </div>
 
+        </div>
         </div>
       </div>
     </div>

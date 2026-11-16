@@ -36,18 +36,44 @@
   }
 
   /* Apple-inspired subtle luxury scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(197, 160, 89, 0.4) transparent;
+  }
+
   ::-webkit-scrollbar {
     width: 6px;
+    height: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #FDFBF7;
+    background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    background: #E2D7C5;
-    border-radius: 4px;
+    background: rgba(197, 160, 89, 0.35);
+    border-radius: 9999px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #D4AF67;
+    background: rgba(197, 160, 89, 0.7);
+  }
+
+  /* Dedicated Modal Luxury Scrollbar */
+  .modal-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(197, 160, 89, 0.45) transparent;
+  }
+  .modal-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .modal-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 20px 0;
+  }
+  .modal-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(197, 160, 89, 0.4);
+    border-radius: 9999px;
+  }
+  .modal-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(197, 160, 89, 0.8);
   }
 }
 
