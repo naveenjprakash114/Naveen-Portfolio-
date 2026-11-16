@@ -207,13 +207,6 @@ export const projects = [
       }
     ],
     tools: ["React.js", "Tailwind CSS", "Figma", "Adobe Photoshop", "Canva Pro"],
-    gallery: [
-      {
-        url: "/assets/projects/web/scoopzone-landing-page.jpg",
-        title: "ScoopZone Official Storefront Landing Page",
-        caption: "High-converting D2C landing page: 'Ice Cream, Delivered Before The Melt.' Featuring top brands (Baskin Robbins, Arun, Boomerang, Ibaco), 8–10 min delivery promise, popular flavours catalog, 3-step order flow, combo packs, and customer reviews."
-      }
-    ],
     isFeatured: true
   },
   {
