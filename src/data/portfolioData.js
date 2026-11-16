@@ -187,7 +187,7 @@ export const experienceTimeline = [
     id: "exp-3",
     company: "Bit Byte Technologies",
     role: "Digital Marketing Executive & Frontend Developer",
-    duration: "Jan 2026 – Present",
+    duration: "Apr 2026 – Present",
     isCurrent: true,
     summary: "Leading digital marketing, social media page curation, visual communication, and developing responsive UI/UX and React frontend interfaces.",
     responsibilities: [
