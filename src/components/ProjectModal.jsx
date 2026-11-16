@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { X, CheckCircle2, ExternalLink, Link2, Copy, Check, Sparkles, FolderOpen, ArrowUpRight, Eye, Maximize2 } from "lucide-react";
+import { X, CheckCircle2, ExternalLink, Link2, Copy, Check, Sparkles, FolderOpen, ArrowUpRight, Eye, Maximize2, Globe } from "lucide-react";
 import { LinkedInIcon, InstagramIcon, GitHubIcon } from "./Icons";
 
 export default function ProjectModal({ project, isOpen, onClose }) {
@@ -28,6 +28,8 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 
   const currentLiveUrl = project.liveUrl || project.instagramUrl || (project.githubId ? `https://github.com/${project.githubId}` : null);
   const isGitHub = Boolean(currentLiveUrl && currentLiveUrl.includes("github.com"));
+  const isInstagram = Boolean(currentLiveUrl && currentLiveUrl.includes("instagram.com"));
+  const isLiveWeb = Boolean(currentLiveUrl && !isGitHub && !isInstagram);
   const hasLinks = Boolean(currentLiveUrl || project.driveUrl || project.githubUrl);
 
   const handleCopyLink = () => {
@@ -85,10 +87,16 @@ export default function ProjectModal({ project, isOpen, onClose }) {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-gold/15">
               <div>
                 <span className="text-[11px] font-mono uppercase tracking-widest text-gold font-bold block">
-                  {isGitHub ? "PROJECT REPOSITORY & CODE HUB" : "PROJECT LINKS & LIVE WORKS"}
+                  {isLiveWeb
+                    ? "LIVE WEB APPLICATION & REPOSITORY"
+                    : isGitHub
+                    ? "PROJECT REPOSITORY & CODE HUB"
+                    : "PROJECT LINKS & LIVE WORKS"}
                 </span>
                 <span className="text-xs text-charcoal/70">
-                  {isGitHub
+                  {isLiveWeb
+                    ? "Explore the live deployed web application on Vercel and review the source code on GitHub"
+                    : isGitHub
                     ? "Explore live code, repositories, and architectural documentation on GitHub"
                     : "View published campaign assets, social media works, and creative files"}
                 </span>
@@ -113,11 +121,13 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                 >
                   {isGitHub ? (
                     <GitHubIcon className="w-4 h-4 text-champagne" />
-                  ) : (
+                  ) : isInstagram ? (
                     <InstagramIcon className="w-4 h-4 text-champagne" />
+                  ) : (
+                    <Globe className="w-4 h-4 text-champagne" />
                   )}
                   <span>
-                    {project.liveUrlLabel || (isGitHub ? `GitHub: @${project.githubId || "naveenjprakash114"}` : "View Live Works / Instagram")}
+                    {project.liveUrlLabel || (isGitHub ? `GitHub: @${project.githubId || "naveenjprakash114"}` : isInstagram ? "View Live Works / Instagram" : "Open Live Website")}
                   </span>
                   <ArrowUpRight className="w-3.5 h-3.5 text-champagne" />
                 </a>
@@ -413,7 +423,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#FAF7F2] border border-gold/30 text-charcoal text-xs font-semibold uppercase tracking-wider hover:bg-white transition-colors"
               >
-                <span>{isGitHub ? "Open GitHub" : "Open Work"}</span>
+                <span>{isLiveWeb ? "Open Live Website" : isGitHub ? "Open GitHub" : isInstagram ? "Open Instagram" : "Open Work"}</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-gold" />
               </a>
             )}
@@ -509,7 +519,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                       rel="noopener noreferrer"
                       className="px-4 py-1.5 rounded-full bg-charcoal text-[#FAF7F2] font-semibold text-xs uppercase tracking-wider flex items-center gap-1 hover:bg-charcoal/80 transition-colors"
                     >
-                      <span>{isGitHub ? "View GitHub Repo" : "Open Live"}</span>
+                      <span>{isLiveWeb ? "Open Live Website" : isGitHub ? "View GitHub Repo" : "Open Live"}</span>
                       <ArrowUpRight className="w-3 h-3 text-gold" />
                     </a>
                   )}

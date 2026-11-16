@@ -270,7 +270,7 @@ export const projects = [
     name: "AI & WEB EXPERIENCES",
     client: "Frontend & AI Engineering Lab",
     category: "UI/UX & Frontend Development",
-    filterTags: ["WEB DESIGN"],
+    filterTags: ["WEB DESIGN", "PHOTOGRAPHY"],
     thumbnail: "/assets/projects/web/cover.jpg",
     monogram: "AI",
     accentColor: "from-amber-100/60 to-yellow-50/40",
@@ -278,21 +278,27 @@ export const projects = [
     description: "Modern website interfaces and web applications built with React.js, Tailwind CSS, and AI-assisted engineering tools.",
     githubId: "naveenjprakash114",
     githubUrl: "https://github.com/naveenjprakash114",
-    liveUrl: "https://github.com/naveenjprakash114",
-    liveUrlLabel: "View GitHub: @naveenjprakash114",
+    liveUrl: "https://photography-website-o0e2qb7uy-naveenjprakash114.vercel.app/",
+    liveUrlLabel: "Live Website (Vercel)",
     driveUrl: "",
     role: [
       "UI/UX Designer",
       "Frontend Developer",
       "AI Prompt Engineer"
     ],
-    overview: "Bridging creative design with modern web engineering, this exploration investigates generative design workflows, prompt engineering for visual mockups, and building responsive React components styled with Tailwind CSS.",
+    overview: "Bridging creative design with modern web engineering, this exploration investigates generative design workflows, prompt engineering for visual mockups, and building responsive React components styled with Tailwind CSS — including a live, high-performance photography portfolio website deployed on Vercel.",
     objectives: [
       "Design user-focused UI/UX layouts and modern website interfaces.",
       "Develop responsive frontend pages using React.js and AI-assisted development tools.",
-      "Implement smooth micro-interactions, responsive grids, and accessible components."
+      "Implement smooth micro-interactions, responsive grids, and accessible components.",
+      "Deploy and maintain production frontend builds on Vercel with continuous deployment."
     ],
     deliverables: [
+      {
+        title: "Photography Showcase Web Application",
+        type: "Frontend Development & React.js",
+        description: "Responsive, high-performance photography showcase website deployed live on Vercel with smooth transitions and curated visual gallery."
+      },
       {
         title: "Component Architecture",
         type: "React.js",
@@ -302,11 +308,6 @@ export const projects = [
         title: "AI Creative Direction",
         type: "Prompt Engineering",
         description: "Structured prompt chains for multimodal design and rapid asset creation."
-      },
-      {
-        title: "Interactive Web Interfaces",
-        type: "UI/UX Design",
-        description: "Luxury minimalism, fluid transitions, and tactile user feedback."
       }
     ],
     tools: ["React.js", "Vite", "Tailwind CSS", "Framer Motion", "Generative AI Tools"],
