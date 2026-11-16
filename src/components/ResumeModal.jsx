@@ -169,11 +169,13 @@ export default function ResumeModal({ isOpen, onClose }) {
                 <span>UI/UX Designer</span>
               </div>
               <div className="flex flex-wrap items-center gap-2">
-                <span>AI Creative Technologist</span>
-                <span className="text-gold">•</span>
                 <span>Frontend Developer</span>
                 <span className="text-gold">•</span>
-                <span>AI Prompt Engineer</span>
+                <span>AI Creative Technology</span>
+                <span className="text-gold">•</span>
+                <span>AI Prompt Engineering</span>
+                <span className="text-gold">•</span>
+                <span>Photography &amp; Videography</span>
               </div>
             </div>
           </div>
@@ -204,12 +206,59 @@ export default function ResumeModal({ isOpen, onClose }) {
             </div>
           </div>
 
-          {/* Section 4: Selected Creative Projects */}
+          {/* Section 4: Selected Projects */}
           <div>
-            <h2 className="text-xs font-mono uppercase tracking-widest text-gold mb-3.5 pb-1 border-b border-gold/25 font-bold">
-              SELECTED CREATIVE PROJECTS
-            </h2>
+            <div className="flex items-center justify-between mb-3.5 pb-1 border-b border-gold/25">
+              <h2 className="text-xs font-mono uppercase tracking-widest text-gold font-bold">
+                SELECTED PROJECTS
+              </h2>
+              <a
+                href="https://naveen-portfolio-umber-beta.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[11px] font-mono text-gold hover:text-charcoal transition-colors font-medium flex items-center gap-1"
+              >
+                <span>Live Portfolio ↗</span>
+                <ExternalLink className="w-3 h-3" />
+              </a>
+            </div>
             <div className="space-y-3.5">
+              <div className="space-y-1">
+                <div className="text-xs sm:text-sm font-bold text-charcoal">
+                  Ice Cream E-Commerce Platform <span className="font-normal text-charcoal/60">|</span> <span className="text-gold font-semibold">E-Commerce &amp; Product Experience</span>
+                </div>
+                <p className="text-xs text-charcoal/80 leading-relaxed">
+                  Designed and developed an online ice cream shopping and delivery platform. Focused on product management, category organisation, pricing, inventory and customer experience, with planned location-based delivery through 5 KM service zones and rapid delivery functionality.
+                </p>
+              </div>
+
+              <div className="space-y-1">
+                <div className="text-xs sm:text-sm font-bold text-charcoal">
+                  El Dhruv Photography <span className="font-normal text-charcoal/60">|</span> <span className="text-gold font-semibold">Photography Portfolio Website</span>
+                </div>
+                <p className="text-xs text-charcoal/80 leading-relaxed">
+                  Designed and developed a professional portfolio showcasing photography, videography, candid photography, model photoshoots and event coverage. Focused on premium visual presentation, responsive layouts, user experience and a strong digital brand presence.
+                </p>
+              </div>
+
+              <div className="space-y-1">
+                <div className="text-xs sm:text-sm font-bold text-charcoal">
+                  Personal AI Assistant <span className="font-normal text-charcoal/60">|</span> <span className="text-gold font-semibold">AI-Powered Personal Project</span>
+                </div>
+                <p className="text-xs text-charcoal/80 leading-relaxed">
+                  Conceptualised and developed an AI-powered personal assistant for individual use. Explored AI integration and prompt engineering to create an intelligent assistant experience focused on simplifying personal workflows.
+                </p>
+              </div>
+
+              <div className="space-y-1">
+                <div className="text-xs sm:text-sm font-bold text-charcoal">
+                  AUREL ESTATES <span className="font-normal text-charcoal/60">|</span> <span className="text-gold font-semibold">Luxury Real Estate Website</span>
+                </div>
+                <p className="text-xs text-charcoal/80 leading-relaxed">
+                  Designed and developed a premium real estate website focused on property buying and selling. Created an elegant UI/UX direction using a white and charcoal palette, with emphasis on property listings, property discovery and intuitive navigation for the Tamil Nadu real estate market.
+                </p>
+              </div>
+
               <div className="space-y-1">
                 <div className="text-xs sm:text-sm font-bold text-charcoal">
                   ARULMATHI SILKS <span className="font-normal text-charcoal/60">|</span> <span className="text-gold font-semibold">Digital Marketing &amp; Creative Design</span>
@@ -236,26 +285,6 @@ export default function ResumeModal({ isOpen, onClose }) {
                 </div>
                 <p className="text-xs text-charcoal/80 leading-relaxed">
                   Designed clothing promotions and social media creatives, edited fashion videos and reels, and supported content publishing and brand consistency.
-                </p>
-              </div>
-
-              <div className="space-y-1">
-                <div className="text-xs sm:text-sm font-bold text-charcoal flex items-center justify-between">
-                  <span>
-                    TINY HASHTAG <span className="font-normal text-charcoal/60">|</span> <span className="text-gold font-semibold">Kids Fashion &amp; Brand Creative</span>
-                  </span>
-                  <a
-                    href="https://www.instagram.com/tinyhashtag?rpxt=cWN1dHF1aWVwNnFo"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[11px] font-mono text-gold hover:text-charcoal transition-colors font-medium flex items-center gap-1"
-                  >
-                    <span>@tinyhashtag</span>
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
-                </div>
-                <p className="text-xs text-charcoal/80 leading-relaxed">
-                  Created playful kids apparel graphics, promotional campaign reels, festive launch creatives, and social content for Tiny Hashtag.
                 </p>
               </div>
             </div>

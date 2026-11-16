@@ -215,7 +215,7 @@ export const experienceTimeline = [
   {
     id: "exp-2",
     company: "Shriram Finance Ltd",
-    role: "Executive Officer",
+    role: "Marketing Executive",
     duration: "6 Months",
     isCurrent: false,
     summary: "Supported customer service, documentation, day-to-day business operations, and customer relationship management.",
