@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Globe } from "lucide-react";
-import { GitHubIcon } from "./Icons";
+import { GitHubIcon, InstagramIcon } from "./Icons";
 
 export default function ProjectCard({ project, index, onSelect }) {
   return (
@@ -63,8 +63,12 @@ export default function ProjectCard({ project, index, onSelect }) {
         {/* Dynamic target based on project type */}
         {project.liveLinks && project.liveLinks.length > 1 ? (
           <span className="inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] font-mono font-semibold tracking-wider text-charcoal/80 group-hover:text-gold transition-colors">
-            <Globe className="w-3 h-3 text-gold" />
-            <span>{project.liveCardLabel || `${project.liveLinks.length} Live Web Apps`}</span>
+            {project.liveLinks.some(l => l.url.includes("instagram.com")) ? (
+              <InstagramIcon className="w-3 h-3 text-gold" />
+            ) : (
+              <Globe className="w-3 h-3 text-gold" />
+            )}
+            <span>{project.liveCardLabel || (project.liveLinks.some(l => l.url.includes("instagram.com")) ? "2 Instagram Profiles" : `${project.liveLinks.length} Live Web Apps`)}</span>
             <ArrowUpRight className="w-2.5 h-2.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </span>
         ) : project.liveUrl && !project.liveUrl.includes("github.com") && !project.liveUrl.includes("instagram.com") ? (
@@ -80,7 +84,8 @@ export default function ProjectCard({ project, index, onSelect }) {
             <ArrowUpRight className="w-2.5 h-2.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </span>
         ) : project.instagramHandle ? (
-          <span className="inline-flex items-center gap-1 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-wider text-charcoal/70 group-hover:text-gold transition-colors">
+          <span className="inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-wider text-charcoal/70 group-hover:text-gold transition-colors">
+            <InstagramIcon className="w-3 h-3 text-gold" />
             <span>{project.instagramHandle}</span>
             <ArrowUpRight className="w-2.5 h-2.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </span>

@@ -221,8 +221,21 @@ export const projects = [
     accentColor: "from-stone-200/80 to-amber-50/40",
     roleSubtitle: "Visual Storyteller & Camera Director",
     description: "A curated selection of commercial, product, portrait, and event photography, cinematography, and cinematic color grading spanning 3+ years.",
-    liveUrl: "",
-    instagramUrl: "",
+    liveUrl: "https://www.instagram.com/djphotography268?vrfl=NW02N2VpOWJoa3d3",
+    instagramUrl: "https://www.instagram.com/djphotography268?vrfl=NW02N2VpOWJoa3d3",
+    instagramHandle: "@djphotography268",
+    liveUrlLabel: "Visit @djphotography268 on Instagram",
+    liveCardLabel: "2 Instagram Pages",
+    liveLinks: [
+      {
+        label: "Visit @djphotography268 on Instagram",
+        url: "https://www.instagram.com/djphotography268?vrfl=NW02N2VpOWJoa3d3"
+      },
+      {
+        label: "Visit @djphotographymodelling on Instagram",
+        url: "https://www.instagram.com/djphotographymodelling?vrfl=a3l5bmE2ODJzeHl6"
+      }
+    ],
     githubUrl: "",
     driveUrl: "",
     role: [
@@ -231,26 +244,27 @@ export const projects = [
       "Colour Grader",
       "Editor"
     ],
-    overview: "Drawing upon 3 years of hands-on camera work with DJ Photography, this archive explores commercial shoots, product setups, natural light portraiture, and cinematic short-form visuals. It reflects a dedication to composition, depth, and storytelling.",
+    overview: "Drawing upon 3 years of hands-on camera work with DJ Photography, this archive explores commercial shoots, product setups, natural light portraiture, and cinematic short-form visuals across two active Instagram profiles (@djphotography268 and @djphotographymodelling). It reflects a dedication to composition, depth, and storytelling.",
     objectives: [
       "Produced product, model, portrait, commercial and event photography.",
       "Planned and captured promotional videos, brand visuals and short-form social media reels.",
-      "Performed video editing, colour grading, photo retouching, lighting setup and post-production."
+      "Performed video editing, colour grading, photo retouching, lighting setup and post-production.",
+      "Curated and published photo sets and editorial model portfolios on Instagram."
     ],
     deliverables: [
       {
-        title: "Product & Model Photography",
-        type: "Photography",
-        description: "Studio and outdoor shoots with professional lighting, styling, and composition."
+        title: "Commercial & Event Photography",
+        type: "Photography (@djphotography268)",
+        description: "Studio and outdoor commercial shoots with professional lighting, styling, and composition."
       },
       {
-        title: "Cinematic Brand Reels",
-        type: "Videography",
-        description: "High-definition video capture with intentional camera motion and storytelling."
+        title: "Fashion & Model Portfolios",
+        type: "Editorial Photography (@djphotographymodelling)",
+        description: "Creative fashion portraits, model test shoots, and editorial visual portfolios."
       },
       {
         title: "Post-Production & Colour Grading",
-        type: "Editing",
+        type: "Editing & Retouching",
         description: "Fine-tuned color grading calibrated for skin tones, luxury fabrics, and cinematic atmospheres."
       }
     ],

@@ -112,19 +112,29 @@ export default function ProjectModal({ project, isOpen, onClose }) {
             {/* Quick Action Buttons for Works */}
             <div className="flex flex-wrap items-center gap-3">
               {project.liveLinks && project.liveLinks.length > 0 ? (
-                project.liveLinks.map((link, idx) => (
-                  <a
-                    key={idx}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-charcoal text-[#FAF7F2] text-xs font-semibold uppercase tracking-wider hover:bg-charcoal/80 transition-colors shadow-xs"
-                  >
-                    <Globe className="w-4 h-4 text-champagne" />
-                    <span>{link.label || "Live Website"}</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 text-champagne" />
-                  </a>
-                ))
+                project.liveLinks.map((link, idx) => {
+                  const isLinkInsta = link.url.includes("instagram.com");
+                  const isLinkGit = link.url.includes("github.com");
+                  return (
+                    <a
+                      key={idx}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-charcoal text-[#FAF7F2] text-xs font-semibold uppercase tracking-wider hover:bg-charcoal/80 transition-colors shadow-xs"
+                    >
+                      {isLinkInsta ? (
+                        <InstagramIcon className="w-4 h-4 text-champagne" />
+                      ) : isLinkGit ? (
+                        <GitHubIcon className="w-4 h-4 text-champagne" />
+                      ) : (
+                        <Globe className="w-4 h-4 text-champagne" />
+                      )}
+                      <span>{link.label || "Live Link"}</span>
+                      <ArrowUpRight className="w-3.5 h-3.5 text-champagne" />
+                    </a>
+                  );
+                })
               ) : currentLiveUrl ? (
                 <a
                   href={currentLiveUrl}
@@ -343,19 +353,33 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 
           <div className="flex flex-wrap items-center gap-3">
             {project.liveLinks && project.liveLinks.length > 0 ? (
-              project.liveLinks.map((link, idx) => (
-                <a
-                  key={idx}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#FAF7F2] border border-gold/30 text-charcoal text-xs font-semibold uppercase tracking-wider hover:bg-white transition-colors"
-                >
-                  <Globe className="w-3.5 h-3.5 text-gold" />
-                  <span>{link.label ? link.label.replace(" (Vercel)", "") : "Live Web App"}</span>
-                  <ArrowUpRight className="w-3.5 h-3.5 text-gold" />
-                </a>
-              ))
+              project.liveLinks.map((link, idx) => {
+                const isLinkInsta = link.url.includes("instagram.com");
+                const isLinkGit = link.url.includes("github.com");
+                return (
+                  <a
+                    key={idx}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#FAF7F2] border border-gold/30 text-charcoal text-xs font-semibold uppercase tracking-wider hover:bg-white transition-colors"
+                  >
+                    {isLinkInsta ? (
+                      <InstagramIcon className="w-3.5 h-3.5 text-gold" />
+                    ) : isLinkGit ? (
+                      <GitHubIcon className="w-3.5 h-3.5 text-gold" />
+                    ) : (
+                      <Globe className="w-3.5 h-3.5 text-gold" />
+                    )}
+                    <span>
+                      {link.label
+                        ? link.label.replace(" (Vercel)", "").replace("Visit ", "").replace(" on Instagram", "")
+                        : "Live Link"}
+                    </span>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-gold" />
+                  </a>
+                );
+              })
             ) : currentLiveUrl ? (
               <a
                 href={currentLiveUrl}
