@@ -282,13 +282,17 @@ export const projects = [
     monogram: "AI",
     accentColor: "from-amber-100/60 to-yellow-50/40",
     roleSubtitle: "Frontend Developer & AI Prompt Engineer",
-    description: "Modern website interfaces and web applications built with React.js, Tailwind CSS, and AI-assisted engineering tools — featuring live Real Estate and Photography web apps.",
+    description: "Modern website interfaces and web applications built with React.js, Tailwind CSS, and AI-assisted engineering tools — featuring an AI Assistant Dashboard, Real Estate platform, and Photography web app.",
     githubId: "naveenjprakash114",
     githubUrl: "https://github.com/naveenjprakash114",
-    liveUrl: "https://real-estate-6l3ojtw4h-naveenjprakash114.vercel.app/",
-    liveUrlLabel: "Real Estate Website (Vercel)",
-    liveCardLabel: "2 Live Web Apps",
+    liveUrl: "https://ai-assistant-ten-steel.vercel.app/dashboard",
+    liveUrlLabel: "AI Assistant Dashboard (Vercel)",
+    liveCardLabel: "3 Live Web Apps",
     liveLinks: [
+      {
+        label: "AI Assistant Dashboard (Vercel)",
+        url: "https://ai-assistant-ten-steel.vercel.app/dashboard"
+      },
       {
         label: "Real Estate Website (Vercel)",
         url: "https://real-estate-6l3ojtw4h-naveenjprakash114.vercel.app/"
@@ -304,7 +308,7 @@ export const projects = [
       "Frontend Developer",
       "AI Prompt Engineer"
     ],
-    overview: "Bridging creative design with modern web engineering, this exploration investigates generative design workflows, prompt engineering for visual mockups, and building responsive React components styled with Tailwind CSS — including live production web platforms for Real Estate and Photography deployed on Vercel.",
+    overview: "Bridging creative design with modern web engineering, this exploration investigates generative design workflows, prompt engineering for visual mockups, and building responsive React components styled with Tailwind CSS — including live production web platforms for an AI Assistant Dashboard, Real Estate marketplace, and Photography showcase deployed on Vercel.",
     objectives: [
       "Design user-focused UI/UX layouts and modern website interfaces.",
       "Develop responsive frontend pages using React.js and AI-assisted development tools.",
@@ -312,6 +316,11 @@ export const projects = [
       "Deploy and maintain production frontend builds on Vercel with continuous deployment."
     ],
     deliverables: [
+      {
+        title: "AI Assistant Web Dashboard",
+        type: "AI & Frontend Engineering",
+        description: "Interactive AI assistant dashboard featuring generative workflows, prompt interfaces, real-time responses, and clean analytics UI deployed on Vercel."
+      },
       {
         title: "Real Estate Web Platform",
         type: "Frontend Development & React.js",
