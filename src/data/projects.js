@@ -285,13 +285,13 @@ export const projects = [
     description: "Modern website interfaces and web applications built with React.js, Tailwind CSS, and AI-assisted engineering tools — featuring an AI Assistant Dashboard, Real Estate platform, and Photography web app.",
     githubId: "naveenjprakash114",
     githubUrl: "https://github.com/naveenjprakash114",
-    liveUrl: "https://ai-assistant-ten-steel.vercel.app/dashboard",
-    liveUrlLabel: "AI Assistant Dashboard (Vercel)",
+    liveUrl: "https://ai-assistant-ohl0ttblf-naveenjprakash114.vercel.app/",
+    liveUrlLabel: "AI Assistant (Vercel)",
     liveCardLabel: "3 Live Web Apps",
     liveLinks: [
       {
-        label: "AI Assistant Dashboard (Vercel)",
-        url: "https://ai-assistant-ten-steel.vercel.app/dashboard"
+        label: "AI Assistant (Vercel)",
+        url: "https://ai-assistant-ohl0ttblf-naveenjprakash114.vercel.app/"
       },
       {
         label: "Real Estate Website (Vercel)",
