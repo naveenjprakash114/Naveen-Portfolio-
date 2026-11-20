@@ -1,10 +1,11 @@
 export const projectFilterCategories = [
   "ALL",
+  "FRONTEND",
+  "UI/UX DESIGN",
   "WEB DESIGN",
   "E-COMMERCE",
   "PHOTOGRAPHY",
-  "VIDEOGRAPHY",
-  "BRANDING"
+  "VIDEOGRAPHY"
 ];
 
 export const projects = [
@@ -14,7 +15,7 @@ export const projects = [
     name: "MODERN E-COMMERCE STORE",
     client: "ScoopZone — Ice Cream Delivery",
     category: "E-Commerce UI/UX & Web Development",
-    filterTags: ["E-COMMERCE", "WEB DESIGN", "BRANDING"],
+    filterTags: ["E-COMMERCE", "WEB DESIGN", "BRANDING", "FRONTEND"],
     thumbnail: "/assets/projects/web/scoopzone-landing-page.jpg",
     monogram: "SZ",
     accentColor: "from-amber-100/90 to-yellow-50/50",
@@ -123,14 +124,14 @@ export const projects = [
   {
     id: "ai-powered-web-experiences",
     number: "03",
-    name: "AI & WEB EXPERIENCES",
+    name: "FRONTEND DEVELOPER",
     client: "Frontend & AI Engineering Lab",
-    category: "UI/UX & Frontend Development",
-    filterTags: ["WEB DESIGN", "PHOTOGRAPHY"],
+    category: "Frontend Developer",
+    filterTags: ["FRONTEND", "WEB DESIGN"],
     thumbnail: "/assets/projects/web/cover.jpg",
-    monogram: "AI",
+    monogram: "FE",
     accentColor: "from-amber-100/60 to-yellow-50/40",
-    roleSubtitle: "Frontend Developer & AI Prompt Engineer",
+    roleSubtitle: "React.js, Web Applications & AI Integration",
     description: "Modern website interfaces and web applications built with React.js, Tailwind CSS, and AI-assisted engineering tools — featuring an AI Assistant Dashboard, Real Estate platform, and Photography web app.",
     githubId: "naveenjprakash114",
     githubUrl: "https://github.com/naveenjprakash114",
@@ -153,8 +154,8 @@ export const projects = [
     ],
     driveUrl: "",
     role: [
-      "UI/UX Designer",
       "Frontend Developer",
+      "React.js Engineer",
       "AI Prompt Engineer"
     ],
     overview: "Bridging creative design with modern web engineering, this exploration investigates generative design workflows, prompt engineering for visual mockups, and building responsive React components styled with Tailwind CSS — including live production web platforms for an AI Assistant Dashboard, Real Estate marketplace, and Photography showcase deployed on Vercel.",
@@ -193,5 +194,66 @@ export const projects = [
     ],
     tools: ["React.js", "Vite", "Tailwind CSS", "Framer Motion", "Generative AI Tools"],
     isFeatured: false
+  },
+  {
+    id: "uiux-design-projects",
+    number: "04",
+    name: "UI/UX DESIGN",
+    client: "Aurel Estates & Interface Systems",
+    category: "UI/UX Design",
+    filterTags: ["UI/UX DESIGN", "WEB DESIGN"],
+    thumbnail: "/images/services/uiux.jpg",
+    monogram: "UX",
+    accentColor: "from-purple-100/80 to-amber-50/40",
+    roleSubtitle: "Luxury Real Estate & Interface Systems",
+    description: "User-centered UI/UX design direction for Aurel Estates luxury real estate and modern web platforms — focused on minimalist white & charcoal aesthetics, intuitive property discovery, and responsive interface systems.",
+    githubId: "naveenjprakash114",
+    githubUrl: "https://github.com/naveenjprakash114",
+    liveUrl: "https://real-estate-6l3ojtw4h-naveenjprakash114.vercel.app/",
+    liveUrlLabel: "Live UI/UX Experience",
+    liveCardLabel: "2 UI/UX Prototypes",
+    liveLinks: [
+      {
+        label: "Aurel Estates — Luxury Real Estate UI/UX",
+        url: "https://real-estate-6l3ojtw4h-naveenjprakash114.vercel.app/"
+      },
+      {
+        label: "ScoopZone — E-Commerce Storefront UI/UX",
+        url: "https://ice-cream-ecommerce-dtigp0wua-naveenjprakash114.vercel.app/"
+      }
+    ],
+    driveUrl: "",
+    role: [
+      "UI/UX Designer",
+      "Wireframing & Prototyping",
+      "Design System Architect",
+      "User Research"
+    ],
+    overview: "A dedicated UI/UX design portfolio creating sophisticated, Apple-inspired minimalist web interfaces. Features Aurel Estates, a luxury property buying and selling platform crafted with an elegant white and charcoal aesthetic for the Tamil Nadu real estate market, alongside D2C e-commerce user journeys.",
+    objectives: [
+      "Design clean, intuitive user flows for property exploration and transactional journeys.",
+      "Develop unified typography, whitespace, and layout hierarchy for premium visual appeal.",
+      "Prototype responsive mobile, tablet, and desktop viewports in Figma.",
+      "Translate wireframes into functional high-fidelity interfaces with smooth micro-interactions."
+    ],
+    deliverables: [
+      {
+        title: "Aurel Estates Luxury Real Estate UI/UX",
+        type: "Wireframing & UI Design",
+        description: "Minimalist property discovery layout, filtering system, and interactive detail views."
+      },
+      {
+        title: "Design System & Component Library",
+        type: "Figma & UI Architecture",
+        description: "Cohesive typographic scales, luxury gold/charcoal palette, and reusable atomic UI tokens."
+      },
+      {
+        title: "Mobile-First UX Optimization",
+        type: "UX Prototyping",
+        description: "Thumb-friendly mobile navigation, fluid search filters, and rapid property inquiries."
+      }
+    ],
+    tools: ["Figma", "Adobe Photoshop", "Canva Pro", "Design Systems", "Tailwind CSS"],
+    isFeatured: true
   }
 ];
