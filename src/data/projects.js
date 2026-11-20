@@ -207,21 +207,9 @@ export const projects = [
     accentColor: "from-purple-100/80 to-amber-50/40",
     roleSubtitle: "Luxury Real Estate & Interface Systems",
     description: "User-centered UI/UX design direction for Aurel Estates luxury real estate and modern web platforms — focused on minimalist white & charcoal aesthetics, intuitive property discovery, and responsive interface systems.",
-    githubId: "naveenjprakash114",
-    githubUrl: "https://github.com/naveenjprakash114",
-    liveUrl: "https://real-estate-6l3ojtw4h-naveenjprakash114.vercel.app/",
-    liveUrlLabel: "Live UI/UX Experience",
-    liveCardLabel: "2 UI/UX Prototypes",
-    liveLinks: [
-      {
-        label: "Aurel Estates — Luxury Real Estate UI/UX",
-        url: "https://real-estate-6l3ojtw4h-naveenjprakash114.vercel.app/"
-      },
-      {
-        label: "ScoopZone — E-Commerce Storefront UI/UX",
-        url: "https://ice-cream-ecommerce-dtigp0wua-naveenjprakash114.vercel.app/"
-      }
-    ],
+    liveUrl: "",
+    liveLinks: [],
+    githubUrl: "",
     driveUrl: "",
     role: [
       "UI/UX Designer",
