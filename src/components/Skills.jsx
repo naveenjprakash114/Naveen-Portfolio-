@@ -83,7 +83,7 @@ export default function Skills() {
             </h2>
 
             <p className="text-xs sm:text-sm text-charcoal/70 leading-relaxed">
-              Specialized across Frontend Development, UI/UX Design, AI Creative Technology, Adobe Creative Suite, Graphic Design &amp; Canva Pro.
+              Specialized across Frontend Development, AI Creative Technology, Adobe Creative Suite, Graphic Design &amp; Canva Pro.
             </p>
           </motion.div>
 
