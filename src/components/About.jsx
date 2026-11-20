@@ -64,7 +64,7 @@ export default function About() {
             </p>
 
             <p className="text-sm sm:text-base leading-relaxed text-charcoal/80">
-              Currently, I work at BitByte Technologies, exploring the intersection of creativity, marketing and frontend development.
+              Experience as Frontend Developer at Bit Byte Technologies, developing responsive web applications and translating UI/UX designs into modern web experiences.
             </p>
 
             <p className="text-base sm:text-lg font-serif italic text-charcoal pt-2 border-l-2 border-gold pl-4">
@@ -77,7 +77,7 @@ export default function About() {
                 Naveen Prakash J
               </span>
               <span className="text-[11px] font-mono tracking-widest uppercase text-gold">
-                AI Creative Technologist • Frontend Developer • UI/UX
+                FRONTEND DEVELOPER • UI/UX DESIGNER • AI CREATIVE TECHNOLOGIST
               </span>
             </div>
           </motion.div>

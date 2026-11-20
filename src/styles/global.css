@@ -66,7 +66,7 @@
   }
   .modal-scrollbar::-webkit-scrollbar-track {
     background: transparent;
-    margin: 20px 0;
+    margin: 8px 0;
   }
   .modal-scrollbar::-webkit-scrollbar-thumb {
     background: rgba(197, 160, 89, 0.4);

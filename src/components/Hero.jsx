@@ -84,18 +84,18 @@ export default function Hero() {
               variants={itemVariants}
               className="text-base sm:text-lg text-charcoal/75 max-w-xl leading-relaxed font-normal"
             >
-              I create meaningful digital experiences combining digital marketing, design systems, modern frontend engineering and artificial intelligence.
+              I create meaningful digital experiences combining frontend development, UI/UX design, visual storytelling and artificial intelligence.
             </motion.p>
 
             {/* 6 Core Specializations */}
             <motion.div variants={itemVariants} className="flex flex-wrap gap-2 pt-1 max-w-xl">
               {[
-                "Digital Marketing",
-                "Graphic Designer",
+                "Frontend Developer",
                 "UI/UX Designer",
                 "AI Creative Technologist",
-                "Frontend Developer",
-                "Prompt Engineer",
+                "Graphic Designer",
+                "AI Prompt Engineering",
+                "Photography & Videography",
               ].map((role) => (
                 <span
                   key={role}

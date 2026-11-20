@@ -103,7 +103,7 @@ export default function ResumeModal({ isOpen, onClose }) {
               NAVEEN PRAKASH J
             </h1>
             <p className="text-xs uppercase tracking-widest text-gold font-semibold mt-1">
-              DIGITAL MARKETING &nbsp;/&nbsp; AI CREATIVE TECHNOLOGIST &nbsp;/&nbsp; FRONTEND DEVELOPER
+              FRONTEND DEVELOPER &nbsp;•&nbsp; UI/UX DESIGNER &nbsp;•&nbsp; AI CREATIVE TECHNOLOGIST
             </p>
 
             {/* Quick Contact Line */}
@@ -151,7 +151,7 @@ export default function ResumeModal({ isOpen, onClose }) {
               PROFESSIONAL PROFILE
             </h2>
             <p className="text-xs sm:text-sm text-charcoal/85 leading-relaxed text-justify">
-              Multidisciplinary creative and technology professional with experience in digital marketing, graphic design, photography, videography, video editing, UI/UX design and AI-assisted frontend development. Skilled in creating brand-focused visual content, managing social media pages, producing product and model photography, editing promotional videos, and designing responsive web experiences. Combines visual storytelling, design thinking and emerging AI tools to deliver engaging digital solutions.
+              Multidisciplinary creative and technology professional with experience in graphic design, photography, videography, video editing, UI/UX design and AI-assisted frontend development. Skilled in creating brand-focused visual content, managing social media pages, producing product and model photography, editing promotional videos and designing responsive web experiences. Combines visual storytelling, design thinking and emerging AI tools to deliver engaging digital solutions.
             </p>
           </div>
 
@@ -162,15 +162,13 @@ export default function ResumeModal({ isOpen, onClose }) {
             </h2>
             <div className="space-y-1.5 text-xs sm:text-sm font-medium text-charcoal">
               <div className="flex flex-wrap items-center gap-2">
-                <span>Digital Marketing</span>
-                <span className="text-gold">•</span>
-                <span>Graphic Designer</span>
-                <span className="text-gold">•</span>
-                <span>UI/UX Designer</span>
-              </div>
-              <div className="flex flex-wrap items-center gap-2">
                 <span>Frontend Developer</span>
                 <span className="text-gold">•</span>
+                <span>UI/UX Designer</span>
+                <span className="text-gold">•</span>
+                <span>Graphic Designer</span>
+              </div>
+              <div className="flex flex-wrap items-center gap-2">
                 <span>AI Creative Technology</span>
                 <span className="text-gold">•</span>
                 <span>AI Prompt Engineering</span>
@@ -261,7 +259,7 @@ export default function ResumeModal({ isOpen, onClose }) {
 
               <div className="space-y-1">
                 <div className="text-xs sm:text-sm font-bold text-charcoal">
-                  ARULMATHI SILKS <span className="font-normal text-charcoal/60">|</span> <span className="text-gold font-semibold">Digital Marketing &amp; Creative Design</span>
+                  ARULMATHI SILKS <span className="font-normal text-charcoal/60">|</span> <span className="text-gold font-semibold">Creative Design</span>
                 </div>
                 <p className="text-xs text-charcoal/80 leading-relaxed">
                   Created promotional posters, campaign creatives, product-focused videos and social media content; supported page management and brand presentation.
@@ -317,15 +315,15 @@ export default function ResumeModal({ isOpen, onClose }) {
                 </span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-12 gap-1 sm:gap-4">
-                <span className="sm:col-span-3 font-semibold text-gold">Design &amp; Marketing</span>
+                <span className="sm:col-span-3 font-semibold text-gold">Design &amp; Creative</span>
                 <span className="sm:col-span-9 text-charcoal/80">
-                  Graphic Design, UI/UX Design, Digital Marketing, Social Media Management, Content Creation, Branding
+                  Graphic Design, UI/UX Designer, Social Media Management, Content Creation, Branding
                 </span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-12 gap-1 sm:gap-4">
                 <span className="sm:col-span-3 font-semibold text-gold">Development &amp; AI</span>
                 <span className="sm:col-span-9 text-charcoal/80">
-                  React.js, Frontend Development, AI Prompt Engineering, AI-assisted Development, AI Creative Tools
+                  React.js, Frontend Development, AI Prompt Engineering, AI-Assisted Development, AI Creative Tools
                 </span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-12 gap-1 sm:gap-4">

@@ -7,19 +7,20 @@
 export const personalInfo = {
   name: "Naveen Prakash J",
   shortName: "Naveen Prakash",
-  identity: "AI Creative Technologist & Multidisciplinary Professional",
+  identity: "Frontend Developer • UI/UX Designer • AI Creative Technologist",
   positioning: [
-    "Digital Marketing",
-    "Graphic Designer",
+    "Frontend Developer",
     "UI/UX Designer",
     "AI Creative Technologist",
-    "Frontend Developer",
-    "Prompt Engineer"
+    "Graphic Designer",
+    "AI Prompt Engineering",
+    "Photography & Videography"
   ],
   location: "Salem, Tamil Nadu, India",
   email: "naveenjprakash114@gmail.com",
   phone: "+91 7397172114",
   phoneDisplay: "+91 73971 72114",
+  portfolioUrl: "https://naveen-portfolio-umber-beta.vercel.app/",
   whatsappUrl: "https://wa.me/917397172114?text=Hello%20Naveen,%20I%20viewed%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project.",
   instagramHandle: "@naveen_j_prakash",
   instagramUrl: "https://www.instagram.com/naveen_j_prakash/",
@@ -29,7 +30,7 @@ export const personalInfo = {
   githubUrl: "https://github.com/naveenjprakash114",
   githubRepoUrl: "https://github.com/naveenjprakash114/Naveen",
   currentCompany: "Bit Byte Technologies",
-  currentRole: "Digital Marketing Executive & Frontend Developer",
+  currentRole: "Frontend Developer | Web Application Development",
   
   // Social links
   socialLinks: {
@@ -43,30 +44,30 @@ export const personalInfo = {
   hero: {
     smallIntro: "HELLO, I'M NAVEEN PRAKASH",
     mainHeading: "Creativity meets technology.\nIdeas become experiences.",
-    supportingText: "Digital Marketing • Graphic Designer • UI/UX Designer • AI Creative Technologist • Frontend Developer • AI Prompt Engineer",
+    supportingText: "Frontend Developer • UI/UX Designer • AI Creative Technologist",
     locationBadge: "Based in Salem, Tamil Nadu, India",
   },
 
   ticker: [
-    "DIGITAL MARKETING",
-    "GRAPHIC DESIGNER",
+    "FRONTEND DEVELOPER",
     "UI/UX DESIGNER",
     "AI CREATIVE TECHNOLOGIST",
-    "FRONTEND DEVELOPER",
-    "AI PROMPT ENGINEER"
+    "GRAPHIC DESIGNER",
+    "AI PROMPT ENGINEERING",
+    "PHOTOGRAPHY & VIDEOGRAPHY"
   ],
 
   about: {
     headline: "Behind the pixels, ideas and innovation.",
-    lead: "Multidisciplinary creative and technology professional with experience in digital marketing, graphic design, photography, videography, video editing, UI/UX design and AI-assisted frontend development.",
+    lead: "Multidisciplinary creative and technology professional with experience in graphic design, photography, videography, video editing, UI/UX design and AI-assisted frontend development.",
     bioParagraphs: [
-      "Skilled in creating brand-focused visual content, managing social media pages, producing product and model photography, editing promotional videos, and designing responsive web experiences.",
+      "Skilled in creating brand-focused visual content, managing social media pages, producing product and model photography, editing promotional videos and designing responsive web experiences.",
       "Combines visual storytelling, design thinking and emerging AI tools to deliver engaging digital solutions.",
-      "Currently working as Digital Marketing Executive & Frontend Developer at Bit Byte Technologies, developing responsive frontend pages using React.js and AI-assisted workflows alongside digital branding.",
-      "Passionate about exploring the intersection of creative media, modern web technologies, and generative AI."
+      "Professional experience as Frontend Developer at Bit Byte Technologies, developing responsive and user-friendly web application interfaces, building modern layouts with reusable UI components, and integrating frontend interfaces with APIs.",
+      "Passionate about exploring the intersection of modern frontend engineering, UI/UX design, and AI creative workflows."
     ],
     philosophy: "Combines visual storytelling, design thinking and emerging AI tools to deliver engaging digital solutions.",
-    positioningNote: "Presenting practical experience across digital marketing, creative media, and frontend development."
+    positioningNote: "Frontend Developer • UI/UX Designer • AI Creative Technologist"
   },
 
   education: {
@@ -75,19 +76,39 @@ export const personalInfo = {
     university: "Periyar University",
     graduationYear: "2022",
     additionalLearning: [
-      "Digital Marketing",
-      "Graphic Design",
+      "Frontend Development (React.js)",
       "UI/UX Design",
       "AI Creative Direction",
-      "Frontend Development (React.js)",
-      "AI Prompt Engineering"
+      "Graphic Design",
+      "AI Prompt Engineering",
+      "Photography & Videography"
     ]
   },
 
   resumeProjects: [
     {
+      name: "Ice Cream E-Commerce Platform",
+      subtitle: "E-Commerce & Product Experience",
+      description: "Designed and developed an online ice cream shopping and delivery platform. Focused on product management, category organisation, pricing, inventory and customer experience, with planned location-based delivery through 5 KM service zones and rapid delivery functionality."
+    },
+    {
+      name: "El Dhruv Photography",
+      subtitle: "Photography Portfolio Website",
+      description: "Designed and developed a professional portfolio showcasing photography, videography, candid photography, model photoshoots and event coverage. Focused on premium visual presentation, responsive layouts, user experience and a strong digital brand presence."
+    },
+    {
+      name: "Personal AI Assistant",
+      subtitle: "AI-Powered Personal Project",
+      description: "Conceptualised and developed an AI-powered personal assistant for individual use. Explored AI integration and prompt engineering to create an intelligent assistant experience focused on simplifying personal workflows."
+    },
+    {
+      name: "AUREL ESTATES",
+      subtitle: "Luxury Real Estate Website",
+      description: "Designed and developed a premium real estate website focused on property buying and selling. Created an elegant UI/UX direction using a white and charcoal palette, with emphasis on property listings, property discovery and intuitive navigation for the Tamil Nadu real estate market."
+    },
+    {
       name: "ARULMATHI SILKS",
-      subtitle: "Digital Marketing & Creative Design",
+      subtitle: "Creative Design",
       description: "Created promotional posters, campaign creatives, product-focused videos and social media content; supported page management and brand presentation.",
       instagramUrl: "https://www.instagram.com/arulmathisilksofficial?vrfl=MTU5bzFhYmR6anZrdg==",
       instagramHandle: "@arulmathisilksofficial"
@@ -95,14 +116,17 @@ export const personalInfo = {
     {
       name: "HASHTAG CLOTHING",
       subtitle: "Social Media & Brand Promotion",
-      description: "Designed clothing promotions and social media creatives, edited fashion videos and reels, and supported content publishing and brand consistency."
+      description: "Designed clothing promotions and social media creatives, edited fashion videos and reels, and supported content publishing and brand consistency.",
+      instagramUrl: "https://www.instagram.com/hashtagclothings31?srtk=Z3JhZjdyOWRvcHc5",
+      instagramHandle: "@hashtagclothings31"
     }
   ],
 
   coreSkills: {
     creativeMedia: ["Photography", "Product Photography", "Model Photography", "Videography", "Video Editing", "Colour Grading", "Photo Retouching"],
-    designMarketing: ["Graphic Design", "UI/UX Design", "Digital Marketing", "Social Media Management", "Content Creation", "Branding"],
-    developmentAI: ["React.js", "Frontend Development", "AI Prompt Engineering", "AI-assisted Development", "AI Creative Tools"],
+    designCreative: ["Graphic Design", "UI/UX Designer", "Social Media Management", "Content Creation", "Branding"],
+    designMarketing: ["Graphic Design", "UI/UX Designer", "Social Media Management", "Content Creation", "Branding"],
+    developmentAI: ["React.js", "Frontend Development", "AI Prompt Engineering", "AI-Assisted Development", "AI Creative Tools"],
     software: ["Adobe Photoshop", "Illustrator", "Lightroom", "Premiere Pro", "After Effects", "Canva Pro"]
   }
 };
@@ -184,25 +208,43 @@ export const expertiseCategories = [
 
 export const experienceTimeline = [
   {
-    id: "exp-3",
+    id: "exp-1",
     company: "Bit Byte Technologies",
-    role: "Digital Marketing Executive & Frontend Developer",
-    duration: "Apr 2026 – Present",
-    isCurrent: true,
-    summary: "Leading digital marketing, social media page curation, visual communication, and developing responsive UI/UX and React frontend interfaces.",
+    role: "Frontend Developer | Web Application Development",
+    duration: "Nov 2025 – Nov 2026 | 1 Year",
+    isCurrent: false,
+    summary: "Developed responsive and user-friendly web application interfaces, translating UI/UX designs into reusable React components and integrating frontend interfaces with APIs using modern workflows.",
     responsibilities: [
-      "Create digital posters, banners, promotional creatives and marketing content for brand communication.",
-      "Support social media page management, content planning, publishing and digital marketing activities.",
-      "Design user-focused UI/UX layouts and modern website interfaces.",
-      "Develop responsive frontend pages using React.js and AI-assisted development tools.",
-      "Use Adobe Creative Cloud, Canva and AI tools to support creative production and development workflows."
+      "Developed responsive and user-friendly web application interfaces.",
+      "Translated UI/UX designs and concepts into functional frontend experiences.",
+      "Built modern website layouts with reusable UI components.",
+      "Implemented responsive designs for desktop, tablet and mobile devices.",
+      "Worked on website navigation, forms, dashboards and interactive elements.",
+      "Integrated frontend interfaces with backend APIs.",
+      "Used AI-powered development tools to accelerate frontend development and improve productivity.",
+      "Collaborated with the design and development teams to deliver web application projects.",
+      "Improved website usability, visual consistency and cross-device compatibility.",
+      "Tested and refined frontend interfaces to ensure a smooth user experience."
     ]
   },
   {
-    id: "exp-1",
-    company: "DJ PHOTOGRAPHY",
+    id: "exp-2",
+    company: "Shriram Finance Ltd",
+    role: "Marketing Executive",
+    duration: "Jun 2024 – Nov 2024 | 6 Months",
+    isCurrent: false,
+    summary: "Supported customer service, documentation, day-to-day business operations, and customer relationship management.",
+    responsibilities: [
+      "Supported customer service, documentation and day-to-day business operations.",
+      "Assisted with customer enquiries, record maintenance and coordination with internal teams.",
+      "Built experience in financial services, operational processes and customer relationship management."
+    ]
+  },
+  {
+    id: "exp-3",
+    company: "DJ Photography",
     role: "Photographer, Videographer & Video Editor",
-    duration: "3 Years",
+    duration: "Jun 2022 – May 2024; Dec 2024 – Nov 2025",
     isCurrent: false,
     summary: "Produced commercial, product, portrait, and event visual content, short-form reels, and post-production creative assets.",
     responsibilities: [
@@ -210,19 +252,6 @@ export const experienceTimeline = [
       "Planned and captured promotional videos, brand visuals and short-form social media reels.",
       "Performed video editing, colour grading, photo retouching, lighting setup and post-production.",
       "Created posters, banners and advertising creatives for business and brand promotions."
-    ]
-  },
-  {
-    id: "exp-2",
-    company: "Shriram Finance Ltd",
-    role: "Marketing Executive",
-    duration: "6 Months",
-    isCurrent: false,
-    summary: "Supported customer service, documentation, day-to-day business operations, and customer relationship management.",
-    responsibilities: [
-      "Supported customer service, documentation and day-to-day business operations.",
-      "Assisted with customer enquiries, record maintenance and coordination with internal teams.",
-      "Built experience in financial services, operational processes and customer relationship management."
     ]
   }
 ];
