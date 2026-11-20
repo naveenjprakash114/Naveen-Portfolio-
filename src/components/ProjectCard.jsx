@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Globe } from "lucide-react";
+import { ArrowUpRight, Globe, Sparkles } from "lucide-react";
 import { GitHubIcon, InstagramIcon } from "./Icons";
 
 export default function ProjectCard({ project, index, onSelect }) {
@@ -87,6 +87,12 @@ export default function ProjectCard({ project, index, onSelect }) {
           <span className="inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-wider text-charcoal/70 group-hover:text-gold transition-colors">
             <InstagramIcon className="w-3 h-3 text-gold" />
             <span>{project.instagramHandle}</span>
+            <ArrowUpRight className="w-2.5 h-2.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </span>
+        ) : project.fullDesignImage ? (
+          <span className="inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] font-mono font-semibold tracking-wider text-charcoal/80 group-hover:text-gold transition-colors">
+            <Sparkles className="w-3 h-3 text-gold" />
+            <span>UI/UX Page Mockup</span>
             <ArrowUpRight className="w-2.5 h-2.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </span>
         ) : (

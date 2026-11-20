@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { X, CheckCircle2, ExternalLink, Link2, Copy, Check, Sparkles, FolderOpen, ArrowUpRight, Globe } from "lucide-react";
+import { X, CheckCircle2, ExternalLink, Link2, Copy, Check, Sparkles, FolderOpen, ArrowUpRight, Globe, Maximize2, ZoomIn, ZoomOut, Download } from "lucide-react";
 import { LinkedInIcon, InstagramIcon, GitHubIcon } from "./Icons";
 
 export default function ProjectModal({ project, isOpen, onClose }) {
   const [copiedLink, setCopiedLink] = useState(false);
   const [customLink, setCustomLink] = useState("");
   const [showAttachHelp, setShowAttachHelp] = useState(false);
+  const [isZoomed, setIsZoomed] = useState(false);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -236,13 +237,122 @@ export default function ProjectModal({ project, isOpen, onClose }) {
             )}
           </div>
         ) : (
-          /* Case Study Archive Banner when no external link is attached (e.g. Photography) */
+          /* Case Study / Visual Archive Banner when no external link is attached */
           <div className="p-4 sm:p-5 rounded-2xl bg-white border border-gold/25 mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-charcoal/70">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-gold" />
-              <span className="font-medium text-charcoal">Visual Practice Archive &amp; Independent Case Study</span>
+              <span className="font-medium text-charcoal">
+                {project.fullDesignImage
+                  ? "UI/UX Design Mockup & Architectural Layout System"
+                  : "Visual Practice Archive & Independent Case Study"}
+              </span>
             </div>
-            <span className="font-mono text-[11px] text-gold uppercase tracking-wider">Internal Portfolio Works</span>
+            <span className="font-mono text-[11px] text-gold uppercase tracking-wider">
+              {project.fullDesignImage ? "Full-Page Design Mockup" : "Internal Portfolio Works"}
+            </span>
+          </div>
+        )}
+
+        {/* Full-Page Visual UI/UX Design Showcase */}
+        {project.fullDesignImage && (
+          <div className="space-y-3 mb-8">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-1">
+              <div className="flex items-center gap-2">
+                <span className="w-5 h-[1px] bg-gold" />
+                <h3 className="text-xs font-mono uppercase tracking-widest text-gold font-bold">
+                  FULL-PAGE UI/UX DESIGN SHOWCASE
+                </h3>
+              </div>
+              <div className="flex items-center gap-2">
+                <a
+                  href={project.fullDesignImage}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-gold/30 text-xs font-mono text-gold hover:text-charcoal hover:border-gold transition-colors font-medium shadow-2xs"
+                >
+                  <span>Open Full Size</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+                <a
+                  href={project.fullDesignImage}
+                  download="Aurel-Estates-UIUX-Design.jpg"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-charcoal text-[#FAF7F2] text-xs font-mono hover:bg-charcoal/80 transition-colors font-medium shadow-2xs"
+                >
+                  <Download className="w-3 h-3 text-gold" />
+                  <span>Download</span>
+                </a>
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-gold/30 bg-[#161514] overflow-hidden shadow-2xl">
+              {/* Browser / Canvas Chrome */}
+              <div className="px-4 py-3 bg-[#22201D] border-b border-gold/20 flex items-center justify-between text-xs text-[#FAF7F2]">
+                <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
+                  </div>
+                  <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#161514] border border-gold/20 text-[11px] font-mono text-gold/90">
+                    <span className="text-gold/60">https://</span>
+                    <span>aurel-estates.design/spaces-that-define-living</span>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => setIsZoomed(!isZoomed)}
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#2C2925] border border-gold/25 text-[11px] font-mono text-champagne hover:text-white hover:border-gold transition-colors"
+                    title={isZoomed ? "Fit to container" : "Zoom 100% scale"}
+                  >
+                    {isZoomed ? (
+                      <>
+                        <ZoomOut className="w-3 h-3 text-gold" />
+                        <span>Fit View</span>
+                      </>
+                    ) : (
+                      <>
+                        <ZoomIn className="w-3 h-3 text-gold" />
+                        <span>100% Zoom</span>
+                      </>
+                    )}
+                  </button>
+                  <a
+                    href={project.fullDesignImage}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#2C2925] border border-gold/25 text-[11px] font-mono text-champagne hover:text-white hover:border-gold transition-colors"
+                  >
+                    <Maximize2 className="w-3 h-3 text-gold" />
+                    <span className="hidden sm:inline">Inspect</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Scrollable Viewport */}
+              <div className="relative max-h-[620px] sm:max-h-[720px] overflow-y-auto modal-scrollbar bg-[#0E0D0C] flex justify-center p-3 sm:p-6 select-none">
+                <img
+                  src={project.fullDesignImage}
+                  alt={project.designTitle || `${project.name} UI/UX Design`}
+                  className={`h-auto rounded-lg shadow-2xl object-top transition-all duration-300 cursor-zoom-in ${
+                    isZoomed ? "w-auto max-w-none scale-100" : "w-full max-w-xl"
+                  }`}
+                  onClick={() => setIsZoomed(!isZoomed)}
+                  title="Click to toggle 100% zoom / fit view"
+                />
+              </div>
+
+              {/* Status and Instruction Bar */}
+              <div className="px-4 py-2 bg-[#22201D] border-t border-gold/20 flex flex-col sm:flex-row items-center justify-between text-[11px] font-mono text-[#FAF7F2]/75 gap-2">
+                <span className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
+                  <span>Scrollable Layout Preview — Click design to zoom, or Open Full Size in a new tab</span>
+                </span>
+                <span className="text-[10px] text-gold uppercase tracking-wider">
+                  861 × 3072 px HD Preview
+                </span>
+              </div>
+            </div>
           </div>
         )}
 
@@ -389,6 +499,16 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                 className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#FAF7F2] border border-gold/30 text-charcoal text-xs font-semibold uppercase tracking-wider hover:bg-white transition-colors"
               >
                 <span>{isLiveWeb ? "Open Live Website" : isGitHub ? "Open GitHub" : isInstagram ? "Open Instagram" : "Open Work"}</span>
+                <ArrowUpRight className="w-3.5 h-3.5 text-gold" />
+              </a>
+            ) : project.fullDesignImage ? (
+              <a
+                href={project.fullDesignImage}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#FAF7F2] border border-gold/30 text-charcoal text-xs font-semibold uppercase tracking-wider hover:bg-white transition-colors"
+              >
+                <span>View Full Design</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-gold" />
               </a>
             ) : null}

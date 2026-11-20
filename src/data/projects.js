@@ -202,11 +202,13 @@ export const projects = [
     client: "Aurel Estates & Interface Systems",
     category: "UI/UX Design",
     filterTags: ["UI/UX DESIGN", "WEB DESIGN"],
-    thumbnail: "/images/services/uiux.jpg",
+    thumbnail: "/assets/projects/uiux/aurel-estates-uiux-design-hd.jpg",
+    fullDesignImage: "/assets/projects/uiux/aurel-estates-uiux-design-hd.jpg",
+    designTitle: "Aurel Estates — Luxury Real Estate Landing Page Design",
     monogram: "UX",
     accentColor: "from-purple-100/80 to-amber-50/40",
     roleSubtitle: "Luxury Real Estate & Interface Systems",
-    description: "User-centered UI/UX design direction for Aurel Estates luxury real estate and modern web platforms — focused on minimalist white & charcoal aesthetics, intuitive property discovery, and responsive interface systems.",
+    description: "User-centered UI/UX design direction for Aurel Estates luxury real estate — featuring 'Spaces That Define Living', iconic estate listings, architectural storytelling, and high-conversion private briefing inquiries.",
     liveUrl: "",
     liveLinks: [],
     githubUrl: "",
@@ -217,31 +219,31 @@ export const projects = [
       "Design System Architect",
       "User Research"
     ],
-    overview: "A dedicated UI/UX design portfolio creating sophisticated, Apple-inspired minimalist web interfaces. Features Aurel Estates, a luxury property buying and selling platform crafted with an elegant white and charcoal aesthetic for the Tamil Nadu real estate market, alongside D2C e-commerce user journeys.",
+    overview: "A comprehensive full-page UI/UX design crafted for Aurel Estates, an ultra-luxury real estate platform. Focused on an architectural editorial aesthetic, typography hierarchy, elegant property showcases, and seamless private client inquiry flows.",
     objectives: [
-      "Design clean, intuitive user flows for property exploration and transactional journeys.",
-      "Develop unified typography, whitespace, and layout hierarchy for premium visual appeal.",
-      "Prototype responsive mobile, tablet, and desktop viewports in Figma.",
-      "Translate wireframes into functional high-fidelity interfaces with smooth micro-interactions."
+      "Designed full-length editorial landing page layout from hero to private ledger.",
+      "Established typography and luxury gold & charcoal visual hierarchy.",
+      "Structured property listing cards with key metric tags (4.2B+ volume, 18 capitals).",
+      "Engineered private client inquiry form with streamlined lead capture."
     ],
     deliverables: [
       {
-        title: "Aurel Estates Luxury Real Estate UI/UX",
-        type: "Wireframing & UI Design",
-        description: "Minimalist property discovery layout, filtering system, and interactive detail views."
+        title: "Full-Length Landing Page Design",
+        type: "UI/UX Design Mockup",
+        description: "Complete end-to-end luxury desktop layout showcasing hero, iconic estates, and private client services."
       },
       {
-        title: "Design System & Component Library",
-        type: "Figma & UI Architecture",
-        description: "Cohesive typographic scales, luxury gold/charcoal palette, and reusable atomic UI tokens."
+        title: "Design System & Typography Hierarchy",
+        type: "UI Architecture",
+        description: "Serif headline composition paired with clean monospace labels and warm champagne accents."
       },
       {
-        title: "Mobile-First UX Optimization",
-        type: "UX Prototyping",
-        description: "Thumb-friendly mobile navigation, fluid search filters, and rapid property inquiries."
+        title: "Private Ledger & Inquiry Experience",
+        type: "Conversion UX",
+        description: "Discreet off-market inquiry form designed for high-net-worth real estate clients."
       }
     ],
-    tools: ["Figma", "Adobe Photoshop", "Canva Pro", "Design Systems", "Tailwind CSS"],
+    tools: ["Figma", "Adobe Photoshop", "Canva Pro", "Design Systems"],
     isFeatured: true
   }
 ];
