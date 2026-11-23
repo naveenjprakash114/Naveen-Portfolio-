@@ -331,7 +331,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                 </a>
                 <a
                   href={activeScreen.url}
-                  download={`Aurel-Estates-${activeScreen.id || "design"}.png`}
+                  download={`${activeScreen.id || "uiux-design"}-preview.jpg`}
                   className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-charcoal text-[#FAF7F2] text-xs font-mono hover:bg-charcoal/80 transition-colors font-medium shadow-2xs"
                 >
                   <Download className="w-3 h-3 text-gold" />
@@ -398,8 +398,12 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                   )}
 
                   <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#161514] border border-gold/20 text-[11px] font-mono text-gold/90 truncate max-w-xs md:max-w-md">
-                    <span className="text-gold/60">aurel-estates.design/</span>
-                    <span className="text-white/90">{activeScreen.id || "preview"}</span>
+                    <span className="text-gold/60">{activeScreen.device === "desktop" ? "https://" : ""}</span>
+                    <span className="text-white/90">
+                      {activeScreen.id?.includes("scoopzone")
+                        ? "scoopzone.store/before-it-melts"
+                        : `aurel-estates.design/${activeScreen.id || "preview"}`}
+                    </span>
                   </div>
                 </div>
 

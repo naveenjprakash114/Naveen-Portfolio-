@@ -16,7 +16,9 @@ export const projects = [
     client: "ScoopZone — Ice Cream Delivery",
     category: "E-Commerce UI/UX & Web Development",
     filterTags: ["E-COMMERCE", "WEB DESIGN", "BRANDING", "FRONTEND"],
-    thumbnail: "/assets/projects/web/scoopzone-landing-page.jpg",
+    thumbnail: "/assets/projects/uiux/scoopzone/scoopzone-uiux-landing-hd.jpg",
+    fullDesignImage: "/assets/projects/uiux/scoopzone/scoopzone-uiux-landing-hd.jpg",
+    designTitle: "ScoopZone — High-Converting E-Commerce Storefront Landing Page Design",
     monogram: "SZ",
     accentColor: "from-amber-100/90 to-yellow-50/50",
     roleSubtitle: "E-Commerce UI/UX & Frontend Development",
@@ -26,6 +28,19 @@ export const projects = [
     liveUrl: "https://ice-cream-ecommerce-dtigp0wua-naveenjprakash114.vercel.app/",
     liveUrlLabel: "Live Storefront (Vercel)",
     driveUrl: "", // Attach Google Drive / Figma link here
+    designScreens: [
+      {
+        id: "scoopzone-storefront",
+        title: "ScoopZone Storefront Design",
+        subtitle: "Ice Cream, Before It Melts — Full Landing Page",
+        badge: "E-Commerce",
+        device: "desktop",
+        url: "/assets/projects/uiux/scoopzone/scoopzone-uiux-landing-hd.jpg",
+        rawUrl: "/assets/projects/uiux/scoopzone/scoopzone-uiux-landing-raw.jpg",
+        resolution: "744 × 4096 px HD",
+        description: "Complete full-length conversion landing page design: Hero product showcase, Build Your Perfect Scoop interactive module, 10-Minute Cold Chain, and Live Delivery Tracking."
+      }
+    ],
     role: [
       "E-Commerce UI/UX Designer",
       "Frontend Developer",
@@ -199,71 +214,72 @@ export const projects = [
     id: "uiux-design-projects",
     number: "04",
     name: "UI/UX DESIGN",
-    client: "Aurel Estates & Interface Systems",
+    client: "ScoopZone & Aurel Estates",
     category: "UI/UX Design",
-    filterTags: ["UI/UX DESIGN", "WEB DESIGN"],
-    thumbnail: "/assets/projects/uiux/mobile/aurel-home-hd.png",
-    fullDesignImage: "/assets/projects/uiux/mobile/aurel-home-hd.png",
-    designTitle: "Aurel Estates — Luxury Real Estate Mobile & Web UI/UX Suite",
+    filterTags: ["UI/UX DESIGN", "WEB DESIGN", "E-COMMERCE"],
+    thumbnail: "/assets/projects/uiux/scoopzone/scoopzone-uiux-landing-hd.jpg",
+    fullDesignImage: "/assets/projects/uiux/scoopzone/scoopzone-uiux-landing-hd.jpg",
+    designTitle: "ScoopZone & Aurel Estates — Full-Page UI/UX Design Systems",
     monogram: "UX",
     accentColor: "from-purple-100/80 to-amber-50/40",
-    roleSubtitle: "Luxury Real Estate & Multi-Screen Interface Systems",
-    description: "End-to-end luxury UI/UX design suite for Aurel Estates — featuring 5 full mobile application experiences (Home Showcase, Exceptional Properties Catalog, Residence Dossier, Editorial Philosophy, Confidential Enquiry) and a full-page desktop editorial layout.",
+    roleSubtitle: "D2C E-Commerce & Luxury Interface Systems",
+    description: "End-to-end conversion-driven UI/UX design suites — featuring the full-length D2C e-commerce storefront for ScoopZone ('Ice Cream, Before It Melts') and the comprehensive 6-screen mobile & desktop architectural design system for Aurel Estates.",
     liveUrl: "",
     liveLinks: [],
     githubUrl: "",
     driveUrl: "",
     role: [
       "UI/UX Designer",
-      "Mobile App & Web Prototyping",
+      "E-Commerce Wireframing & Design",
       "Design System Architect",
-      "User Research & Wireframing"
+      "User Journey & Conversion Prototyping"
     ],
-    overview: "A comprehensive 6-screen UI/UX design suite crafted for Aurel Estates, an ultra-luxury real estate atelier. Spans full mobile experiences (Home Showcase, Curated Catalog with Faceted Filters, In-Depth Architectural Residence Dossier, Atelier Philosophy Editorial, and Private Concierge Enquiry Flow with Capital Allocation Selectors) alongside an expansive Desktop Landing Page.",
+    overview: "A showcase of end-to-end UI/UX landing page and application designs. Features ScoopZone's high-converting D2C e-commerce storefront ('Ice Cream, Before It Melts' — with interactive scoop customizer, brand showcases, 10-minute cold chain engineering, and real-time live map tracking) alongside Aurel Estates' luxury architectural estate multi-screen ecosystem.",
     objectives: [
-      "Designed 5 full-length mobile application screens and a desktop editorial landing page.",
-      "Engineered high-converting property discovery with territory filters (Goa, Mumbai, ECR Chennai).",
-      "Crafted detailed residence dossier layout with architectural specs, floor plans, and viewing booking.",
-      "Built confidential client brief experience with NDA sequestering and capital allocation brackets."
+      "Designed full-length ScoopZone e-commerce landing page with interactive ordering flows.",
+      "Crafted conversion-optimized merchandising hierarchy, brand partner showcases, and delivery proof.",
+      "Engineered Aurel Estates multi-screen mobile application and desktop luxury portal.",
+      "Standardized typography scales, luxury and playful color palettes, and responsive grids."
     ],
     deliverables: [
       {
-        title: "Mobile Home & Curated Showcase",
-        type: "Mobile UI/UX Design",
-        description: "Spaces That Define Living hero, curated acquisitions carousel, and bespoke advisory cards."
+        title: "ScoopZone E-Commerce Storefront",
+        type: "Full-Length Landing Page UI/UX",
+        description: "Complete conversion page with hero storytelling, Build Your Perfect Scoop configurator, 10-minute cold chain guarantee, and live delivery tracking."
       },
       {
-        title: "Exceptional Properties Catalog",
-        type: "Mobile UI/UX Design",
-        description: "Faceted search, territory filtering (Goa, Mumbai, ECR), price brackets, and off-market briefing triggers."
+        title: "Aurel Estates Mobile App Suite",
+        type: "Mobile UI/UX Design (5 Screens)",
+        description: "Spaces That Define Living hero, Exceptional Properties catalog with faceted filters, and deep residence dossiers."
       },
       {
-        title: "Residence Dossier & Architectural Specs",
-        type: "Deep Detail UI/UX",
-        description: "Comprehensive property dossier with photo gallery, room specs, floor plans, location map, and private viewing."
+        title: "Aurel Estates Desktop Editorial Portal",
+        type: "Desktop UI/UX Layout",
+        description: "Full desktop editorial layout showcasing architectural vision, iconic estates, and private client ledger."
       },
       {
-        title: "Editorial & Brand Philosophy",
-        type: "Brand Storytelling UX",
-        description: "Editorial layout with The Aurel Benchmark, Three Acts of Acquisition, and Private Client Directorate."
-      },
-      {
-        title: "Private Office & Confidential Enquiry",
-        type: "Conversion UX",
-        description: "Off-market acquisition brief, territory selection, capital brackets (₹5Cr–₹50Cr+), and Atelier chambers."
-      },
-      {
-        title: "Full-Length Desktop Landing Page",
-        type: "Desktop UI/UX Design",
-        description: "Expansive desktop layout featuring hero, iconic estate cards, architectural philosophy, and private ledger."
+        title: "Design Systems & Component Libraries",
+        type: "UI Architecture",
+        description: "Modular component hierarchies, atomic tokens, and responsive multi-device design patterns."
       }
     ],
     designScreens: [
       {
+        id: "scoopzone-storefront",
+        title: "ScoopZone Storefront",
+        subtitle: "Ice Cream, Before It Melts — Full Landing Page",
+        badge: "E-Commerce",
+        device: "desktop",
+        url: "/assets/projects/uiux/scoopzone/scoopzone-uiux-landing-hd.jpg",
+        rawUrl: "/assets/projects/uiux/scoopzone/scoopzone-uiux-landing-raw.jpg",
+        resolution: "744 × 4096 px HD",
+        description: "Complete full-length conversion landing page design: Hero product showcase, Build Your Perfect Scoop interactive module, 10-Minute Cold Chain, and Live Delivery Tracking."
+      },
+      {
         id: "mobile-home",
-        title: "Mobile Home",
+        title: "Aurel Mobile Home",
         subtitle: "Spaces That Define Living",
-        badge: "Screen 01",
+        badge: "Mobile 01",
         device: "mobile",
         url: "/assets/projects/uiux/mobile/aurel-home-hd.png",
         rawUrl: "/assets/projects/uiux/mobile/aurel-home-raw.png",
@@ -272,9 +288,9 @@ export const projects = [
       },
       {
         id: "mobile-catalog",
-        title: "Properties Catalog",
+        title: "Aurel Properties Catalog",
         subtitle: "Exceptional Properties & Filter System",
-        badge: "Screen 02",
+        badge: "Mobile 02",
         device: "mobile",
         url: "/assets/projects/uiux/mobile/aurel-catalog-hd.png",
         rawUrl: "/assets/projects/uiux/mobile/aurel-catalog-raw.png",
@@ -283,9 +299,9 @@ export const projects = [
       },
       {
         id: "mobile-dossier",
-        title: "Residence Dossier",
+        title: "Aurel Residence Dossier",
         subtitle: "The Aurelia Residence & Specs",
-        badge: "Screen 03",
+        badge: "Mobile 03",
         device: "mobile",
         url: "/assets/projects/uiux/mobile/aurel-property-detail-hd.png",
         rawUrl: "/assets/projects/uiux/mobile/aurel-property-detail-raw.png",
@@ -294,9 +310,9 @@ export const projects = [
       },
       {
         id: "mobile-editorial",
-        title: "Brand Editorial",
+        title: "Aurel Brand Editorial",
         subtitle: "Philosophy & The Aurel Benchmark",
-        badge: "Screen 04",
+        badge: "Mobile 04",
         device: "mobile",
         url: "/assets/projects/uiux/mobile/aurel-editorial-hd.png",
         rawUrl: "/assets/projects/uiux/mobile/aurel-editorial-raw.png",
@@ -305,9 +321,9 @@ export const projects = [
       },
       {
         id: "mobile-enquiry",
-        title: "Private Enquiry",
+        title: "Aurel Private Enquiry",
         subtitle: "Confidential Dossier Brief",
-        badge: "Screen 05",
+        badge: "Mobile 05",
         device: "mobile",
         url: "/assets/projects/uiux/mobile/aurel-enquiry-hd.png",
         rawUrl: "/assets/projects/uiux/mobile/aurel-enquiry-raw.png",
@@ -316,7 +332,7 @@ export const projects = [
       },
       {
         id: "desktop-landing",
-        title: "Desktop Landing",
+        title: "Aurel Desktop Landing",
         subtitle: "Full-Length Desktop Showcase",
         badge: "Desktop",
         device: "desktop",
@@ -326,7 +342,7 @@ export const projects = [
         description: "Expansive desktop layout featuring hero, iconic estate cards, architectural philosophy, and private ledger."
       }
     ],
-    tools: ["Figma", "Adobe Photoshop", "Canva Pro", "Design Systems", "Mobile UI/UX"],
+    tools: ["Figma", "Adobe Photoshop", "Canva Pro", "Design Systems", "E-Commerce UI/UX", "Mobile UI/UX"],
     isFeatured: true
   }
 ];
