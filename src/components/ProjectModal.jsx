@@ -1,5 +1,25 @@
 import { useEffect, useState } from "react";
-import { X, CheckCircle2, ExternalLink, Link2, Copy, Check, Sparkles, FolderOpen, ArrowUpRight, Globe, Maximize2, ZoomIn, ZoomOut, Download } from "lucide-react";
+import {
+  X,
+  CheckCircle2,
+  ExternalLink,
+  Link2,
+  Copy,
+  Check,
+  Sparkles,
+  FolderOpen,
+  ArrowUpRight,
+  Globe,
+  Maximize2,
+  ZoomIn,
+  ZoomOut,
+  Download,
+  Smartphone,
+  Monitor,
+  ChevronLeft,
+  ChevronRight,
+  Layers
+} from "lucide-react";
 import { LinkedInIcon, InstagramIcon, GitHubIcon } from "./Icons";
 
 export default function ProjectModal({ project, isOpen, onClose }) {
@@ -7,6 +27,12 @@ export default function ProjectModal({ project, isOpen, onClose }) {
   const [customLink, setCustomLink] = useState("");
   const [showAttachHelp, setShowAttachHelp] = useState(false);
   const [isZoomed, setIsZoomed] = useState(false);
+  const [selectedScreenIndex, setSelectedScreenIndex] = useState(0);
+
+  useEffect(() => {
+    setSelectedScreenIndex(0);
+    setIsZoomed(false);
+  }, [project?.id]);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -31,6 +57,22 @@ export default function ProjectModal({ project, isOpen, onClose }) {
   const isInstagram = Boolean(currentLiveUrl && currentLiveUrl.includes("instagram.com"));
   const isLiveWeb = Boolean(currentLiveUrl && !isGitHub && !isInstagram);
   const hasLinks = Boolean(currentLiveUrl || project.driveUrl || project.githubUrl || (project.liveLinks && project.liveLinks.length > 0));
+
+  const screens = project.designScreens && project.designScreens.length > 0
+    ? project.designScreens
+    : project.fullDesignImage
+    ? [{
+        id: "default-design",
+        title: project.designTitle || `${project.name} — Full Layout Preview`,
+        badge: "Full Design",
+        device: "desktop",
+        url: project.fullDesignImage,
+        resolution: "HD Design Preview",
+        description: project.description
+      }]
+    : [];
+
+  const activeScreen = screens[selectedScreenIndex] || screens[0];
 
   const handleCopyLink = () => {
     if (!currentLiveUrl) return;
@@ -242,30 +284,44 @@ export default function ProjectModal({ project, isOpen, onClose }) {
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-gold" />
               <span className="font-medium text-charcoal">
-                {project.fullDesignImage
-                  ? "UI/UX Design Mockup & Architectural Layout System"
+                {screens.length > 0
+                  ? `UI/UX Design Mockup System (${screens.length} Screens Uploaded)`
                   : "Visual Practice Archive & Independent Case Study"}
               </span>
             </div>
             <span className="font-mono text-[11px] text-gold uppercase tracking-wider">
-              {project.fullDesignImage ? "Full-Page Design Mockup" : "Internal Portfolio Works"}
+              {screens.length > 0 ? `${screens.length} High-Res Pages` : "Internal Portfolio Works"}
             </span>
           </div>
         )}
 
         {/* Full-Page Visual UI/UX Design Showcase */}
-        {project.fullDesignImage && (
-          <div className="space-y-3 mb-8">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-1">
-              <div className="flex items-center gap-2">
-                <span className="w-5 h-[1px] bg-gold" />
-                <h3 className="text-xs font-mono uppercase tracking-widest text-gold font-bold">
-                  FULL-PAGE UI/UX DESIGN SHOWCASE
-                </h3>
+        {screens.length > 0 && activeScreen && (
+          <div className="space-y-4 mb-8">
+            {/* Top Bar with Section Title and Quick Actions */}
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-1">
+              <div className="space-y-1">
+                <div className="flex items-center gap-2">
+                  <span className="w-5 h-[1px] bg-gold" />
+                  <h3 className="text-xs font-mono uppercase tracking-widest text-gold font-bold">
+                    FULL-PAGE UI/UX DESIGN SHOWCASE
+                  </h3>
+                  {screens.length > 1 && (
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-charcoal/70 bg-white border border-gold/30 px-2 py-0.5 rounded-full font-semibold">
+                      {screens.length} Screens Available
+                    </span>
+                  )}
+                </div>
+                {activeScreen.subtitle && (
+                  <p className="text-xs text-charcoal/75 font-mono">
+                    {activeScreen.subtitle}
+                  </p>
+                )}
               </div>
+
               <div className="flex items-center gap-2">
                 <a
-                  href={project.fullDesignImage}
+                  href={activeScreen.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-gold/30 text-xs font-mono text-gold hover:text-charcoal hover:border-gold transition-colors font-medium shadow-2xs"
@@ -274,8 +330,8 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                   <ExternalLink className="w-3 h-3" />
                 </a>
                 <a
-                  href={project.fullDesignImage}
-                  download="Aurel-Estates-UIUX-Design.jpg"
+                  href={activeScreen.url}
+                  download={`Aurel-Estates-${activeScreen.id || "design"}.png`}
                   className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-charcoal text-[#FAF7F2] text-xs font-mono hover:bg-charcoal/80 transition-colors font-medium shadow-2xs"
                 >
                   <Download className="w-3 h-3 text-gold" />
@@ -284,26 +340,102 @@ export default function ProjectModal({ project, isOpen, onClose }) {
               </div>
             </div>
 
+            {/* Screen Selector Tabs (if more than 1 screen) */}
+            {screens.length > 1 && (
+              <div className="flex items-center gap-1.5 overflow-x-auto pb-1 modal-scrollbar">
+                {screens.map((scr, idx) => {
+                  const isActive = idx === selectedScreenIndex;
+                  return (
+                    <button
+                      key={scr.id || idx}
+                      onClick={() => {
+                        setSelectedScreenIndex(idx);
+                        setIsZoomed(false);
+                      }}
+                      className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-mono transition-all duration-200 shrink-0 border ${
+                        isActive
+                          ? "bg-charcoal text-champagne border-gold shadow-xs font-semibold"
+                          : "bg-white text-charcoal/70 border-gold/25 hover:border-gold hover:text-charcoal"
+                      }`}
+                    >
+                      {scr.device === "mobile" ? (
+                        <Smartphone className="w-3 h-3 text-gold" />
+                      ) : (
+                        <Monitor className="w-3 h-3 text-gold" />
+                      )}
+                      <span>{scr.title}</span>
+                      {scr.badge && (
+                        <span className={`text-[9px] uppercase tracking-wider px-1.5 py-0.5 rounded ${
+                          isActive ? "bg-[#25221F] text-gold" : "bg-[#FAF7F2] text-charcoal/60"
+                        }`}>
+                          {scr.badge}
+                        </span>
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
+            )}
+
+            {/* Design Showcase Frame */}
             <div className="rounded-2xl border border-gold/30 bg-[#161514] overflow-hidden shadow-2xl">
-              {/* Browser / Canvas Chrome */}
+              {/* Device / Canvas Top Bar */}
               <div className="px-4 py-3 bg-[#22201D] border-b border-gold/20 flex items-center justify-between text-xs text-[#FAF7F2]">
                 <div className="flex items-center gap-3">
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
-                  </div>
-                  <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#161514] border border-gold/20 text-[11px] font-mono text-gold/90">
-                    <span className="text-gold/60">https://</span>
-                    <span>aurel-estates.design/spaces-that-define-living</span>
+                  {activeScreen.device === "mobile" ? (
+                    <div className="flex items-center gap-2">
+                      <div className="w-2.5 h-2.5 rounded-full bg-emerald-400/80 animate-pulse" />
+                      <span className="font-mono text-[11px] text-gold/90 font-medium">
+                        Mobile iOS App UI/UX
+                      </span>
+                    </div>
+                  ) : (
+                    <div className="flex items-center gap-1.5">
+                      <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
+                    </div>
+                  )}
+
+                  <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#161514] border border-gold/20 text-[11px] font-mono text-gold/90 truncate max-w-xs md:max-w-md">
+                    <span className="text-gold/60">aurel-estates.design/</span>
+                    <span className="text-white/90">{activeScreen.id || "preview"}</span>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-2">
+                  {screens.length > 1 && (
+                    <div className="flex items-center gap-1 border-r border-gold/20 pr-2 mr-1">
+                      <button
+                        onClick={() => {
+                          setSelectedScreenIndex((prev) => (prev - 1 + screens.length) % screens.length);
+                          setIsZoomed(false);
+                        }}
+                        className="p-1 rounded hover:bg-[#2C2925] text-gold transition-colors"
+                        title="Previous Screen"
+                      >
+                        <ChevronLeft className="w-4 h-4" />
+                      </button>
+                      <span className="text-[10px] font-mono text-[#FAF7F2]/60 px-1">
+                        {selectedScreenIndex + 1}/{screens.length}
+                      </span>
+                      <button
+                        onClick={() => {
+                          setSelectedScreenIndex((prev) => (prev + 1) % screens.length);
+                          setIsZoomed(false);
+                        }}
+                        className="p-1 rounded hover:bg-[#2C2925] text-gold transition-colors"
+                        title="Next Screen"
+                      >
+                        <ChevronRight className="w-4 h-4" />
+                      </button>
+                    </div>
+                  )}
+
                   <button
                     onClick={() => setIsZoomed(!isZoomed)}
                     className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#2C2925] border border-gold/25 text-[11px] font-mono text-champagne hover:text-white hover:border-gold transition-colors"
-                    title={isZoomed ? "Fit to container" : "Zoom 100% scale"}
+                    title={isZoomed ? "Fit to container" : "Zoom 100% natural scale"}
                   >
                     {isZoomed ? (
                       <>
@@ -318,7 +450,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                     )}
                   </button>
                   <a
-                    href={project.fullDesignImage}
+                    href={activeScreen.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#2C2925] border border-gold/25 text-[11px] font-mono text-champagne hover:text-white hover:border-gold transition-colors"
@@ -329,30 +461,98 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                 </div>
               </div>
 
-              {/* Scrollable Viewport */}
-              <div className="relative max-h-[620px] sm:max-h-[720px] overflow-y-auto modal-scrollbar bg-[#0E0D0C] flex justify-center p-3 sm:p-6 select-none">
-                <img
-                  src={project.fullDesignImage}
-                  alt={project.designTitle || `${project.name} UI/UX Design`}
-                  className={`h-auto rounded-lg shadow-2xl object-top transition-all duration-300 cursor-zoom-in ${
-                    isZoomed ? "w-auto max-w-none scale-100" : "w-full max-w-xl"
-                  }`}
-                  onClick={() => setIsZoomed(!isZoomed)}
-                  title="Click to toggle 100% zoom / fit view"
-                />
+              {/* Scrollable Viewport with Device Frame */}
+              <div className="relative max-h-[640px] sm:max-h-[740px] overflow-y-auto modal-scrollbar bg-[#0E0D0C] flex justify-center p-3 sm:p-6 select-none">
+                {activeScreen.device === "mobile" ? (
+                  /* Mobile Device Shell */
+                  <div className={`transition-all duration-300 ${isZoomed ? "w-auto max-w-none" : "w-full max-w-[380px] sm:max-w-[420px]"}`}>
+                    <div className="rounded-[32px] border-[5px] border-[#2C2925] bg-[#161514] shadow-2xl overflow-hidden p-1">
+                      {/* Mobile Notch Bar */}
+                      <div className="h-6 bg-[#161514] flex items-center justify-between px-5 text-[10px] text-white/50 font-mono select-none">
+                        <span>9:41</span>
+                        <div className="w-16 h-3 bg-black rounded-full mx-auto" />
+                        <span className="text-emerald-400">5G</span>
+                      </div>
+                      <img
+                        src={activeScreen.url}
+                        alt={activeScreen.title || "UI/UX Mobile Design"}
+                        className={`h-auto rounded-[24px] object-top transition-all duration-300 cursor-zoom-in ${
+                          isZoomed ? "w-auto max-w-none scale-100" : "w-full"
+                        }`}
+                        onClick={() => setIsZoomed(!isZoomed)}
+                        title="Click to toggle 100% zoom / fit view"
+                      />
+                    </div>
+                  </div>
+                ) : (
+                  /* Desktop Viewport */
+                  <img
+                    src={activeScreen.url}
+                    alt={activeScreen.title || "UI/UX Desktop Design"}
+                    className={`h-auto rounded-lg shadow-2xl object-top transition-all duration-300 cursor-zoom-in ${
+                      isZoomed ? "w-auto max-w-none scale-100" : "w-full max-w-xl"
+                    }`}
+                    onClick={() => setIsZoomed(!isZoomed)}
+                    title="Click to toggle 100% zoom / fit view"
+                  />
+                )}
               </div>
 
               {/* Status and Instruction Bar */}
               <div className="px-4 py-2 bg-[#22201D] border-t border-gold/20 flex flex-col sm:flex-row items-center justify-between text-[11px] font-mono text-[#FAF7F2]/75 gap-2">
                 <span className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
-                  <span>Scrollable Layout Preview — Click design to zoom, or Open Full Size in a new tab</span>
+                  <span>
+                    {activeScreen.description || "Scrollable Layout Preview — Click mockup to zoom, or Open Full Size in a new tab"}
+                  </span>
                 </span>
-                <span className="text-[10px] text-gold uppercase tracking-wider">
-                  861 × 3072 px HD Preview
+                <span className="text-[10px] text-gold uppercase tracking-wider shrink-0">
+                  {activeScreen.resolution || "HD Preview"}
                 </span>
               </div>
             </div>
+
+            {/* Thumbnail Navigation Strip */}
+            {screens.length > 1 && (
+              <div className="pt-2">
+                <p className="text-[10px] font-mono uppercase tracking-widest text-charcoal/60 mb-2">
+                  SWITCH SCREEN VIEW ({screens.length} PAGES):
+                </p>
+                <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
+                  {screens.map((scr, idx) => {
+                    const isActive = idx === selectedScreenIndex;
+                    return (
+                      <button
+                        key={scr.id || idx}
+                        onClick={() => {
+                          setSelectedScreenIndex(idx);
+                          setIsZoomed(false);
+                        }}
+                        className={`group p-2 rounded-xl border text-left transition-all duration-200 flex flex-col gap-1.5 ${
+                          isActive
+                            ? "bg-white border-gold shadow-sm ring-1 ring-gold"
+                            : "bg-white/60 border-gold/20 hover:border-gold/50 hover:bg-white"
+                        }`}
+                      >
+                        <div className="h-20 w-full rounded-md overflow-hidden bg-[#161514] flex items-center justify-center relative">
+                          <img
+                            src={scr.url}
+                            alt=""
+                            className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 transition-opacity"
+                          />
+                          <span className="absolute top-1 right-1 text-[8px] font-mono px-1 py-0.2 rounded bg-black/70 text-champagne">
+                            {scr.device === "mobile" ? "MOB" : "DESK"}
+                          </span>
+                        </div>
+                        <span className="text-[10px] font-mono font-semibold text-charcoal truncate block line-clamp-1">
+                          {scr.title}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
           </div>
         )}
 
@@ -499,6 +699,16 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                 className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#FAF7F2] border border-gold/30 text-charcoal text-xs font-semibold uppercase tracking-wider hover:bg-white transition-colors"
               >
                 <span>{isLiveWeb ? "Open Live Website" : isGitHub ? "Open GitHub" : isInstagram ? "Open Instagram" : "Open Work"}</span>
+                <ArrowUpRight className="w-3.5 h-3.5 text-gold" />
+              </a>
+            ) : activeScreen ? (
+              <a
+                href={activeScreen.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#FAF7F2] border border-gold/30 text-charcoal text-xs font-semibold uppercase tracking-wider hover:bg-white transition-colors"
+              >
+                <span>View Full Design ({activeScreen.title})</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-gold" />
               </a>
             ) : project.fullDesignImage ? (

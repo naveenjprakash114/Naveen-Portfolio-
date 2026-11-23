@@ -202,48 +202,131 @@ export const projects = [
     client: "Aurel Estates & Interface Systems",
     category: "UI/UX Design",
     filterTags: ["UI/UX DESIGN", "WEB DESIGN"],
-    thumbnail: "/assets/projects/uiux/aurel-estates-uiux-design-hd.jpg",
-    fullDesignImage: "/assets/projects/uiux/aurel-estates-uiux-design-hd.jpg",
-    designTitle: "Aurel Estates — Luxury Real Estate Landing Page Design",
+    thumbnail: "/assets/projects/uiux/mobile/aurel-home-hd.png",
+    fullDesignImage: "/assets/projects/uiux/mobile/aurel-home-hd.png",
+    designTitle: "Aurel Estates — Luxury Real Estate Mobile & Web UI/UX Suite",
     monogram: "UX",
     accentColor: "from-purple-100/80 to-amber-50/40",
-    roleSubtitle: "Luxury Real Estate & Interface Systems",
-    description: "User-centered UI/UX design direction for Aurel Estates luxury real estate — featuring 'Spaces That Define Living', iconic estate listings, architectural storytelling, and high-conversion private briefing inquiries.",
+    roleSubtitle: "Luxury Real Estate & Multi-Screen Interface Systems",
+    description: "End-to-end luxury UI/UX design suite for Aurel Estates — featuring 5 full mobile application experiences (Home Showcase, Exceptional Properties Catalog, Residence Dossier, Editorial Philosophy, Confidential Enquiry) and a full-page desktop editorial layout.",
     liveUrl: "",
     liveLinks: [],
     githubUrl: "",
     driveUrl: "",
     role: [
       "UI/UX Designer",
-      "Wireframing & Prototyping",
+      "Mobile App & Web Prototyping",
       "Design System Architect",
-      "User Research"
+      "User Research & Wireframing"
     ],
-    overview: "A comprehensive full-page UI/UX design crafted for Aurel Estates, an ultra-luxury real estate platform. Focused on an architectural editorial aesthetic, typography hierarchy, elegant property showcases, and seamless private client inquiry flows.",
+    overview: "A comprehensive 6-screen UI/UX design suite crafted for Aurel Estates, an ultra-luxury real estate atelier. Spans full mobile experiences (Home Showcase, Curated Catalog with Faceted Filters, In-Depth Architectural Residence Dossier, Atelier Philosophy Editorial, and Private Concierge Enquiry Flow with Capital Allocation Selectors) alongside an expansive Desktop Landing Page.",
     objectives: [
-      "Designed full-length editorial landing page layout from hero to private ledger.",
-      "Established typography and luxury gold & charcoal visual hierarchy.",
-      "Structured property listing cards with key metric tags (4.2B+ volume, 18 capitals).",
-      "Engineered private client inquiry form with streamlined lead capture."
+      "Designed 5 full-length mobile application screens and a desktop editorial landing page.",
+      "Engineered high-converting property discovery with territory filters (Goa, Mumbai, ECR Chennai).",
+      "Crafted detailed residence dossier layout with architectural specs, floor plans, and viewing booking.",
+      "Built confidential client brief experience with NDA sequestering and capital allocation brackets."
     ],
     deliverables: [
       {
-        title: "Full-Length Landing Page Design",
-        type: "UI/UX Design Mockup",
-        description: "Complete end-to-end luxury desktop layout showcasing hero, iconic estates, and private client services."
+        title: "Mobile Home & Curated Showcase",
+        type: "Mobile UI/UX Design",
+        description: "Spaces That Define Living hero, curated acquisitions carousel, and bespoke advisory cards."
       },
       {
-        title: "Design System & Typography Hierarchy",
-        type: "UI Architecture",
-        description: "Serif headline composition paired with clean monospace labels and warm champagne accents."
+        title: "Exceptional Properties Catalog",
+        type: "Mobile UI/UX Design",
+        description: "Faceted search, territory filtering (Goa, Mumbai, ECR), price brackets, and off-market briefing triggers."
       },
       {
-        title: "Private Ledger & Inquiry Experience",
+        title: "Residence Dossier & Architectural Specs",
+        type: "Deep Detail UI/UX",
+        description: "Comprehensive property dossier with photo gallery, room specs, floor plans, location map, and private viewing."
+      },
+      {
+        title: "Editorial & Brand Philosophy",
+        type: "Brand Storytelling UX",
+        description: "Editorial layout with The Aurel Benchmark, Three Acts of Acquisition, and Private Client Directorate."
+      },
+      {
+        title: "Private Office & Confidential Enquiry",
         type: "Conversion UX",
-        description: "Discreet off-market inquiry form designed for high-net-worth real estate clients."
+        description: "Off-market acquisition brief, territory selection, capital brackets (₹5Cr–₹50Cr+), and Atelier chambers."
+      },
+      {
+        title: "Full-Length Desktop Landing Page",
+        type: "Desktop UI/UX Design",
+        description: "Expansive desktop layout featuring hero, iconic estate cards, architectural philosophy, and private ledger."
       }
     ],
-    tools: ["Figma", "Adobe Photoshop", "Canva Pro", "Design Systems"],
+    designScreens: [
+      {
+        id: "mobile-home",
+        title: "Mobile Home",
+        subtitle: "Spaces That Define Living",
+        badge: "Screen 01",
+        device: "mobile",
+        url: "/assets/projects/uiux/mobile/aurel-home-hd.png",
+        rawUrl: "/assets/projects/uiux/mobile/aurel-home-raw.png",
+        resolution: "336 × 3584 px HD",
+        description: "Hero landing page featuring curated estate listings, lifestyle philosophy, and advisory pillars."
+      },
+      {
+        id: "mobile-catalog",
+        title: "Properties Catalog",
+        subtitle: "Exceptional Properties & Filter System",
+        badge: "Screen 02",
+        device: "mobile",
+        url: "/assets/projects/uiux/mobile/aurel-catalog-hd.png",
+        rawUrl: "/assets/projects/uiux/mobile/aurel-catalog-raw.png",
+        resolution: "528 × 3584 px HD",
+        description: "Luxury property search and filtering across Goa, Mumbai, and ECR Chennai with unlisted mandates trigger."
+      },
+      {
+        id: "mobile-dossier",
+        title: "Residence Dossier",
+        subtitle: "The Aurelia Residence & Specs",
+        badge: "Screen 03",
+        device: "mobile",
+        url: "/assets/projects/uiux/mobile/aurel-property-detail-hd.png",
+        rawUrl: "/assets/projects/uiux/mobile/aurel-property-detail-raw.png",
+        resolution: "332 × 3584 px HD",
+        description: "In-depth property dossier with architectural vision, craftsmanship specs, azure amenities, location map, and floor plans."
+      },
+      {
+        id: "mobile-editorial",
+        title: "Brand Editorial",
+        subtitle: "Philosophy & The Aurel Benchmark",
+        badge: "Screen 04",
+        device: "mobile",
+        url: "/assets/projects/uiux/mobile/aurel-editorial-hd.png",
+        rawUrl: "/assets/projects/uiux/mobile/aurel-editorial-raw.png",
+        resolution: "262 × 3584 px HD",
+        description: "Editorial storytelling on modernist artistry, acquisition in three acts, track record metrics, and directorate."
+      },
+      {
+        id: "mobile-enquiry",
+        title: "Private Enquiry",
+        subtitle: "Confidential Dossier Brief",
+        badge: "Screen 05",
+        device: "mobile",
+        url: "/assets/projects/uiux/mobile/aurel-enquiry-hd.png",
+        rawUrl: "/assets/projects/uiux/mobile/aurel-enquiry-raw.png",
+        resolution: "511 × 3584 px HD",
+        description: "High-net-worth confidential brief with NDA sequestering, territory selection, capital brackets, and ateliers."
+      },
+      {
+        id: "desktop-landing",
+        title: "Desktop Landing",
+        subtitle: "Full-Length Desktop Showcase",
+        badge: "Desktop",
+        device: "desktop",
+        url: "/assets/projects/uiux/aurel-estates-uiux-design-hd.jpg",
+        rawUrl: "/assets/projects/uiux/aurel-estates-uiux-design.jpg",
+        resolution: "861 × 3072 px HD",
+        description: "Expansive desktop layout featuring hero, iconic estate cards, architectural philosophy, and private ledger."
+      }
+    ],
+    tools: ["Figma", "Adobe Photoshop", "Canva Pro", "Design Systems", "Mobile UI/UX"],
     isFeatured: true
   }
 ];
