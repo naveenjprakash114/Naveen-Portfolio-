@@ -37,7 +37,7 @@ export const projects = [
         device: "desktop",
         url: "/assets/projects/uiux/scoopzone/scoopzone-uiux-landing-hd.jpg",
         rawUrl: "/assets/projects/uiux/scoopzone/scoopzone-uiux-landing-raw.jpg",
-        resolution: "744 × 4096 px HD",
+        resolution: "1280 × 7038 px HD",
         description: "Complete full-length conversion landing page design: Hero product showcase, Build Your Perfect Scoop interactive module, 10-Minute Cold Chain, and Live Delivery Tracking."
       }
     ],
@@ -272,7 +272,7 @@ export const projects = [
         device: "desktop",
         url: "/assets/projects/uiux/scoopzone/scoopzone-uiux-landing-hd.jpg",
         rawUrl: "/assets/projects/uiux/scoopzone/scoopzone-uiux-landing-raw.jpg",
-        resolution: "744 × 4096 px HD",
+        resolution: "1280 × 7038 px HD",
         description: "Complete full-length conversion landing page design: Hero product showcase, Build Your Perfect Scoop interactive module, 10-Minute Cold Chain, and Live Delivery Tracking."
       },
       {
@@ -283,7 +283,7 @@ export const projects = [
         device: "mobile",
         url: "/assets/projects/uiux/mobile/aurel-home-hd.png",
         rawUrl: "/assets/projects/uiux/mobile/aurel-home-raw.png",
-        resolution: "336 × 3584 px HD",
+        resolution: "430 × 4579 px HD",
         description: "Hero landing page featuring curated estate listings, lifestyle philosophy, and advisory pillars."
       },
       {
@@ -294,7 +294,7 @@ export const projects = [
         device: "mobile",
         url: "/assets/projects/uiux/mobile/aurel-catalog-hd.png",
         rawUrl: "/assets/projects/uiux/mobile/aurel-catalog-raw.png",
-        resolution: "528 × 3584 px HD",
+        resolution: "430 × 2905 px HD",
         description: "Luxury property search and filtering across Goa, Mumbai, and ECR Chennai with unlisted mandates trigger."
       },
       {
@@ -305,7 +305,7 @@ export const projects = [
         device: "mobile",
         url: "/assets/projects/uiux/mobile/aurel-property-detail-hd.png",
         rawUrl: "/assets/projects/uiux/mobile/aurel-property-detail-raw.png",
-        resolution: "332 × 3584 px HD",
+        resolution: "438 × 4704 px HD",
         description: "In-depth property dossier with architectural vision, craftsmanship specs, azure amenities, location map, and floor plans."
       },
       {
@@ -316,7 +316,7 @@ export const projects = [
         device: "mobile",
         url: "/assets/projects/uiux/mobile/aurel-editorial-hd.png",
         rawUrl: "/assets/projects/uiux/mobile/aurel-editorial-raw.png",
-        resolution: "262 × 3584 px HD",
+        resolution: "430 × 5858 px HD",
         description: "Editorial storytelling on modernist artistry, acquisition in three acts, track record metrics, and directorate."
       },
       {
@@ -327,7 +327,7 @@ export const projects = [
         device: "mobile",
         url: "/assets/projects/uiux/mobile/aurel-enquiry-hd.png",
         rawUrl: "/assets/projects/uiux/mobile/aurel-enquiry-raw.png",
-        resolution: "511 × 3584 px HD",
+        resolution: "458 × 3200 px HD",
         description: "High-net-worth confidential brief with NDA sequestering, territory selection, capital brackets, and ateliers."
       },
       {
@@ -338,7 +338,7 @@ export const projects = [
         device: "desktop",
         url: "/assets/projects/uiux/aurel-estates-uiux-design-hd.jpg",
         rawUrl: "/assets/projects/uiux/aurel-estates-uiux-design.jpg",
-        resolution: "861 × 3072 px HD",
+        resolution: "1280 × 4564 px HD",
         description: "Expansive desktop layout featuring hero, iconic estate cards, architectural philosophy, and private ledger."
       }
     ],
